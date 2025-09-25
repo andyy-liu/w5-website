@@ -25,18 +25,16 @@ const Home = () => {
       </section>
 
       {/* Sponsors Section */}
-      <section className="bg-white py-16">
+      <section className="bg-white py-12">
         <div className="container-w5">
-          <div className="overflow-hidden">
-            <div className="flex space-x-8 animate-scroll">
-              {sponsors.map((sponsor, index) => (
-                <div key={index} className="flex-shrink-0">
-                  <span className="text-lg font-medium text-muted whitespace-nowrap">
-                    {sponsor}
-                  </span>
-                </div>
-              ))}
-            </div>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+            {sponsors.map((sponsor, index) => (
+              <div key={index} className="flex-shrink-0">
+                <span className="text-base md:text-lg font-medium text-muted whitespace-nowrap">
+                  {sponsor}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -55,7 +53,7 @@ const Home = () => {
                 exposure, and a tight-knit peer network, we're here to help students turn curiosity into action.
               </p>
             </div>
-            <div className="bg-muted rounded-[var(--radius)] h-64 lg:h-80"></div>
+            <div className="bg-gray-300 rounded-[var(--radius)] h-64 lg:h-80"></div>
           </div>
         </div>
       </section>
@@ -64,7 +62,7 @@ const Home = () => {
       <section className="bg-muted py-24">
         <div className="container-w5">
           <div className="text-center max-w-4xl mx-auto">
-            <p className="text-lg text-muted mb-6">Our Mission</p>
+            <p className="text-lg text-on-light mb-6">Our Mission</p>
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-on-light leading-tight">
               To make entrepreneurship accessible to everyone.
             </h2>
@@ -96,12 +94,12 @@ const Home = () => {
       </section>
 
       {/* Bottom Section with placeholders */}
-      <section className="bg-muted py-24">
+      <section className="bg-white py-24">
         <div className="container-w5">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-primary/10 rounded-[var(--radius)] h-64"></div>
-            <div className="bg-primary/10 rounded-[var(--radius)] h-64"></div>
-            <div className="bg-primary/10 rounded-[var(--radius)] h-64"></div>
+            <div className="bg-gray-300 rounded-[var(--radius)] h-64"></div>
+            <div className="bg-gray-300 rounded-[var(--radius)] h-64"></div>
+            <div className="bg-gray-300 rounded-[var(--radius)] h-64"></div>
           </div>
         </div>
       </section>
