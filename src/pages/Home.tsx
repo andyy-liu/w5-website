@@ -1,5 +1,6 @@
 import Layout from "../components/Layout";
 import PortfolioCard from "../components/PortfolioCard";
+import { useState } from "react";
 
 const Home = () => {
   const sponsors = [
@@ -17,6 +18,18 @@ const Home = () => {
     "Adobe",
   ];
 
+  // Track which portfolio is currently active (shows primary variant)
+  const [activePortfolio, setActivePortfolio] = useState<string>("Accelerator");
+
+  const portfolios = [
+    "Accelerator",
+    "Catalyst",
+    "Community",
+    "Development",
+    "Innovation",
+    "Marketing",
+  ];
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -24,12 +37,12 @@ const Home = () => {
         <div className="container-w5 w-full">
           <div className="flex justify-start">
             <div className="max-w-4xl">
-              <h1 className="text-8xl md:text-10xl lg:text-10xl font-apple-garamond font-normal text-on-gradient mb-8">
+              <h1 className="text-8xl md:text-9xl lg:text-10xl font-apple-garamond font-normal text-on-gradient mb-8">
                 A Startup
                 <br />
                 for Startups.
               </h1>
-              <p className="font-helvetica-neue text-xl md:text-3xl font-medium text-white text-on-gradient/90 max-w-4xl">
+              <p className="font-helvetica text-xl md:text-3xl font-normal text-[#FFFFFF] text-on-gradient/90 max-w-4xl">
                 The largest entrepreneurship community at Western University.
               </p>
             </div>
@@ -63,7 +76,7 @@ const Home = () => {
               <h2 className="text-5xl md:text-6xl font-apple-garamond font-600 text-on-light mb-8">
                 What is W5?
               </h2>
-              <p className="font-helvetica-neue text-lg text-on-light leading-relaxed">
+              <p className="font-helvetica text-xl text-on-light leading-relaxed">
                 W5 is Western's largest entrepreneurial community — a launchpad
                 for students who want to build, create, and explore bold ideas.
                 Through immersive events, real-world startup exposure, and a
@@ -81,7 +94,7 @@ const Home = () => {
         <div className="container-w5">
           <div className="bg-muted rounded-[var(--radius)] p-16 md:p-20 lg:p-24">
             <div className="text-center max-w-8xl mx-auto">
-              <p className="text-2xl font-helvetica-neue text-on-light mb-6">
+              <p className="text-2xl font-helvetica text-on-light mb-6">
                 Our Mission
               </p>
               <h2 className="text-5xl md:text-7xl lg:text-8xl font-apple-garamond font-normal text-on-light leading-tight">
@@ -99,21 +112,21 @@ const Home = () => {
             <h2 className="text-5xl font-apple-garamond md:text-6xl font-normal text-on-light mb-4">
               Our Portfolios
             </h2>
-            <p className="text-lg text-on-light">
+            <p className="text-xl text-on-light">
               Want to know what each of W5's portfolios does blah blah blah?
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <PortfolioCard
-              title="Accelerator"
-              variant="primary"
-            />
-            <PortfolioCard title="Catalyst" />
-            <PortfolioCard title="Community" />
-            <PortfolioCard title="Development" />
-            <PortfolioCard title="Innovation" />
-            <PortfolioCard title="Marketing" />
+            {portfolios.map((p) => (
+              <PortfolioCard
+                key={p}
+                title={p}
+                variant={activePortfolio === p ? "primary" : "secondary"}
+                onMouseEnter={() => setActivePortfolio(p)}
+                onClick={() => setActivePortfolio(p)}
+              />
+            ))}
           </div>
         </div>
       </section>

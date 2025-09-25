@@ -54,7 +54,7 @@
     /* Gradient definitions */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary-deep)), hsl(var(--primary-medium)));
     --gradient-hero: linear-gradient(180deg, hsl(var(--primary-deep) / 1), hsl(var(--primary-medium)), hsl(var(--primary-light)));
-    --gradient-card: linear-gradient(135deg, hsl(var(--primary-medium) / 0.9), hsl(var(--primary-light) / 0.8));
+    --gradient-card: radial-gradient(at 15% -15%, #7075BC, transparent 40%), radial-gradient(at 85% 115%, #7075BC, transparent 40%), #dfdddd;
     
     /* Text colors */
     --text-on-gradient: 0 0% 100%;    /* White text on gradients */
@@ -64,7 +64,7 @@
     /* Component colors using our purple theme */
     --card: 0 0% 100%;
     --card-foreground: 220 26% 14%;
-    --card-hover: 262 83% 97%;         /* Very light purple for card hover */
+    --card-hover: 0 0% 100%;         /* Very light purple for card hover */
 
     --popover: 0 0% 100%;
     --popover-foreground: 220 26% 14%;
@@ -190,6 +190,22 @@
   
   .bg-gradient-card {
     background: var(--gradient-card);
+    position: relative;
+    overflow: hidden; /* contain blur layer */
+  }
+  
+  .bg-gradient-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 0;
+  }
+  
+  .bg-gradient-card > * {
+    position: relative;
+    z-index: 1;
   }
   
   /* Text colors for gradients */
@@ -207,7 +223,7 @@
   
   /* Card styles */
   .card-w5 {
-    @apply bg-card border border-border/10 rounded-[var(--radius)] shadow-[var(--shadow-card)] transition-all duration-200;
+    @apply bg-card rounded-[var(--radius)] shadow-[var(--shadow-card)] transition-all duration-200;
   }
   
   .card-w5:hover {
@@ -234,6 +250,6 @@
   
   /* Arrow icon for cards */
   .card-arrow {
-    @apply w-6 h-6 text-primary transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1;
+    @apply w-7 h-7 text-primary transition-transform duration-200 ease-out group-hover:translate-x-1 group-hover:-translate-y-1;
   }
 }
