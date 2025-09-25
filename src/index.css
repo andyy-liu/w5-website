@@ -48,12 +48,12 @@
     /* Primary purple gradient colors */
     --primary-deep: 262 80% 11%;     /* Deep purple #4C1D95 */
     --primary-medium: 255 76% 59%;   /* Medium purple #7C3AED */
-    --primary-light: 43 25% 93%;    /* Light purple #A855F7 */
+    --primary-light: 43 24% 94%;    /* Light purple #A855F7 */
     --primary-pink: 316 73% 69%;     /* Pink accent #E879F9 */
     
     /* Gradient definitions */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary-deep)), hsl(var(--primary-medium)));
-    --gradient-hero: linear-gradient(180deg, hsl(var(--primary-deep) / 1), hsl(var(--primary-medium)), hsl(var(--primary-light) / 0));
+    --gradient-hero: linear-gradient(180deg, hsl(var(--primary-deep) / 1), hsl(var(--primary-medium)), hsl(var(--primary-light)));
     --gradient-card: linear-gradient(135deg, hsl(var(--primary-medium) / 0.9), hsl(var(--primary-light) / 0.8));
     
     /* Text colors */
@@ -75,7 +75,7 @@
     --secondary: 262 30% 94%;           /* Light purple-gray */
     --secondary-foreground: 220 26% 14%;
 
-    --muted: 220 14% 96%;              /* Very light gray */
+    --muted: 0 5% 88%;              /* Very light gray */
     --muted-foreground: 220 26% 30%;   /* Much darker for better contrast */
 
     --accent: 262 83% 58%;
@@ -88,7 +88,7 @@
     --input: 220 13% 91%;
     --ring: 258 86% 47%;
 
-    --radius: 7px;                    /* Increased border radius for modern look */
+    --radius: 10px;                    /* Increased border radius for modern look */
     
     /* Shadows for elevation */
     --shadow-card: 0 1px 3px 0 hsl(262 83% 35% / 0.1), 0 1px 2px 0 hsl(262 83% 35% / 0.06);

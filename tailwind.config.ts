@@ -17,6 +17,9 @@ export default {
         serif: ["EB Garamond", "Georgia", "serif"],
         sans: ["-apple-system", "BlinkMacSystemFont", "Helvetica Neue", "Helvetica", "sans-serif"],
       },
+      fontSize: {
+        "10xl": "10em",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

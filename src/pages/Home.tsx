@@ -24,12 +24,12 @@ const Home = () => {
         <div className="container-w5 w-full">
           <div className="flex justify-start">
             <div className="max-w-4xl">
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-apple-garamond font-normal text-on-gradient leading-tight mb-8">
+              <h1 className="text-8xl md:text-10xl lg:text-10xl font-apple-garamond font-normal text-on-gradient mb-8">
                 A Startup
                 <br />
                 for Startups.
               </h1>
-              <p className="font-helvetica text-xl md:text-2xl text-white text-on-gradient/90 max-w-2xl">
+              <p className="font-helvetica-neue text-xl md:text-3xl font-medium text-white text-on-gradient/90 max-w-4xl">
                 The largest entrepreneurship community at Western University.
               </p>
             </div>
@@ -38,7 +38,7 @@ const Home = () => {
       </section>
 
       {/* Sponsors Section */}
-      <section className="bg-white py-12">
+      <section className="bg-primary-light/90 py-12">
         <div className="container-w5">
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
             {sponsors.map((sponsor, index) => (
@@ -56,14 +56,14 @@ const Home = () => {
       </section>
 
       {/* What is W5 Section */}
-      <section className="bg-white py-24">
+      <section className="bg-primary-light/90 py-24">
         <div className="container-w5">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-apple-garamond font-600 text-on-light mb-8">
+              <h2 className="text-5xl md:text-6xl font-apple-garamond font-600 text-on-light mb-8">
                 What is W5?
               </h2>
-              <p className="font-helvetica text-lg text-on-light leading-relaxed">
+              <p className="font-helvetica-neue text-lg text-on-light leading-relaxed">
                 W5 is Western's largest entrepreneurial community — a launchpad
                 for students who want to build, create, and explore bold ideas.
                 Through immersive events, real-world startup exposure, and a
@@ -77,22 +77,26 @@ const Home = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="bg-muted py-24">
+      <section className="bg-primary-light/90 py-24">
         <div className="container-w5">
-          <div className="text-center max-w-4xl mx-auto">
-            <p className="text-lg text-on-light mb-6">Our Mission</p>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-on-light leading-tight">
-              To make entrepreneurship accessible to everyone.
-            </h2>
+          <div className="bg-muted rounded-[var(--radius)] p-16 md:p-20 lg:p-24">
+            <div className="text-center max-w-8xl mx-auto">
+              <p className="text-2xl font-helvetica-neue text-on-light mb-6">
+                Our Mission
+              </p>
+              <h2 className="text-5xl md:text-7xl lg:text-8xl font-apple-garamond font-normal text-on-light leading-tight">
+                To make entrepreneurship accessible to everyone.
+              </h2>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Portfolios Section */}
-      <section className="bg-white py-24">
+      <section className="bg-primary-light/90 py-24">
         <div className="container-w5">
           <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-on-light mb-4">
+            <h2 className="text-5xl font-apple-garamond md:text-6xl font-normal text-on-light mb-4">
               Our Portfolios
             </h2>
             <p className="text-lg text-on-light">
@@ -105,17 +109,17 @@ const Home = () => {
               title="Accelerator"
               variant="primary"
             />
-            <PortfolioCard title="Accelerator" />
-            <PortfolioCard title="Accelerator" />
-            <PortfolioCard title="Accelerator" />
-            <PortfolioCard title="Accelerator" />
-            <PortfolioCard title="Accelerator" />
+            <PortfolioCard title="Catalyst" />
+            <PortfolioCard title="Community" />
+            <PortfolioCard title="Development" />
+            <PortfolioCard title="Innovation" />
+            <PortfolioCard title="Marketing" />
           </div>
         </div>
       </section>
 
       {/* Bottom Section with placeholders */}
-      <section className="bg-white py-24">
+      <section className="bg-primary-light/90 py-24">
         <div className="container-w5">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-gray-300 rounded-[var(--radius)] h-64"></div>
