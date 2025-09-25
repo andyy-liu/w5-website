@@ -3,23 +3,36 @@ import PortfolioCard from "../components/PortfolioCard";
 
 const Home = () => {
   const sponsors = [
-    "Deloitte", "RBC", "TD", "KPMG", "BDO", "BMO", "PwC", "BCG", 
-    "Accenture", "Amazon", "Uber", "Adobe", "Microsoft"
+    "Deloitte",
+    "RBC",
+    "TD",
+    "KPMG",
+    "BDO",
+    "BMO",
+    "PwC",
+    "BCG",
+    "Accenture",
+    "Amazon",
+    "Uber",
+    "Adobe",
   ];
 
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-hero min-h-[80vh] flex items-center">
-        <div className="container-w5">
-          <div className="max-w-4xl">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-serif font-bold text-on-gradient leading-tight mb-8">
-              A Startup<br />
-              for Startups.
-            </h1>
-            <p className="text-xl md:text-2xl text-on-gradient/90 max-w-2xl">
-              The largest entrepreneurship community at Western University.
-            </p>
+      <section className="bg-gradient-hero min-h-[86vh] flex items-center">
+        <div className="container-w5 w-full">
+          <div className="flex justify-start">
+            <div className="max-w-4xl">
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-apple-garamond font-normal text-on-gradient leading-tight mb-8">
+                A Startup
+                <br />
+                for Startups.
+              </h1>
+              <p className="font-helvetica text-xl md:text-2xl text-white text-on-gradient/90 max-w-2xl">
+                The largest entrepreneurship community at Western University.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -29,7 +42,10 @@ const Home = () => {
         <div className="container-w5">
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
             {sponsors.map((sponsor, index) => (
-              <div key={index} className="flex-shrink-0">
+              <div
+                key={index}
+                className="flex-shrink-0"
+              >
                 <span className="text-base md:text-lg font-medium text-on-light whitespace-nowrap">
                   {sponsor}
                 </span>
@@ -44,13 +60,15 @@ const Home = () => {
         <div className="container-w5">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-on-light mb-8">
+              <h2 className="text-4xl md:text-5xl font-apple-garamond font-600 text-on-light mb-8">
                 What is W5?
               </h2>
-              <p className="text-lg text-on-light leading-relaxed">
-                W5 is Western's largest entrepreneurial community — a launchpad for students who want 
-                to build, create, and explore bold ideas. Through immersive events, real-world startup 
-                exposure, and a tight-knit peer network, we're here to help students turn curiosity into action.
+              <p className="font-helvetica text-lg text-on-light leading-relaxed">
+                W5 is Western's largest entrepreneurial community — a launchpad
+                for students who want to build, create, and explore bold ideas.
+                Through immersive events, real-world startup exposure, and a
+                tight-knit peer network, we're here to help students turn
+                curiosity into action.
               </p>
             </div>
             <div className="bg-gray-300 rounded-[var(--radius)] h-64 lg:h-80"></div>
@@ -83,7 +101,10 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <PortfolioCard title="Accelerator" variant="primary" />
+            <PortfolioCard
+              title="Accelerator"
+              variant="primary"
+            />
             <PortfolioCard title="Accelerator" />
             <PortfolioCard title="Accelerator" />
             <PortfolioCard title="Accelerator" />

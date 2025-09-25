@@ -1,5 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap');
 
+/* Apple Garamond Font Faces */
+@font-face {
+  font-family: 'Apple Garamond';
+  src: url('/fonts/AppleGaramond.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apple Garamond';
+  src: url('/fonts/AppleGaramond-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apple Garamond';
+  src: url('/fonts/AppleGaramond-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apple Garamond';
+  src: url('/fonts/AppleGaramond-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,14 +46,14 @@
     --foreground: 222.2 84% 4.9%;
     
     /* Primary purple gradient colors */
-    --primary-deep: 262 83% 35%;     /* Deep purple #4C1D95 */
-    --primary-medium: 258 86% 47%;   /* Medium purple #7C3AED */
-    --primary-light: 262 83% 58%;    /* Light purple #A855F7 */
+    --primary-deep: 262 80% 11%;     /* Deep purple #4C1D95 */
+    --primary-medium: 255 76% 59%;   /* Medium purple #7C3AED */
+    --primary-light: 43 25% 93%;    /* Light purple #A855F7 */
     --primary-pink: 316 73% 69%;     /* Pink accent #E879F9 */
     
     /* Gradient definitions */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary-deep)), hsl(var(--primary-medium)));
-    --gradient-hero: linear-gradient(180deg, hsl(var(--primary-deep)), hsl(var(--primary-medium)), hsl(var(--primary-light)));
+    --gradient-hero: linear-gradient(180deg, hsl(var(--primary-deep) / 1), hsl(var(--primary-medium)), hsl(var(--primary-light) / 0));
     --gradient-card: linear-gradient(135deg, hsl(var(--primary-medium) / 0.9), hsl(var(--primary-light) / 0.8));
     
     /* Text colors */
@@ -55,7 +88,7 @@
     --input: 220 13% 91%;
     --ring: 258 86% 47%;
 
-    --radius: 12px;                    /* Increased border radius for modern look */
+    --radius: 7px;                    /* Increased border radius for modern look */
     
     /* Shadows for elevation */
     --shadow-card: 0 1px 3px 0 hsl(262 83% 35% / 0.1), 0 1px 2px 0 hsl(262 83% 35% / 0.06);
@@ -129,7 +162,15 @@
   
   /* Typography classes */
   .font-serif {
-    font-family: "EB Garamond", Georgia, serif;
+    font-family: "Apple Garamond", "EB Garamond", Georgia, serif;
+  }
+  
+  .font-apple-garamond {
+    font-family: "Apple Garamond", "EB Garamond", Georgia, serif;
+  }
+  
+  .font-helvetica {
+    font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Helvetica", sans-serif;
   }
   
   .font-sans {
@@ -175,7 +216,7 @@
   
   /* Button variants */
   .btn-w5-primary {
-    @apply bg-primary text-primary-foreground px-6 py-3 rounded-[var(--radius)] font-medium transition-all duration-200 hover:opacity-90;
+    @apply bg-white text-gray-800 px-3 py-1 rounded-[var(--radius)] font-medium transition-all duration-200 hover:opacity-90;
   }
   
   .btn-w5-ghost {
