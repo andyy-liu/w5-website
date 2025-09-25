@@ -30,7 +30,7 @@ const Home = () => {
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
             {sponsors.map((sponsor, index) => (
               <div key={index} className="flex-shrink-0">
-                <span className="text-base md:text-lg font-medium text-muted whitespace-nowrap">
+                <span className="text-base md:text-lg font-medium text-on-light whitespace-nowrap">
                   {sponsor}
                 </span>
               </div>
@@ -77,7 +77,7 @@ const Home = () => {
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-on-light mb-4">
               Our Portfolios
             </h2>
-            <p className="text-lg text-muted">
+            <p className="text-lg text-on-light">
               Want to know what each of W5's portfolios does blah blah blah?
             </p>
           </div>

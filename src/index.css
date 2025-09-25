@@ -30,36 +30,36 @@
 
     /* Component colors using our purple theme */
     --card: 0 0% 100%;
-    --card-foreground: var(--text-on-light);
+    --card-foreground: 220 26% 14%;
     --card-hover: 262 83% 97%;         /* Very light purple for card hover */
 
     --popover: 0 0% 100%;
-    --popover-foreground: var(--text-on-light);
+    --popover-foreground: 220 26% 14%;
 
-    --primary: var(--primary-deep);
-    --primary-foreground: var(--text-on-gradient);
+    --primary: 262 83% 35%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 262 30% 94%;           /* Light purple-gray */
-    --secondary-foreground: var(--text-on-light);
+    --secondary-foreground: 220 26% 14%;
 
     --muted: 220 14% 96%;              /* Very light gray */
-    --muted-foreground: var(--text-muted);
+    --muted-foreground: 220 26% 30%;   /* Much darker for better contrast */
 
-    --accent: var(--primary-light);
-    --accent-foreground: var(--text-on-gradient);
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: var(--primary-medium);
+    --ring: 258 86% 47%;
 
     --radius: 12px;                    /* Increased border radius for modern look */
     
     /* Shadows for elevation */
-    --shadow-card: 0 1px 3px 0 hsl(var(--primary-deep) / 0.1), 0 1px 2px 0 hsl(var(--primary-deep) / 0.06);
-    --shadow-card-hover: 0 4px 6px -1px hsl(var(--primary-deep) / 0.1), 0 2px 4px -1px hsl(var(--primary-deep) / 0.06);
+    --shadow-card: 0 1px 3px 0 hsl(262 83% 35% / 0.1), 0 1px 2px 0 hsl(262 83% 35% / 0.06);
+    --shadow-card-hover: 0 4px 6px -1px hsl(262 83% 35% / 0.1), 0 2px 4px -1px hsl(262 83% 35% / 0.06);
 
     --sidebar-background: 0 0% 98%;
 
@@ -153,15 +153,15 @@
   
   /* Text colors for gradients */
   .text-on-gradient {
-    color: hsl(var(--text-on-gradient));
+    color: hsl(0 0% 100%);
   }
   
   .text-on-light {
-    color: hsl(var(--text-on-light));
+    color: hsl(220 26% 14%);
   }
   
   .text-muted {
-    color: hsl(var(--text-muted));
+    color: hsl(220 26% 30%);  /* Much darker for better contrast */
   }
   
   /* Card styles */
