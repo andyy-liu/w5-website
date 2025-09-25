@@ -13,15 +13,27 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        serif: ["EB Garamond", "Georgia", "serif"],
+        sans: ["-apple-system", "BlinkMacSystemFont", "Helvetica Neue", "Helvetica", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        "card-hover": "hsl(var(--card-hover))",
+        "text-on-gradient": "hsl(var(--text-on-gradient))",
+        "text-on-light": "hsl(var(--text-on-light))",
+        "text-muted": "hsl(var(--text-muted))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          deep: "hsl(var(--primary-deep))",
+          medium: "hsl(var(--primary-medium))",
+          light: "hsl(var(--primary-light))",
+          pink: "hsl(var(--primary-pink))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -80,10 +92,19 @@ export default {
             height: "0",
           },
         },
+        "scroll": {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "100%": {
+            transform: "translateX(-100%)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "scroll": "scroll 30s linear infinite",
       },
     },
   },
