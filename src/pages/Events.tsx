@@ -5,7 +5,7 @@ const Events = () => {
   const upcomingEvents = [
     {
       title: "Annual General Meeting",
-      date: "Month ##-##, 202#",
+      date: "September 13, 2025",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-agm",
@@ -19,49 +19,70 @@ const Events = () => {
     },
     {
       title: "Summit Case Competition",
-      date: "October 1-2, 2025",
+      date: "October 3-4, 2025",
       description:
         "Gain valuable case competition experience, network with sponsor representatives, and work on creating solutions to real world business problems",
       register: "https://example.com/register-summit",
     },
     {
       title: "Steve Jobs Night",
-      date: "Month ##-##, 202#",
+      date: "October 10, 2025",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-steve-jobs",
     },
     {
       title: "Careers Panel",
-      date: "Month ##-##, 202#",
+      date: "October 28-29, 2025",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-careers",
     },
     {
       title: "Innovation Sprint",
-      date: "Month ##-##, 202#",
+      date: "November 15-16, 2025",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-sprint",
     },
     {
       title: "Internship Program",
-      date: "Month ##-##, 202#",
+      date: "November 23, 2025",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-internship",
     },
     {
       title: "Accelerator Program",
-      date: "Month ##-##, 202#",
+      date: "December-January, 2025",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-accelerator",
     },
     {
       title: "Designathon",
-      date: "Month ##-##, 202#",
+      date: "January 9-10, 2025",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      register: "https://example.com/register-designathon",
+    },
+    {
+      title: "VC Case Competition",
+      date: "January 18, 2025",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      register: "https://example.com/register-designathon",
+    },
+    {
+      title: "Toronto Firms Trip",
+      date: "February 7, 2025",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      register: "https://example.com/register-designathon",
+    },
+    {
+      title: "Pitch5",
+      date: "February 28 - March 1, 2025",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-designathon",
