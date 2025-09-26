@@ -17,7 +17,7 @@ const About = () => {
     {
       title: "COMMUNITY",
       description:
-        "Community Leads are dedicated to cultivating community within W5. Unlike other portfolios that run specific external-facing programs, the Community Leads work under the Presidents and supports all teams to ensure that members feel connected and valued. The portfolio organizes initiatives that strengthen internal culture, bring general members into the fold, and enhance collaboration across W5.",
+        "Community is the portfolio that unites W5. It focuses on creating a welcoming, inclusive, and engaging environment for both internal members and the broader student body. By organizing social events, mentorship mixers, and community-building initiatives, Community ensures that every member feels connected and part of something bigger.",
       events: ["Summer Dinner", "Annual General Meeting", "Socials"],
     },
     {
@@ -46,7 +46,7 @@ const About = () => {
       <section className="bg-gradient-hero min-h-[86vh] flex items-center">
         <div className="container-w5 w-full">
           <div className="max-w-5xl">
-            <h1 className="text-8xl md:text-9xl lg:text-10xl font-apple-garamond font-normal text-on-gradient leading-tight mb-8">
+            <h1 className="text-7xl md:text-9xl lg:text-10xl font-apple-garamond font-normal text-on-gradient leading-tight mb-8">
               About Us
             </h1>
             <p className="text-xl md:text-2xl font-helvetica text-white max-w-5xl">
@@ -65,7 +65,7 @@ const About = () => {
             <h2 className="text-5xl md:text-6xl font-apple-garamond font-normal text-on-light mb-8">
               History
             </h2>
-            <p className="text-xl text-on-light font-helvetica leading-relaxed">
+            <p className="text-lg md:text-xl text-on-light font-helvetica leading-relaxed">
               W5 was founded in 2016 by Braden Ream, Zach Friedman and Kirill
               Kokokrev, with the goal of giving idea-stage student entrepreneurs
               the mentorship, accountability, and resources they couldn't find
@@ -96,13 +96,13 @@ const About = () => {
                   <h3 className="text-2xl font-helvetica font-bold text-on-light mb-4">
                     {portfolio.title}
                   </h3>
-                  <p className="text-xl text-on-light font-helvetica leading-relaxed max-w-6xl">
+                  <p className="text-lg md:text-xl text-on-light font-helvetica leading-relaxed max-w-6xl">
                     {portfolio.description}
                   </p>
                 </div>
 
                 <div>
-                  <p className="text-xl font-helvetica text-on-light mb-6">
+                  <p className="text-lg md:text-xl font-helvetica text-on-light mb-6">
                     Events Include:
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

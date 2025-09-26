@@ -7,7 +7,7 @@ const Team = () => {
       <section className="bg-gradient-hero min-h-[86vh] flex items-center">
         <div className="container-w5 w-full">
           <div className="max-w-4xl">
-            <h1 className="text-8xl md:text-9xl lg:text-10xl font-apple-garamond font-normal text-on-gradient leading-tight mb-8">
+            <h1 className="text-7xl md:text-9xl lg:text-10xl font-apple-garamond font-normal text-on-gradient leading-tight mb-8">
               Our Team
             </h1>
             <p className="text-xl md:text-2xl font-helvetica text-white font-normal max-w-4xl">

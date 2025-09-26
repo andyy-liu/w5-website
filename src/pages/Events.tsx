@@ -20,7 +20,7 @@ const Events = () => {
       <section className="bg-gradient-hero min-h-[86vh] flex items-center">
         <div className="container-w5 w-full">
           <div className="max-w-5xl">
-            <h1 className="text-8xl md:text-10xl lg:text-10xl font-apple-garamond font-normal text-on-gradient mb-8">
+            <h1 className="text-7xl md:text-9xl lg:text-10xl font-apple-garamond font-normal text-on-gradient mb-8">
               Our Events
             </h1>
             <p className="text-xl md:text-2xl font-helvetica text-white text-on-gradient/90 max-w-6xl">
