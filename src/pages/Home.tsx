@@ -56,20 +56,37 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Sponsors Section */}
-      <section className="bg-white py-12">
-        <div className="container-w5">
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-            {sponsors.map((sponsor, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0"
-              >
-                <span className="text-base md:text-lg font-medium text-on-light whitespace-nowrap">
-                  {sponsor}
-                </span>
-              </div>
-            ))}
+      {/* Sponsors Logo Scrolling Section */}
+      <section className="bg-white py-8">
+        <div className="overflow-hidden w-full group/sponsors-scroll">
+          <div className="relative w-full h-24">
+            <div
+              className="absolute flex animate-scroll-sponsors"
+              style={{ minWidth: "200%", height: "96px" }}
+            >
+              <img
+                src="/sponsors.png"
+                alt="Sponsors"
+                style={{
+                  height: "96px",
+                  width: "auto",
+                  minWidth: "min-content",
+                  objectFit: "contain",
+                  display: "block",
+                }}
+              />
+              <img
+                src="/sponsors.png"
+                alt="Sponsors"
+                style={{
+                  height: "96px",
+                  width: "auto",
+                  minWidth: "min-content",
+                  objectFit: "contain",
+                  display: "block",
+                }}
+              />
+            </div>
           </div>
         </div>
       </section>
