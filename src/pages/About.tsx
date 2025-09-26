@@ -4,100 +4,112 @@ const About = () => {
   const portfolios = [
     {
       title: "ACCELERATOR",
-      description: "The Accelerator portfolio is built for students who are passionate about entrepreneurship and want to be at the forefront of helping new ideas grow into real startups. Accelerator runs high-impact, hands-on events and programs that lower the barrier to building or working in startups.",
-      events: ["Event Name", "Event Name", "Event Name"]
+      description:
+        "The Accelerator portfolio is built for students who are passionate about entrepreneurship and want to be at the forefront of helping new ideas grow into real startups. Accelerator runs high-impact, hands-on events and programs that lower the barrier to building or working in startups. We focus on developing execution skills—across product, marketing, data, and development—through mentorship and community, even before you have an idea in place.",
+      events: ["Innovation Sprint", "Accelerator Program", "Event Name"],
     },
     {
-      title: "ACCELERATOR",
-      description: "The Accelerator portfolio is built for students who are passionate about entrepreneurship and want to be at the forefront of helping new ideas grow into real startups. Accelerator runs high-impact, hands-on events and programs that lower the barrier to building or working in startups.",
-      events: ["Event Name", "Event Name", "Event Name"]
+      title: "CATALYST",
+      description:
+        "Catalyst is the operations engine of W5. This portfolio manages everything behind the scenes—from financial planning and grant writing to venue booking and logistics. It’s ideal for detail-oriented students who enjoy structure, organization, and having a direct hand in making events possible. Catalyst also plans a major cross-club event and brand-new VC-focused competition.",
+      events: ["Alchemy", "VC Event", "Event Name"],
     },
     {
-      title: "ACCELERATOR",
-      description: "The Accelerator portfolio is built for students who are passionate about entrepreneurship and want to be at the forefront of helping new ideas grow into real startups. Accelerator runs high-impact, hands-on events and programs that lower the barrier to building or working in startups.",
-      events: ["Event Name", "Event Name", "Event Name"]
+      title: "COMMUNITY",
+      description:
+        "Community Leads are dedicated to cultivating community within W5. Unlike other portfolios that run specific external-facing programs, the Community Leads work under the Presidents and supports all teams to ensure that members feel connected and valued. The portfolio organizes initiatives that strengthen internal culture, bring general members into the fold, and enhance collaboration across W5.",
+      events: ["Summer Dinner", "Annual General Meeting", "Socials"],
     },
     {
-      title: "ACCELERATOR",
-      description: "The Accelerator portfolio is built for students who are passionate about entrepreneurship and want to be at the forefront of helping new ideas grow into real startups. Accelerator runs high-impact, hands-on events and programs that lower the barrier to building or working in startups.",
-      events: ["Event Name", "Event Name", "Event Name"]
+      title: "DEVELOPMENT",
+      description:
+        "The Development portfolio is the powerhouse behind W5’s biggest and most high-profile events. If you're someone who loves detailed planning, working with external partners, and seeing large-scale ideas come to life, this is where you’ll thrive. Development members gain experience in event execution, sponsorship outreach, and corporate relations—skills that are incredibly valuable in any business career.",
+      events: ["Summit Case Competition", "Toronto Firms Trip", "Designathon"],
     },
     {
-      title: "ACCELERATOR",
-      description: "The Accelerator portfolio is built for students who are passionate about entrepreneurship and want to be at the forefront of helping new ideas grow into real startups. Accelerator runs high-impact, hands-on events and programs that lower the barrier to building or working in startups.",
-      events: ["Event Name", "Event Name", "Event Name"]
+      title: "INNOVATION",
+      description:
+        "Innovation is where curiosity meets opportunity. Our portfolio is focused on making entrepreneurship accessible and fun by providing hands-on exposure to the startup world. Innovation creates and organizes events that aim to spark the entrepreneurial spirit within students who are curious and want to take the next step.",
+      events: ["On The Road", "Steve Jobs Night", "Internship Program"],
     },
     {
-      title: "ACCELERATOR",
-      description: "The Accelerator portfolio is built for students who are passionate about entrepreneurship and want to be at the forefront of helping new ideas grow into real startups. Accelerator runs high-impact, hands-on events and programs that lower the barrier to building or working in startups.",
-      events: ["Event Name", "Event Name", "Event Name"]
-    }
+      title: "MARKETING",
+      description:
+        "Marketing is the creative voice of W5. This portfolio brings our events, initiatives, and identity to life through engaging visuals, strong branding, and creative storytelling. You’ll work on everything from Instagram posts and promo videos to full event packages. Marketing members collaborate with every portfolio to promote events and grow W5’s presence.",
+      events: ["Figma Workshop", "Designathon", "Marketing Bootcamp"],
+    },
   ];
 
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-hero py-32">
-        <div className="container-w5">
-          <div className="max-w-4xl">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-serif font-bold text-on-gradient leading-tight mb-8">
+      <section className="bg-gradient-hero min-h-[86vh] flex items-center">
+        <div className="container-w5 w-full">
+          <div className="max-w-5xl">
+            <h1 className="text-8xl md:text-9xl lg:text-10xl font-apple-garamond font-normal text-on-gradient leading-tight mb-8">
               About Us
             </h1>
-            <p className="text-xl md:text-2xl text-on-gradient/90 max-w-3xl">
-              W5 is Western's largest entrepreneurial community — a launchpad for students who want 
-              to build, create, and explore bold ideas. Through immersive events, real world startup 
-              exposure.
+            <p className="text-xl md:text-2xl font-helvetica text-white max-w-5xl">
+              W5 is Western's largest entrepreneurial community — a launchpad
+              for students who want to build, create, and explore bold ideas.
+              Through immersive events, real world startup exposure.
             </p>
           </div>
         </div>
       </section>
 
       {/* History Section */}
-      <section className="bg-white py-24">
+      <section className="bg-primary-light/90 py-24">
         <div className="container-w5">
-          <div className="max-w-4xl">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-on-light mb-8">
+          <div className="max-w-6xl">
+            <h2 className="text-5xl md:text-6xl font-apple-garamond font-normal text-on-light mb-8">
               History
             </h2>
-            <p className="text-lg text-on-light leading-relaxed">
-              W5 was founded in 2016 by Braden Ream, Zach Friedman and Kirill Kokokrev, with the goal 
-              of giving idea-stage student entrepreneurs the mentorship, accountability, and resources 
-              they couldn't find elsewhere on campus. What began as a three-person pilot project is 
-              now Western's fastest growing organization with over 2000 student entrepreneurs, alumni, and 
-              mentors.
+            <p className="text-xl text-on-light font-helvetica leading-relaxed">
+              W5 was founded in 2016 by Braden Ream, Zach Friedman and Kirill
+              Kokokrev, with the goal of giving idea-stage student entrepreneurs
+              the mentorship, accountability, and resources they couldn't find
+              elsewhere on campus. What began as a three-person pilot project is
+              now Western's fastest growing organization with over 2000 student
+              entrepreneurs, alumni, and mentors.
             </p>
           </div>
         </div>
       </section>
 
       {/* Portfolios Section */}
-      <section className="bg-white pb-24">
+      <section className="bg-primary-light/90 pb-24">
         <div className="container-w5">
-          <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-on-light">
+          <div className="mb-12">
+            <h2 className="text-5xl md:text-6xl font-apple-garamond font-normal text-on-light">
               Portfolios
             </h2>
           </div>
 
           <div className="space-y-24">
             {portfolios.map((portfolio, index) => (
-              <div key={index} className="space-y-8">
+              <div
+                key={index}
+                className="space-y-8"
+              >
                 <div>
-                  <h3 className="text-xl font-bold text-on-light mb-4">
+                  <h3 className="text-2xl font-helvetica font-bold text-on-light mb-4">
                     {portfolio.title}
                   </h3>
-                  <p className="text-lg text-on-light leading-relaxed max-w-4xl">
+                  <p className="text-xl text-on-light font-helvetica leading-relaxed max-w-6xl">
                     {portfolio.description}
                   </p>
                 </div>
-                
+
                 <div>
-                  <p className="text-lg text-on-light mb-6">Events Include:</p>
+                  <p className="text-xl font-helvetica text-on-light mb-6">
+                    Events Include:
+                  </p>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {portfolio.events.map((event, eventIndex) => (
                       <div
                         key={eventIndex}
-                        className="bg-primary/10 rounded-[var(--radius)] h-48 flex items-end p-6"
+                        className="bg-slate-300 rounded-[var(--radius)] h-48 flex items-end p-6"
                       >
                         <span className="text-xl font-medium text-on-light">
                           {event}
