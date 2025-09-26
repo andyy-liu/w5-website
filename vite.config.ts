@@ -9,7 +9,6 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   plugins: [react()].filter(Boolean),
-  base: 'https://andyy-liu.github.io/w5-website/', 
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
