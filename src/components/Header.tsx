@@ -34,7 +34,7 @@ const Header = ({
 
   const headerBg =
     variant === "landing"
-      ? "bg-primary-deep/30 backdrop-blur-md border-b border-white/5"
+      ? "bg-primary-deep/25 backdrop-blur-md"
       : "bg-white/80 backdrop-blur-md border-b border-black/10";
   const textColor = variant === "landing" ? "text-white" : "text-black";
 

@@ -161,7 +161,18 @@ const Home = () => {
             >
               <div className="flex items-start space-x-4">
                 <div className="bg-gray-200 rounded-lg aspect-square w-28 flex items-center justify-center flex-shrink-0">
-                  <span className="text-4xl">🏃</span>
+                  <span className="text-4xl flex items-center justify-center">
+                    <img
+                      src="/accelerator.svg"
+                      alt="Accelerator"
+                      style={{
+                        filter: "brightness(2)",
+                        width: "1.25em",
+                        height: "1.25em",
+                        display: "block",
+                      }}
+                    />
+                  </span>
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl md:text-2xl font-helvetica font-normal tracking-tighter text-on-light">
@@ -182,7 +193,18 @@ const Home = () => {
             >
               <div className="flex items-start space-x-4">
                 <div className="bg-gray-200 rounded-lg aspect-square w-28 flex items-center justify-center flex-shrink-0">
-                  <span className="text-4xl">⚡</span>
+                  <span className="text-4xl flex items-center justify-center">
+                    <img
+                      src="/catalyst.svg"
+                      alt="Catalyst"
+                      style={{
+                        filter: "brightness(2)",
+                        width: "1.25em",
+                        height: "1.25em",
+                        display: "block",
+                      }}
+                    />
+                  </span>
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl md:text-2xl font-helvetica font-normal tracking-tighter text-on-light ">
@@ -203,7 +225,18 @@ const Home = () => {
             >
               <div className="flex items-start space-x-4">
                 <div className="bg-gray-200 rounded-lg aspect-square w-28 flex items-center justify-center flex-shrink-0">
-                  <span className="text-4xl">👥</span>
+                  <span className="text-4xl flex items-center justify-center">
+                    <img
+                      src="/community.svg"
+                      alt="Community"
+                      style={{
+                        filter: "brightness(2)",
+                        width: "1.25em",
+                        height: "1.25em",
+                        display: "block",
+                      }}
+                    />
+                  </span>
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl md:text-2xl font-helvetica font-normal tracking-tighter text-on-light ">
@@ -224,7 +257,18 @@ const Home = () => {
             >
               <div className="flex items-start space-x-4">
                 <div className="bg-gray-200 rounded-lg aspect-square w-28 flex items-center justify-center flex-shrink-0">
-                  <span className="text-4xl">⚙️</span>
+                  <span className="text-4xl flex items-center justify-center">
+                    <img
+                      src="/development.svg"
+                      alt="Development"
+                      style={{
+                        filter: "brightness(2)",
+                        width: "1.1em",
+                        height: "1.1em",
+                        display: "block",
+                      }}
+                    />
+                  </span>
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl md:text-2xl font-helvetica font-normal tracking-tighter text-on-light ">
@@ -245,7 +289,18 @@ const Home = () => {
             >
               <div className="flex items-start space-x-4">
                 <div className="bg-gray-200 rounded-lg aspect-square w-28 flex items-center justify-center flex-shrink-0">
-                  <span className="text-4xl">💡</span>
+                  <span className="text-4xl flex items-center justify-center">
+                    <img
+                      src="/innovation.svg"
+                      alt="Innovation"
+                      style={{
+                        filter: "brightness(2)",
+                        width: "1.25em",
+                        height: "1.25em",
+                        display: "block",
+                      }}
+                    />
+                  </span>
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl md:text-2xl font-helvetica font-normal tracking-tighter text-on-light ">
@@ -266,7 +321,18 @@ const Home = () => {
             >
               <div className="flex items-start space-x-4">
                 <div className="bg-gray-200 rounded-lg aspect-square w-28 flex items-center justify-center flex-shrink-0">
-                  <span className="text-4xl">🎯</span>
+                  <span className="text-4xl flex items-center justify-center">
+                    <img
+                      src="/marketing.svg"
+                      alt="Marketing"
+                      style={{
+                        filter: "brightness(2)",
+                        width: "1.25em",
+                        height: "1.25em",
+                        display: "block",
+                      }}
+                    />
+                  </span>
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl md:text-2xl  font-helvetica font-normal tracking-tighter text-on-light ">

@@ -85,13 +85,13 @@ const Events = () => {
       </section>
 
       {/* Upcoming Events Section */}
-      <section className="bg-white">
+      <section className="bg-white pb-24">
         <div className="container-w5">
           <div className="space-y-8">
             {upcomingEvents.map((event, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 flex items-start space-x-6"
+                className="bg-white rounded-lg cursor-pointer shadow-sm border border-gray-200 p-6 flex items-start space-x-6 transition-all duration-300 ease-out hover:scale-102 hover:-translate-y-1 hover:shadow-xl"
               >
                 {/* Image placeholder */}
                 <div className="bg-gray-100 w-32 h-32 flex items-center justify-center flex-shrink-0">
