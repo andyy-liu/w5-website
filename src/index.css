@@ -165,6 +165,8 @@
   }
 }
 
+@utility scrollbar-hidden {  &::-webkit-scrollbar {    display: none;  }}
+
 @layer base {
   * {
     @apply border-border;
@@ -190,6 +192,12 @@
   
   .font-sans {
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+  }
+  
+  /* Firefox scrollbar styles */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(120, 120, 120, 0.4) transparent;
   }
 }
 
@@ -274,3 +282,4 @@
     color: #553ECC;
   }
 }
+

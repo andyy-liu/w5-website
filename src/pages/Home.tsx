@@ -1,5 +1,4 @@
 import Layout from "../components/Layout";
-import PortfolioCard from "../components/PortfolioCard";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserRound, Rocket } from "lucide-react";
@@ -33,8 +32,6 @@ const Home = () => {
   ];
 
   const navigate = useNavigate();
-
-  const toSlug = (name: string) => name.toLowerCase().replace(/\s+/g, "-");
 
   return (
     <Layout variant="landing">

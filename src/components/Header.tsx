@@ -94,12 +94,7 @@ const Header = ({
               </SheetTrigger>
               <SheetContent
                 side="bottom"
-                className={clsx(
-                  "backdrop-blur supports-[backdrop-filter]:bg-primary-light/80 max-h-[85vh] overflow-y-auto rounded-t-[var(--radius)]",
-                  variant === "landing"
-                    ? "bg-white/90 border-t border-primary-light/30"
-                    : "bg-primary-light/90"
-                )}
+                className="backdrop-blur supports-[backdrop-filter]:bg-primary-light/90 max-h-[85vh] overflow-y-auto rounded-t-[var(--radius)]"
               >
                 <div className="mt-10 space-y-6">
                   {navItems.map((item) => (
@@ -110,8 +105,7 @@ const Header = ({
                       <Link
                         to={item.path}
                         className={clsx(
-                          "block px-2 font-helvetica text-xl",
-                          textColor,
+                          "block px-2 font-helvetica text-xl text-black",
                           isActive(item.path)
                             ? "text-foreground"
                             : "text-foreground/80 hover:text-foreground"
@@ -124,12 +118,7 @@ const Header = ({
 
                   <div className="pt-4">
                     <SheetClose asChild>
-                      <button
-                        className={clsx(
-                          "w-full font-helvetica btn-w5-primary",
-                          textColor
-                        )}
-                      >
+                      <button className="w-full font-helvetica btn-w5-primary text-white">
                         Get Involved
                       </button>
                     </SheetClose>

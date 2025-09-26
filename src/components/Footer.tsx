@@ -2,7 +2,7 @@ import { Instagram, Linkedin, Link } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#00000A] border-t border-white/10">
+    <footer className="bg-[#00000A]">
       <div className="container-w5 py-12">
         <div className="flex flex-col items-center justify-center space-y-8">
           {/* Social Links */}
