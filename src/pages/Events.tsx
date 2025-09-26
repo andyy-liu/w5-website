@@ -3,51 +3,122 @@ import EventCard from "../components/EventCard";
 
 const Events = () => {
   const upcomingEvents = [
-    "Annual General Meeting",
-    "VP Coffee Chats",
-    "Summit Case Competition",
-    "Fail Factor",
-    "Careers Panel",
-    "Innovation Sprint",
-    "Internship Program",
-    "Accelerator Program",
-    "Designathon",
+    {
+      title: "Annual General Meeting",
+      date: "Month ##-##, 202#",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      register: "https://example.com/register-agm",
+    },
+    {
+      title: "VP Coffee Chats",
+      date: "Month ##-##, 202#",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      register: "https://example.com/register-coffee",
+    },
+    {
+      title: "Summit Case Competition",
+      date: "October 1-2, 2025",
+      description:
+        "Gain valuable case competition experience, network with sponsor representatives, and work on creating solutions to real world business problems",
+      register: "https://example.com/register-summit",
+    },
+    {
+      title: "Steve Jobs Night",
+      date: "Month ##-##, 202#",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      register: "https://example.com/register-steve-jobs",
+    },
+    {
+      title: "Careers Panel",
+      date: "Month ##-##, 202#",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      register: "https://example.com/register-careers",
+    },
+    {
+      title: "Innovation Sprint",
+      date: "Month ##-##, 202#",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      register: "https://example.com/register-sprint",
+    },
+    {
+      title: "Internship Program",
+      date: "Month ##-##, 202#",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      register: "https://example.com/register-internship",
+    },
+    {
+      title: "Accelerator Program",
+      date: "Month ##-##, 202#",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      register: "https://example.com/register-accelerator",
+    },
+    {
+      title: "Designathon",
+      date: "Month ##-##, 202#",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      register: "https://example.com/register-designathon",
+    },
   ];
 
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-hero min-h-[86vh] flex items-center">
+      <section className="bg-white min-h-[35vh] mt-16 flex items-center">
         <div className="container-w5 w-full">
           <div className="max-w-5xl">
-            <h1 className="text-7xl md:text-9xl lg:text-10xl font-apple-garamond font-normal text-on-gradient mb-8">
-              Our Events
+            <h1 className="text-7xl md:text-9xl lg:text-10xl font-apple-garamond font-normal text-black">
+              Events
             </h1>
-            <p className="text-xl md:text-2xl font-helvetica text-white text-on-gradient/90 max-w-6xl">
-              W5 is Western's largest entrepreneurial community — a launchpad
-              for students who want to build, create, and explore bold ideas.
-              Through immersive events, real-world startup exposure.
+            <p className="text-xl md:text-2xl font-helvetica text-black tracking-tight max-w-6xl">
+              Always announced on our Instagram, @w5uwo.
             </p>
           </div>
         </div>
       </section>
 
       {/* Upcoming Events Section */}
-      <section className="bg-primary-light/90 py-24">
+      <section className="bg-white">
         <div className="container-w5">
-          <div className="mb-16">
-            <h2 className="text-5xl md:text-6xl font-apple-garamond font-normal text-on-light mb-8">
-              Upcoming Events
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {upcomingEvents.map((event, index) => (
-              <EventCard
-                key={index}
-                title={event}
-                onClick={() => console.log(`Clicked on ${event}`)}
-              />
+          <div className="space-y-8">
+            {upcomingEvents.map((event, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 flex items-start space-x-6"
+              >
+                {/* Image placeholder */}
+                <div className="bg-gray-100 w-32 h-32 flex items-center justify-center flex-shrink-0">
+                  <span className="text-sm text-gray-500">Image</span>
+                </div>
+                {/* Event details */}
+                <div className="flex-1">
+                  <div className="text-md font-helvetica text-gray-700 tracking-tight font-medium">
+                    {event.date}
+                  </div>
+                  <div className="text-3xl font-helvetica font-medium tracking-tight text-black mb-1">
+                    {event.title}
+                  </div>
+                  <div className="text-md font-helvetica text-gray-500 tracking-snug mb-2">
+                    {event.description}
+                  </div>
+                  <a
+                    href={event.register}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button className="px-4 py-1 rounded bg-gray-100 border border-black text-sm tracking-tight font-helvetica text-gray-800 hover:bg-gray-200 transition">
+                      Register
+                    </button>
+                  </a>
+                </div>
+              </div>
             ))}
           </div>
         </div>

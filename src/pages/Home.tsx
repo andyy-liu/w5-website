@@ -37,7 +37,7 @@ const Home = () => {
   const toSlug = (name: string) => name.toLowerCase().replace(/\s+/g, "-");
 
   return (
-    <Layout>
+    <Layout variant="landing">
       {/* Hero Section */}
       <section className="bg-gradient-hero min-h-[86vh] flex items-center">
         <div className="container-w5 w-full">
