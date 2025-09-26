@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
 import PortfolioCard from "../components/PortfolioCard";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const sponsors = [
@@ -29,6 +30,10 @@ const Home = () => {
     "Innovation",
     "Marketing",
   ];
+
+  const navigate = useNavigate();
+
+  const toSlug = (name: string) => name.toLowerCase().replace(/\s+/g, "-");
 
   return (
     <Layout>
@@ -124,7 +129,10 @@ const Home = () => {
                 title={p}
                 variant={activePortfolio === p ? "primary" : "secondary"}
                 onMouseEnter={() => setActivePortfolio(p)}
-                onClick={() => setActivePortfolio(p)}
+                onClick={() => {
+                  setActivePortfolio(p);
+                  navigate(`/about?section=${toSlug(p)}`);
+                }}
               />
             ))}
           </div>

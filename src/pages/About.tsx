@@ -1,4 +1,6 @@
 import Layout from "../components/Layout";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const About = () => {
   const portfolios = [
@@ -39,6 +41,24 @@ const About = () => {
       events: ["Figma Workshop", "Designathon", "Marketing Bootcamp"],
     },
   ];
+
+  const location = useLocation();
+
+  const toSlug = (name: string) => name.toLowerCase().replace(/\s+/g, "-");
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const section = params.get("section");
+    if (section) {
+      // Wait for paint, then scroll
+      requestAnimationFrame(() => {
+        const el = document.getElementById(section);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    }
+  }, [location.search]);
 
   return (
     <Layout>
@@ -90,7 +110,8 @@ const About = () => {
             {portfolios.map((portfolio, index) => (
               <div
                 key={index}
-                className="space-y-8"
+                id={toSlug(portfolio.title)}
+                className="space-y-8 scroll-mt-28"
               >
                 <div>
                   <h3 className="text-2xl font-helvetica font-bold text-on-light mb-4">

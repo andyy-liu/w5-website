@@ -22,7 +22,7 @@ const Footer = () => {
               <Linkedin className="w-8 h-auto" />
             </a>
             <a
-              href="#"
+              href="https://linktr.ee/w5uwo"
               className="text-on-gradient hover:text-primary-pink transition-colors duration-200"
               aria-label="Link"
             >
