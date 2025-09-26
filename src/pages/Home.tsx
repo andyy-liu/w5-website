@@ -2,6 +2,7 @@ import Layout from "../components/Layout";
 import PortfolioCard from "../components/PortfolioCard";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { UserRound, Rocket } from "lucide-react";
 
 const Home = () => {
   const sponsors = [
@@ -56,7 +57,7 @@ const Home = () => {
       </section>
 
       {/* Sponsors Section */}
-      <section className="bg-primary-light/90 py-12">
+      <section className="bg-white py-12">
         <div className="container-w5">
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
             {sponsors.map((sponsor, index) => (
@@ -74,73 +75,200 @@ const Home = () => {
       </section>
 
       {/* What is W5 Section */}
-      <section className="bg-primary-light/90 py-24">
+      <section className="bg-white py-28">
         <div className="container-w5">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-5xl md:text-6xl font-apple-garamond font-600 text-on-light mb-8">
+          <div className="max-w-5xl">
+            <div className="inline-flex items-center px-2 py-2 border-round mb-4">
+              <span className="text-sm md:text-md font-helvetica text-border mr-2">
+                <UserRound size={16} />
+              </span>
+              <span className="text-sm md:text-md font-helvetica text-border">
                 What is W5?
-              </h2>
-              <p className="font-helvetica text-lg md:text-xl text-on-light leading-relaxed">
-                W5 is Western's largest entrepreneurial community — a launchpad
-                for students who want to build, create, and explore bold ideas.
-                Through immersive events, real-world startup exposure, and a
-                tight-knit peer network, we're here to help students turn
-                curiosity into action.
-              </p>
+              </span>
             </div>
-            <div className="bg-gray-300 rounded-[var(--radius)] h-64 lg:h-80"></div>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-apple-garamond font-normal text-on-light mb-2">
+              A launchpad for students who want to{" "}
+              <em className="italic">build, create,</em> and{" "}
+              <em className="italic">explore</em> bold ideas.
+            </h2>
+            <p className="font-helvetica text-md md:text-xl text-on-light leading-relaxed tracking-tight max-w-3xl">
+              Through immersive events, real-world startup exposure, and a
+              tight-knit peer network, we're here to help students turn
+              curiosity into action.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Mission Section */}
-      <section className="bg-primary-light/90 py-16 md:py-24">
+      <section className="bg-white py-16 md:py-28">
         <div className="container-w5">
-          <div className="bg-muted rounded-[var(--radius)] p-8 md:p-16 lg:p-24">
-            <div className="text-center mx-auto max-w-5xl">
-              <p className="md:text-2xl font-helvetica text-on-light mb-4 md:mb-6 tracking-wide">
+          <div className="text-center mx-auto max-w-4xl">
+            <div className="inline-flex items-center border-round px-2 py-2 mb-2">
+              <span className="text-sm md:text-md font-helvetica text-border mr-2">
+                <Rocket size={16} />
+              </span>
+              <span className="text-sm md:text-md font-helvetica text-border">
                 Our Mission
-              </p>
-              <h2 className="font-apple-garamond font-normal text-on-light leading-tight text-4xl sm:text-5xl md:text-7xl lg:text-8xl break-normal mx-auto">
-                To make entrepreneurship accessible to everyone.
-              </h2>
+              </span>
             </div>
+            <h2 className="font-apple-garamond font-normal text-on-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl break-normal mx-auto">
+              To make entrepreneurship accessible for{" "}
+              <em className="italic">everyone.</em>
+            </h2>
           </div>
         </div>
       </section>
 
       {/* Portfolios Section */}
-      <section className="bg-primary-light/90 py-24">
+      <section className="bg-white py-24">
         <div className="container-w5">
-          <div className="mb-16">
-            <h2 className="text-5xl font-apple-garamond md:text-6xl font-normal text-on-light mb-4">
-              Our Portfolios
-            </h2>
-            <p className="text-xl text-on-light">
-              Want to know what each of W5's portfolios does blah blah blah?
+          <div className="mb-4">
+            <div className="inline-flex items-center border-round mb-2">
+              <span className="text-sm md:text-md font-helvetica text-border mr-2">
+                📁
+              </span>
+              <span className="text-sm md:text-md font-helvetica text-border">
+                Portfolios
+              </span>
+            </div>
+            <p className="text-md md:text-xl font-helvetica tracking-tight max-w-2xl">
+              W5 functions through 6 portfolios.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {portfolios.map((p) => (
-              <PortfolioCard
-                key={p}
-                title={p}
-                variant={activePortfolio === p ? "primary" : "secondary"}
-                onMouseEnter={() => setActivePortfolio(p)}
-                onClick={() => {
-                  setActivePortfolio(p);
-                  navigate(`/about?section=${toSlug(p)}`);
-                }}
-              />
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              className="bg-white rounded-lg hover:bg-gray-50 transition-colors cursor-pointer"
+              onClick={() => navigate(`/about?section=accelerator`)}
+            >
+              <div className="flex items-start space-x-4">
+                <div className="bg-gray-200 rounded-lg aspect-square w-28 flex items-center justify-center flex-shrink-0">
+                  <span className="text-4xl">🏃</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl md:text-2xl font-helvetica font-normal tracking-tighter text-on-light">
+                    Accelerator
+                  </h3>
+                  <p className="text-sm font-helvetica text-gray-600 leading-snug">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="bg-white rounded-lg  hover:bg-gray-50 transition-colors cursor-pointer"
+              onClick={() => navigate(`/about?section=catalyst`)}
+            >
+              <div className="flex items-start space-x-4">
+                <div className="bg-gray-200 rounded-lg aspect-square w-28 flex items-center justify-center flex-shrink-0">
+                  <span className="text-4xl">⚡</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl md:text-2xl font-helvetica font-normal tracking-tighter text-on-light ">
+                    Catalyst
+                  </h3>
+                  <p className="text-sm font-helvetica text-gray-600 leading-snug">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="bg-white rounded-lg  hover:bg-gray-50 transition-colors cursor-pointer"
+              onClick={() => navigate(`/about?section=community`)}
+            >
+              <div className="flex items-start space-x-4">
+                <div className="bg-gray-200 rounded-lg aspect-square w-28 flex items-center justify-center flex-shrink-0">
+                  <span className="text-4xl">👥</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl md:text-2xl font-helvetica font-normal tracking-tighter text-on-light ">
+                    Community
+                  </h3>
+                  <p className="text-sm font-helvetica text-gray-600 leading-snug">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="bg-white rounded-lg  hover:bg-gray-50 transition-colors cursor-pointer"
+              onClick={() => navigate(`/about?section=development`)}
+            >
+              <div className="flex items-start space-x-4">
+                <div className="bg-gray-200 rounded-lg aspect-square w-28 flex items-center justify-center flex-shrink-0">
+                  <span className="text-4xl">⚙️</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl md:text-2xl font-helvetica font-normal tracking-tighter text-on-light ">
+                    Development
+                  </h3>
+                  <p className="text-sm font-helvetica text-gray-600 leading-snug">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="bg-white rounded-lg  hover:bg-gray-50 transition-colors cursor-pointer"
+              onClick={() => navigate(`/about?section=innovation`)}
+            >
+              <div className="flex items-start space-x-4">
+                <div className="bg-gray-200 rounded-lg aspect-square w-28 flex items-center justify-center flex-shrink-0">
+                  <span className="text-4xl">💡</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl md:text-2xl font-helvetica font-normal tracking-tighter text-on-light ">
+                    Innovation
+                  </h3>
+                  <p className="text-sm font-helvetica text-on-light/30 leading-snug">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="bg-white rounded-lg  hover:bg-gray-50 transition-colors cursor-pointer"
+              onClick={() => navigate(`/about?section=marketing`)}
+            >
+              <div className="flex items-start space-x-4">
+                <div className="bg-gray-200 rounded-lg aspect-square w-28 flex items-center justify-center flex-shrink-0">
+                  <span className="text-4xl">🎯</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl md:text-2xl  font-helvetica font-normal tracking-tighter text-on-light ">
+                    Marketing
+                  </h3>
+                  <p className="text-sm font-helvetica text-gray-600 leading-snug">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Bottom Section with placeholders */}
-      <section className="bg-primary-light/90 py-24">
+      <section className="bg-white py-24">
         <div className="container-w5">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-gray-300 rounded-[var(--radius)] h-64"></div>
