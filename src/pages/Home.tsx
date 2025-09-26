@@ -37,7 +37,7 @@ const Home = () => {
         <div className="container-w5 w-full">
           <div className="flex justify-start">
             <div className="max-w-4xl">
-              <h1 className="text-8xl md:text-9xl lg:text-10xl font-apple-garamond font-normal text-on-gradient mb-8">
+              <h1 className="text-7xl md:text-9xl lg:text-10xl font-apple-garamond font-normal text-on-gradient mb-8">
                 A Startup
                 <br />
                 for Startups.
@@ -76,7 +76,7 @@ const Home = () => {
               <h2 className="text-5xl md:text-6xl font-apple-garamond font-600 text-on-light mb-8">
                 What is W5?
               </h2>
-              <p className="font-helvetica text-xl text-on-light leading-relaxed">
+              <p className="font-helvetica text-lg md:text-xl text-on-light leading-relaxed">
                 W5 is Western's largest entrepreneurial community — a launchpad
                 for students who want to build, create, and explore bold ideas.
                 Through immersive events, real-world startup exposure, and a
@@ -90,14 +90,14 @@ const Home = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="bg-primary-light/90 py-24">
+      <section className="bg-primary-light/90 py-16 md:py-24">
         <div className="container-w5">
-          <div className="bg-muted rounded-[var(--radius)] p-16 md:p-20 lg:p-24">
-            <div className="text-center max-w-8xl mx-auto">
-              <p className="text-2xl font-helvetica text-on-light mb-6">
+          <div className="bg-muted rounded-[var(--radius)] p-8 md:p-16 lg:p-24">
+            <div className="text-center mx-auto max-w-5xl">
+              <p className="md:text-2xl font-helvetica text-on-light mb-4 md:mb-6 tracking-wide">
                 Our Mission
               </p>
-              <h2 className="text-5xl md:text-7xl lg:text-8xl font-apple-garamond font-normal text-on-light leading-tight">
+              <h2 className="font-apple-garamond font-normal text-on-light leading-tight text-4xl sm:text-5xl md:text-7xl lg:text-8xl break-normal mx-auto">
                 To make entrepreneurship accessible to everyone.
               </h2>
             </div>
