@@ -4,7 +4,7 @@ import EventCard from "../components/EventCard";
 const Events = () => {
   const upcomingEvents = [
     {
-      title: "Annual General Meeting",
+      title: "Annual General Meeting", // adding the portfolios beside them in like a coloured pill would be cool
       date: "September 13, 2025",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",

@@ -2,21 +2,37 @@ import Layout from "../components/Layout";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserRound, Rocket } from "lucide-react";
+import EventCarousel from "../components/EventCarousel";
 
 const Home = () => {
-  const sponsors = [
-    "Deloitte",
-    "RBC",
-    "TD",
-    "KPMG",
-    "BDO",
-    "BMO",
-    "PwC",
-    "BCG",
-    "Accenture",
-    "Amazon",
-    "Uber",
-    "Adobe",
+  const upcomingEvents = [
+    {
+      id: "summit",
+      title: "Summit",
+      date: "Month DD-DD, 202#",
+      category: "Case Competition",
+      image:
+        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop",
+      badgeColor: "bg-[#5BA05B]/50",
+    },
+    {
+      id: "pitch-competition",
+      title: "Pitch Competition",
+      date: "Month DD-DD, 202#",
+      category: "DEVELOPMENT",
+      image:
+        "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1770&auto=format&fit=crop",
+      badgeColor: "bg-[#5BA05B]/50",
+    },
+    {
+      id: "western-social",
+      title: "Western Social",
+      date: "Month DD-DD, 202#",
+      category: "Competition",
+      image:
+        "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?q=80&w=1974&auto=format&fit=crop",
+      badgeColor: "bg-[#5BA05B]/50",
+    },
   ];
 
   // Track which portfolio is currently active (shows primary variant)
@@ -154,7 +170,7 @@ const Home = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div
-                className="bg-white rounded-lg hover:bg-gray-50 transition-colors cursor-pointer"
+                className="bg-white rounded-lg  transition duration-300 transform hover:translate-y-[-4px] cursor-pointer"
                 onClick={() => navigate(`/about?section=accelerator`)}
               >
                 <div className="flex items-start space-x-4">
@@ -163,6 +179,7 @@ const Home = () => {
                       <img
                         src="/accelerator.svg"
                         alt="Accelerator"
+                        className="transition-transform duration-300 group-hover:scale-110"
                         style={{
                           filter: "brightness(2)",
                           width: "1.25em",
@@ -186,7 +203,7 @@ const Home = () => {
               </div>
 
               <div
-                className="bg-white rounded-lg  hover:bg-gray-50 transition-colors cursor-pointer"
+                className="bg-white rounded-lg transition duration-300 transform hover:translate-y-[-4px]   cursor-pointer"
                 onClick={() => navigate(`/about?section=catalyst`)}
               >
                 <div className="flex items-start space-x-4">
@@ -195,6 +212,7 @@ const Home = () => {
                       <img
                         src="/catalyst.svg"
                         alt="Catalyst"
+                        className="transition-transform duration-300 group-hover:scale-110"
                         style={{
                           filter: "brightness(2)",
                           width: "1.25em",
@@ -218,7 +236,7 @@ const Home = () => {
               </div>
 
               <div
-                className="bg-white rounded-lg  hover:bg-gray-50 transition-colors cursor-pointer"
+                className="bg-white rounded-lg  transition duration-300 transform hover:translate-y-[-4px]   cursor-pointer"
                 onClick={() => navigate(`/about?section=community`)}
               >
                 <div className="flex items-start space-x-4">
@@ -227,6 +245,7 @@ const Home = () => {
                       <img
                         src="/community.svg"
                         alt="Community"
+                        className="transition-transform duration-300 group-hover:scale-110"
                         style={{
                           filter: "brightness(2)",
                           width: "1.25em",
@@ -250,7 +269,7 @@ const Home = () => {
               </div>
 
               <div
-                className="bg-white rounded-lg  hover:bg-gray-50 transition-colors cursor-pointer"
+                className="bg-white rounded-lg  transition duration-300 transform hover:translate-y-[-4px]   cursor-pointer"
                 onClick={() => navigate(`/about?section=development`)}
               >
                 <div className="flex items-start space-x-4">
@@ -259,6 +278,7 @@ const Home = () => {
                       <img
                         src="/development.svg"
                         alt="Development"
+                        className="transition-transform duration-300 group-hover:scale-110"
                         style={{
                           filter: "brightness(2)",
                           width: "1.1em",
@@ -282,7 +302,7 @@ const Home = () => {
               </div>
 
               <div
-                className="bg-white rounded-lg  hover:bg-gray-50 transition-colors cursor-pointer"
+                className="bg-white rounded-lg  transition duration-300 transform hover:translate-y-[-4px]   cursor-pointer"
                 onClick={() => navigate(`/about?section=innovation`)}
               >
                 <div className="flex items-start space-x-4">
@@ -291,6 +311,7 @@ const Home = () => {
                       <img
                         src="/innovation.svg"
                         alt="Innovation"
+                        className="transition-transform duration-300 group-hover:scale-110"
                         style={{
                           filter: "brightness(2)",
                           width: "1.25em",
@@ -314,7 +335,7 @@ const Home = () => {
               </div>
 
               <div
-                className="bg-white rounded-lg  hover:bg-gray-50 transition-colors cursor-pointer"
+                className="bg-white rounded-lg  transition duration-300 transform hover:translate-y-[-4px]   cursor-pointer"
                 onClick={() => navigate(`/about?section=marketing`)}
               >
                 <div className="flex items-start space-x-4">
@@ -323,6 +344,7 @@ const Home = () => {
                       <img
                         src="/marketing.svg"
                         alt="Marketing"
+                        className="transition-transform duration-300 group-hover:scale-110"
                         style={{
                           filter: "brightness(2)",
                           width: "1.25em",
@@ -348,14 +370,20 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Bottom Section with placeholders */}
+        {/* Events Carousel Section */}
         <section className="bg-white py-24 relative rounded-b-[4rem]">
           <div className="container-w5">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-gray-300 rounded-[var(--radius)] h-64"></div>
-              <div className="bg-gray-300 rounded-[var(--radius)] h-64"></div>
-              <div className="bg-gray-300 rounded-[var(--radius)] h-64"></div>
+            <div className="flex justify-center mb-2">
+              <div className="inline-flex items-center border-round">
+                <span className="text-sm md:text-md font-helvetica text-border mr-2">
+                  📅
+                </span>
+                <span className="text-sm md:text-md font-helvetica text-border">
+                  Events
+                </span>
+              </div>
             </div>
+            <EventCarousel events={upcomingEvents} />
           </div>
         </section>
       </section>
