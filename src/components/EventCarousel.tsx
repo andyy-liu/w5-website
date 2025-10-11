@@ -9,6 +9,8 @@ interface Event {
   category: string;
   image: string;
   badgeColor?: string;
+  portfolio?: string;
+  portfolioColor?: string;
 }
 
 interface EventCarouselProps {
@@ -145,7 +147,7 @@ const EventCarousel = ({ events }: EventCarouselProps) => {
                   <div className="px-2 py-3 flex items-center justify-between">
                     <div>
                       <p className="text-sm font-helvetica text-gray-700 font-medium">
-                        Month DD-DD, 202#
+                        {event.date || "Month DD-DD, 202#"}
                       </p>
                       <div>
                         <span

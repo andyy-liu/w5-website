@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { UserRound, Rocket } from "lucide-react";
+import { UserRound, Rocket, Folder, Calendar } from "lucide-react";
 import EventCarousel from "../components/EventCarousel";
 
 const Home = () => {
@@ -157,7 +157,7 @@ const Home = () => {
             <div className="mb-4">
               <div className="inline-flex items-center border-round mb-2">
                 <span className="text-sm md:text-md font-helvetica text-border mr-2">
-                  📁
+                  <Folder size={16} />
                 </span>
                 <span className="text-sm md:text-md font-helvetica text-border">
                   Portfolios
@@ -194,9 +194,9 @@ const Home = () => {
                       Accelerator
                     </h3>
                     <p className="text-sm font-helvetica text-gray-600 leading-snug">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
+                      Accelerator is built for students who are passionate about
+                      entrepreneurship and want to be at the forefront of
+                      helping new ideas grow into real startups.
                     </p>
                   </div>
                 </div>
@@ -227,9 +227,9 @@ const Home = () => {
                       Catalyst
                     </h3>
                     <p className="text-sm font-helvetica text-gray-600 leading-snug">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
+                      Catalyst is the operations engine of W5, managing
+                      everything behind the scenes—from financial planning and
+                      grant writing to venue booking and logistics.
                     </p>
                   </div>
                 </div>
@@ -260,9 +260,9 @@ const Home = () => {
                       Community
                     </h3>
                     <p className="text-sm font-helvetica text-gray-600 leading-snug">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
+                      Community is the portfolio that unites W5. It focuses on
+                      creating an inclusive environment for both internal
+                      members and the broader student body.
                     </p>
                   </div>
                 </div>
@@ -293,9 +293,9 @@ const Home = () => {
                       Development
                     </h3>
                     <p className="text-sm font-helvetica text-gray-600 leading-snug">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
+                      The Development portfolio is the powerhouse behind W5’s
+                      most high-profile events, leading major projects and
+                      initiatives that make a real impact.
                     </p>
                   </div>
                 </div>
@@ -325,10 +325,10 @@ const Home = () => {
                     <h3 className="text-xl md:text-2xl font-helvetica font-normal tracking-tighter text-on-light ">
                       Innovation
                     </h3>
-                    <p className="text-sm font-helvetica text-on-light/30 leading-snug">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
+                    <p className="text-sm font-helvetica text-gray-600 leading-snug">
+                      Innovation is where curiosity meets opportunity;
+                      organizing events to cultivate the entrepreneurial spirit
+                      within students who want to take the next step.
                     </p>
                   </div>
                 </div>
@@ -359,9 +359,9 @@ const Home = () => {
                       Marketing
                     </h3>
                     <p className="text-sm font-helvetica text-gray-600 leading-snug">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
+                      Marketing is the creative voice of W5. It’s how people
+                      hear about us; through eye-catching visuals, clever
+                      branding, and engaging campaigns.
                     </p>
                   </div>
                 </div>
@@ -376,7 +376,7 @@ const Home = () => {
             <div className="flex justify-center mb-2">
               <div className="inline-flex items-center border-round">
                 <span className="text-sm md:text-md font-helvetica text-border mr-2">
-                  📅
+                  <Calendar size={16} />
                 </span>
                 <span className="text-sm md:text-md font-helvetica text-border">
                   Events

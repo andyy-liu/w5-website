@@ -74,9 +74,14 @@ const Header = ({
           </nav>
 
           {/* CTA Button */}
-          <button className="hidden md:inline-flex font-helvetica btn-w5-primary text-white">
+          <a
+            href="https://buy.stripe.com/dRm8wO4ZMcYAcjrdKTaAw00"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:inline-flex font-helvetica btn-w5-primary text-white"
+          >
             Get Involved
-          </button>
+          </a>
 
           {/* Mobile Menu */}
           <div className="md:hidden">
@@ -118,9 +123,14 @@ const Header = ({
 
                   <div className="pt-4">
                     <SheetClose asChild>
-                      <button className="w-full font-helvetica btn-w5-primary text-white">
+                      <a
+                        href="https://buy.stripe.com/dRm8wO4ZMcYAcjrdKTaAw00"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-full font-helvetica btn-w5-primary text-white text-center"
+                      >
                         Get Involved
-                      </button>
+                      </a>
                     </SheetClose>
                   </div>
                 </div>

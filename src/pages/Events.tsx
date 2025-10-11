@@ -4,18 +4,24 @@ import EventCard from "../components/EventCard";
 const Events = () => {
   const upcomingEvents = [
     {
-      title: "Annual General Meeting", // adding the portfolios beside them in like a coloured pill would be cool
+      title: "Annual General Meeting",
       date: "September 13, 2025",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-agm",
+      portfolio: "FULL TEAM",
+      portfolioColor: "#E6A6C7", // Black for full team events
+      isRegistrationOpen: false, // Event has passed
     },
     {
       title: "VP Coffee Chats",
-      date: "Month ##-##, 202#",
+      date: "September 15-19, 2025",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-coffee",
+      portfolio: "FULL TEAM",
+      portfolioColor: "#E6A6C7", // Community color
+      isRegistrationOpen: false, // Event has passed
     },
     {
       title: "Summit Case Competition",
@@ -23,6 +29,9 @@ const Events = () => {
       description:
         "Gain valuable case competition experience, network with sponsor representatives, and work on creating solutions to real world business problems",
       register: "https://example.com/register-summit",
+      portfolio: "DEVELOPMENT",
+      portfolioColor: "#5BA05B", // Development color
+      isRegistrationOpen: false, // Event has passed
     },
     {
       title: "Steve Jobs Night",
@@ -30,6 +39,9 @@ const Events = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-steve-jobs",
+      portfolio: "INNOVATION",
+      portfolioColor: "#5B9ED1", // Marketing color
+      isRegistrationOpen: true, // Today's event, registration still open
     },
     {
       title: "Careers Panel",
@@ -37,6 +49,9 @@ const Events = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-careers",
+      portfolio: "DEVELOPMENT",
+      portfolioColor: "#5BA05B", // Development color
+      isRegistrationOpen: true, // Upcoming event
     },
     {
       title: "Innovation Sprint",
@@ -44,6 +59,9 @@ const Events = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-sprint",
+      portfolio: "ACCELERATOR",
+      portfolioColor: "#D15B4B", // Innovation color
+      isRegistrationOpen: true, // Upcoming event
     },
     {
       title: "Internship Program",
@@ -51,6 +69,9 @@ const Events = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-internship",
+      portfolio: "INNOVATION",
+      portfolioColor: "#5B9ED1", // Development color
+      isRegistrationOpen: true, // Upcoming event
     },
     {
       title: "Accelerator Program",
@@ -58,6 +79,9 @@ const Events = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-accelerator",
+      portfolio: "Accelerator",
+      portfolioColor: "#D15B4B", // Accelerator color
+      isRegistrationOpen: false, // Not open yet
     },
     {
       title: "Designathon",
@@ -65,6 +89,9 @@ const Events = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-designathon",
+      portfolio: "MARKETING",
+      portfolioColor: "#6B5BD1", // Innovation color
+      isRegistrationOpen: false, // Not open yet
     },
     {
       title: "VC Case Competition",
@@ -72,6 +99,9 @@ const Events = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-designathon",
+      portfolio: "CATALYST",
+      portfolioColor: "#D7C16B", // Catalyst color
+      isRegistrationOpen: false, // Not open yet
     },
     {
       title: "Toronto Firms Trip",
@@ -79,6 +109,9 @@ const Events = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-designathon",
+      portfolio: "DEVELOPMENT",
+      portfolioColor: "#5BA05B", // Community color
+      isRegistrationOpen: false, // Not open yet
     },
     {
       title: "Pitch5",
@@ -86,6 +119,9 @@ const Events = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-designathon",
+      portfolio: "Accelerator",
+      portfolioColor: "#D15B4B", // Accelerator color
+      isRegistrationOpen: false, // Not open yet
     },
   ];
 
@@ -113,7 +149,7 @@ const Events = () => {
               {upcomingEvents.map((event, idx) => (
                 <div
                   key={idx}
-                  className="bg-white rounded-lg cursor-pointer shadow-sm border border-gray-200 p-6 flex items-start space-x-6 transition-all duration-300 ease-out hover:scale-102 hover:-translate-y-1 hover:shadow-xl"
+                  className="bg-white rounded-lg cursor-pointer shadow-sm border border-gray-200 p-6 flex items-start space-x-6 transition-all duration-300 ease-out hover:scale-102 hover:-translate-y-0.5 hover:shadow-lg"
                 >
                   {/* Image placeholder */}
                   <div className="bg-gray-100 w-32 h-32 flex items-center justify-center flex-shrink-0">
@@ -121,8 +157,22 @@ const Events = () => {
                   </div>
                   {/* Event details */}
                   <div className="flex-1">
-                    <div className="text-md font-helvetica text-gray-700 tracking-tight font-medium">
-                      {event.date}
+                    <div className="flex items-center gap-2 mb-1">
+                      <div className="text-md font-helvetica text-gray-700 tracking-tight font-medium">
+                        {event.date}
+                      </div>
+                      {event.portfolio && (
+                        <div
+                          className="justify-center px-2 py-0.5 rounded-2xl text-xs font-normal tracking-tight text-black/90"
+                          style={{
+                            backgroundColor: event.portfolioColor
+                              ? `${event.portfolioColor}50`
+                              : "#000020",
+                          }}
+                        >
+                          {event.portfolio}
+                        </div>
+                      )}
                     </div>
                     <div className="text-3xl font-helvetica font-medium tracking-tight text-black mb-1">
                       {event.title}
@@ -130,15 +180,29 @@ const Events = () => {
                     <div className="text-md font-helvetica text-gray-500 tracking-snug mb-2">
                       {event.description}
                     </div>
-                    <a
-                      href={event.register}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <button className="px-4 py-1 rounded bg-gray-100 border border-black text-sm tracking-tight font-helvetica text-gray-800 hover:bg-gray-200 transition">
-                        Register
-                      </button>
-                    </a>
+                    {event.isRegistrationOpen ? (
+                      <a
+                        href={event.register}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <button className="px-4 py-1 rounded bg-gray-100 border border-black text-sm tracking-tight font-helvetica text-gray-800 hover:bg-gray-200 transition">
+                          Register
+                        </button>
+                      </a>
+                    ) : (
+                      <div className="relative group">
+                        <button
+                          disabled
+                          className="px-4 py-1 rounded bg-gray-100 border border-gray-300 text-sm tracking-tight font-helvetica text-gray-400"
+                        >
+                          Register
+                        </button>
+                        <span className="pointer-events-none absolute -top-8 -left-6 w-max opacity-0 transition-opacity group-hover:opacity-100 bg-gray-800 text-white text-xs rounded py-1 px-2">
+                          Registration is closed
+                        </span>
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
