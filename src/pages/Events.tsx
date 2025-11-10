@@ -41,7 +41,7 @@ const Events = () => {
       register: "https://example.com/register-steve-jobs",
       portfolio: "INNOVATION",
       portfolioColor: "#5B9ED1", // Marketing color
-      isRegistrationOpen: true, // Today's event, registration still open
+      isRegistrationOpen: false, // Today's event, registration still open
     },
     {
       title: "Careers Panel",
@@ -51,7 +51,17 @@ const Events = () => {
       register: "https://example.com/register-careers",
       portfolio: "DEVELOPMENT",
       portfolioColor: "#5BA05B", // Development color
-      isRegistrationOpen: true, // Upcoming event
+      isRegistrationOpen: false, // Upcoming event
+    },
+    {
+      title: "Toronto Firms Trip",
+      date: "February 7, 2025",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      register: "https://example.com/register-designathon",
+      portfolio: "DEVELOPMENT",
+      portfolioColor: "#5BA05B", // Community color
+      isRegistrationOpen: false, // Not open yet
     },
     {
       title: "Innovation Sprint",
@@ -71,7 +81,7 @@ const Events = () => {
       register: "https://example.com/register-internship",
       portfolio: "INNOVATION",
       portfolioColor: "#5B9ED1", // Development color
-      isRegistrationOpen: true, // Upcoming event
+      isRegistrationOpen: false, // Upcoming event
     },
     {
       title: "Accelerator Program",
@@ -101,16 +111,6 @@ const Events = () => {
       register: "https://example.com/register-designathon",
       portfolio: "CATALYST",
       portfolioColor: "#D7C16B", // Catalyst color
-      isRegistrationOpen: false, // Not open yet
-    },
-    {
-      title: "Toronto Firms Trip",
-      date: "February 7, 2025",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      register: "https://example.com/register-designathon",
-      portfolio: "DEVELOPMENT",
-      portfolioColor: "#5BA05B", // Community color
       isRegistrationOpen: false, // Not open yet
     },
     {

@@ -19,14 +19,14 @@ interface EventCarouselProps {
 
 // Constants for animation behavior
 const ONE_SECOND = 1000;
-const AUTO_DELAY = ONE_SECOND * 10; // Auto advance every 10 seconds
+const AUTO_DELAY = ONE_SECOND * 30; // Auto advance every 10 seconds
 const DRAG_BUFFER = 50; // Minimum drag distance to trigger a slide change
 
 const SPRING_OPTIONS = {
   type: "spring" as const,
-  mass: 3,
+  mass: 1,
   stiffness: 400,
-  damping: 50,
+  damping: 100,
 };
 
 const EventCarousel = ({ events }: EventCarouselProps) => {
@@ -86,7 +86,7 @@ const EventCarousel = ({ events }: EventCarouselProps) => {
         <div className="flex items-center mx-auto">
           <div className="flex items-center">
             <h2 className="text-4xl md:text-5xl font-apple-garamond font-normal text-on-light">
-              Upcoming W5 Events
+              Flagship W5 Events
             </h2>
           </div>
         </div>
@@ -127,18 +127,20 @@ const EventCarousel = ({ events }: EventCarouselProps) => {
               >
                 <div className="relative overflow-hidden">
                   {/* Image - wrapped in div to prevent default drag behavior */}
-                  <div className="w-full h-[280px] rounded-xl overflow-hidden">
+                  <div className="relative w-full h-[280px] rounded-xl overflow-hidden">
                     <img
                       src={event.image}
                       alt={event.title}
                       className="w-full h-full object-cover pointer-events-none"
                       draggable="false"
                     />
+                    {/* Dark overlay on image only */}
+                    <div className="absolute inset-0 bg-black/30 pointer-events-none" />
                   </div>
 
                   {/* Title overlay - positioned at top left */}
                   <div className="absolute top-4 left-4">
-                    <h3 className="text-xl md:text-2xl font-helvetica font-semibold text-white drop-shadow-lg">
+                    <h3 className="text-xl md:text-xl font-helvetica font-normal text-white drop-shadow-xl tracking-tight">
                       {event.title}
                     </h3>
                   </div>

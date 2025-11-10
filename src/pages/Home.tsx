@@ -8,30 +8,28 @@ const Home = () => {
   const upcomingEvents = [
     {
       id: "summit",
-      title: "Summit",
-      date: "Month DD-DD, 202#",
-      category: "Case Competition",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop",
+      title: "Summit Case Competition",
+      date: "October 2025",
+      category: "DEVELOPMENT",
+      image: "/photos/summit.jpg",
       badgeColor: "bg-[#5BA05B]/50",
     },
     {
-      id: "pitch-competition",
-      title: "Pitch Competition",
-      date: "Month DD-DD, 202#",
-      category: "DEVELOPMENT",
+      id: "accelerator",
+      title: "Accelerator Program",
+      date: "Februrary 2025",
+      category: "ACCELERATOR",
       image:
         "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1770&auto=format&fit=crop",
-      badgeColor: "bg-[#5BA05B]/50",
+      badgeColor: "bg-[#D15B4B]/50",
     },
     {
-      id: "western-social",
-      title: "Western Social",
-      date: "Month DD-DD, 202#",
-      category: "Competition",
-      image:
-        "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?q=80&w=1974&auto=format&fit=crop",
-      badgeColor: "bg-[#5BA05B]/50",
+      id: "innovation-sprint",
+      title: "Innovation Sprint",
+      date: "November 2025",
+      category: "ACCELERATOR",
+      image: "/photos/inno-sprint.jpg",
+      badgeColor: "bg-[#D15B4B]/50",
     },
   ];
 
