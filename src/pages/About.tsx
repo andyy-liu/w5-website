@@ -11,7 +11,7 @@ const About = () => {
         <section className="bg-cream min-h-[35vh] mt-16 flex items-center">
           <div className="container-w5 w-full">
             <div className="max-w-5xl">
-              <h1 className="text-7xl md:text-9xl lg:text-10xl font-apple-garamond font-normal text-black">
+              <h1 className="text-8xl md:text-9xl lg:text-10xl font-apple-garamond font-normal text-black">
                 About Us
               </h1>
               <p className="text-xl md:text-2xl font-helvetica text-black tracking-tight max-w-6xl">

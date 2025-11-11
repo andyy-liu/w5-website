@@ -105,7 +105,7 @@ const Team = () => {
         <section className="bg-cream min-h-[35vh] mt-16 flex items-center">
           <div className="container-w5 w-full">
             <div className="max-w-5xl">
-              <h1 className="text-7xl md:text-9xl lg:text-10xl font-apple-garamond font-normal text-black">
+              <h1 className="text-8xl md:text-9xl lg:text-10xl font-apple-garamond font-normal text-black">
                 Our Team
               </h1>
               <p className="text-xl md:text-2xl font-helvetica text-black tracking-tight max-w-6xl">
@@ -120,7 +120,7 @@ const Team = () => {
         <section className="bg-cream pb-24 rounded-b-[4rem]">
           <div className="container-w5">
             {/* Year Header */}
-            <h2 className="text-5xl md:text-6xl font-apple-garamond font-normal text-on-light mb-12">
+            <h2 className="text-5xl md:text-6xl font-apple-garamond font-normal text-on-light mb-6">
               2025-2026
             </h2>
 

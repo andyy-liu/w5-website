@@ -6,7 +6,7 @@
 }
 
 .animate-scroll-sponsors {
-  animation: scroll-sponsors 25s linear infinite;
+  animation: scroll-sponsors 18s linear infinite;
     will-change: transform;
   }
 

@@ -55,7 +55,7 @@ const Home = () => {
           <div className="container-w5 w-full">
             <div className="flex justify-start">
               <div className="max-w-4xl">
-                <h1 className="text-7xl md:text-9xl lg:text-10xl font-apple-garamond font-normal text-cream mb-8">
+                <h1 className="text-8xl md:text-9xl lg:text-10xl font-apple-garamond font-normal text-cream mb-8">
                   A Startup
                   <br />
                   for Startups.
@@ -191,7 +191,7 @@ const Home = () => {
                     <h3 className="text-xl md:text-2xl font-helvetica font-normal tracking-tighter text-on-light">
                       Accelerator
                     </h3>
-                    <p className="text-sm font-helvetica text-gray-600 leading-snug">
+                    <p className="text-sm/4 md:text-sm font-helvetica text-gray-600 leading-snug">
                       Accelerator is built for students who are passionate about
                       entrepreneurship and want to be at the forefront of
                       helping new ideas grow into real startups.
@@ -224,7 +224,7 @@ const Home = () => {
                     <h3 className="text-xl md:text-2xl font-helvetica font-normal tracking-tighter text-on-light ">
                       Catalyst
                     </h3>
-                    <p className="text-sm font-helvetica text-gray-600 leading-snug">
+                    <p className="text-sm/4 md:text-sm font-helvetica text-gray-600">
                       Catalyst is the operations engine of W5, managing
                       everything behind the scenes—from financial planning and
                       grant writing to venue booking and logistics.
@@ -257,7 +257,7 @@ const Home = () => {
                     <h3 className="text-xl md:text-2xl font-helvetica font-normal tracking-tighter text-on-light ">
                       Community
                     </h3>
-                    <p className="text-sm font-helvetica text-gray-600 leading-snug">
+                    <p className="text-sm/4 md:text-sm font-helvetica text-gray-600">
                       Community is the portfolio that unites W5. It focuses on
                       creating an inclusive environment for both internal
                       members and the broader student body.
@@ -290,7 +290,7 @@ const Home = () => {
                     <h3 className="text-xl md:text-2xl font-helvetica font-normal tracking-tighter text-on-light ">
                       Development
                     </h3>
-                    <p className="text-sm font-helvetica text-gray-600 leading-snug">
+                    <p className="text-sm/4 md:text-sm font-helvetica text-gray-600 leading-snug">
                       The Development portfolio is the powerhouse behind W5’s
                       most high-profile events, leading major projects and
                       initiatives that make a real impact.
@@ -323,7 +323,7 @@ const Home = () => {
                     <h3 className="text-xl md:text-2xl font-helvetica font-normal tracking-tighter text-on-light ">
                       Innovation
                     </h3>
-                    <p className="text-sm font-helvetica text-gray-600 leading-snug">
+                    <p className="text-sm/4 md:text-sm font-helvetica text-gray-600 leading-snug">
                       Innovation is where curiosity meets opportunity;
                       organizing events to cultivate the entrepreneurial spirit
                       within students who want to take the next step.
@@ -356,7 +356,7 @@ const Home = () => {
                     <h3 className="text-xl md:text-2xl  font-helvetica font-normal tracking-tighter text-on-light ">
                       Marketing
                     </h3>
-                    <p className="text-sm font-helvetica text-gray-600 leading-snug">
+                    <p className="text-sm/4 md:text-sm font-helvetica text-gray-600 leading-snug">
                       Marketing is the creative voice of W5. It’s how people
                       hear about us; through eye-catching visuals, clever
                       branding, and engaging campaigns.

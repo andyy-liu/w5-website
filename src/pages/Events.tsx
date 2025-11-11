@@ -12,16 +12,7 @@ const Events = () => {
       portfolio: "FULL TEAM",
       portfolioColor: "#E6A6C7", // Black for full team events
       isRegistrationOpen: false, // Event has passed
-    },
-    {
-      title: "VP Coffee Chats",
-      date: "September 15-19, 2025",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      register: "https://example.com/register-coffee",
-      portfolio: "FULL TEAM",
-      portfolioColor: "#E6A6C7", // Community color
-      isRegistrationOpen: false, // Event has passed
+      image: "/events/agm-2025.jpg", // Add your event image here
     },
     {
       title: "Summit Case Competition",
@@ -32,6 +23,7 @@ const Events = () => {
       portfolio: "DEVELOPMENT",
       portfolioColor: "#5BA05B", // Development color
       isRegistrationOpen: false, // Event has passed
+      image: "/events/summit-2025.jpg", // Add your event image here
     },
     {
       title: "Steve Jobs Night",
@@ -42,6 +34,7 @@ const Events = () => {
       portfolio: "INNOVATION",
       portfolioColor: "#5B9ED1", // Marketing color
       isRegistrationOpen: false, // Today's event, registration still open
+      image: "/events/steve-jobs-night.jpg", // Add your event image here
     },
     {
       title: "Careers Panel",
@@ -55,7 +48,7 @@ const Events = () => {
     },
     {
       title: "Toronto Firms Trip",
-      date: "February 7, 2025",
+      date: "November 14, 2025",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-designathon",
@@ -80,8 +73,8 @@ const Events = () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-internship",
       portfolio: "INNOVATION",
-      portfolioColor: "#5B9ED1", // Development color
-      isRegistrationOpen: false, // Upcoming event
+      portfolioColor: "#5B9ED1",
+      isRegistrationOpen: false,
     },
     {
       title: "Accelerator Program",
@@ -94,7 +87,7 @@ const Events = () => {
       isRegistrationOpen: false, // Not open yet
     },
     {
-      title: "Designathon",
+      title: "Iterate Designathon",
       date: "January 9-10, 2025",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -123,6 +116,16 @@ const Events = () => {
       portfolioColor: "#D15B4B", // Accelerator color
       isRegistrationOpen: false, // Not open yet
     },
+    {
+      title: "Suit Down & Get Social",
+      date: "March 20-21, 2025",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      register: "https://example.com/register-designathon",
+      portfolio: "FULL TEAM",
+      portfolioColor: "#E6A6C7",
+      isRegistrationOpen: false,
+    },
   ];
 
   return (
@@ -132,7 +135,7 @@ const Events = () => {
         <section className="bg-cream min-h-[35vh] mt-16 flex items-center">
           <div className="container-w5 w-full">
             <div className="max-w-5xl">
-              <h1 className="text-7xl md:text-9xl lg:text-10xl font-apple-garamond font-normal text-black">
+              <h1 className="text-8xl md:text-9xl lg:text-10xl font-apple-garamond font-normal text-black">
                 Events
               </h1>
               <p className="text-xl md:text-2xl font-helvetica text-black tracking-tight max-w-6xl">
@@ -149,22 +152,36 @@ const Events = () => {
               {upcomingEvents.map((event, idx) => (
                 <div
                   key={idx}
-                  className="bg-cream rounded-lg cursor-pointer p-5 flex items-start space-x-6 border-2 border-[#D9D9D9] transition-all duration-300 ease-out hover:-translate-y-0.5"
+                  className="bg-cream rounded-lg cursor-pointer p-5 flex items-stretch space-x-6 border-2 border-[#D9D9D9] transition-all duration-300 ease-out hover:-translate-y-0.5"
                   style={{ boxShadow: "0 0 8px rgba(0, 4, 0, 0.1)" }}
                 >
-                  {/* Image placeholder */}
-                  <div className="bg-gray-100 w-32 h-32 flex items-center justify-center flex-shrink-0">
-                    <span className="text-sm text-gray-500">Image</span>
+                  {/* Event Image */}
+                  <div className="w-32 flex-shrink-0 flex items-center justify-center">
+                    <div className="w-32 h-32 rounded-lg overflow-hidden bg-gray-100">
+                      {event.image ? (
+                        <img
+                          src={event.image}
+                          alt={event.title}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center">
+                          <span className="text-sm text-gray-500">
+                            No Image
+                          </span>
+                        </div>
+                      )}
+                    </div>
                   </div>
                   {/* Event details */}
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
-                      <div className="text-md font-helvetica text-gray-700 tracking-tight font-medium">
+                      <div className="text-sm md:text-md font-helvetica text-black tracking-tight font-medium -mb-2 ml-0.5">
                         {event.date}
                       </div>
                       {event.portfolio && (
                         <div
-                          className="justify-center px-2 py-0.5 rounded-2xl text-xs font-normal tracking-tight text-black/90"
+                          className="justify-center px-2 py-0.5 rounded-2xl text-xs font-normal tracking-tight text-black -mb-2"
                           style={{
                             backgroundColor: event.portfolioColor
                               ? `${event.portfolioColor}50`
@@ -175,10 +192,10 @@ const Events = () => {
                         </div>
                       )}
                     </div>
-                    <div className="text-3xl font-helvetica font-medium tracking-tight text-black mb-1">
+                    <div className="text-xl md:text-2xl lg:text-3xl font-helvetica font-medium tracking-tight text-black mb-1">
                       {event.title}
                     </div>
-                    <div className="text-md font-helvetica text-gray-500 tracking-snug mb-2">
+                    <div className="text-base/5 md:text-lg/5 font-helvetica text-black/60 tracking-tight -mt-1 mb-1">
                       {event.description}
                     </div>
                     {event.isRegistrationOpen ? (
@@ -187,7 +204,7 @@ const Events = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <button className="px-4 py-1 rounded bg-gray-100 border border-black text-sm tracking-tight font-helvetica text-gray-800 hover:bg-gray-200 transition">
+                        <button className="px-3 py-1 rounded-lg bg-gray-100 border border-black text-sm tracking-tight font-helvetica text-gray-800 hover:bg-gray-200 transition">
                           Register
                         </button>
                       </a>
@@ -195,7 +212,7 @@ const Events = () => {
                       <div className="relative group">
                         <button
                           disabled
-                          className="px-4 py-1 rounded bg-gray-100 border border-gray-300 text-sm tracking-tight font-helvetica text-gray-400"
+                          className="px-3 py-1 rounded-lg bg-gray-100 border border-gray-300 text-sm tracking-tight font-helvetica text-gray-400"
                         >
                           Register
                         </button>
