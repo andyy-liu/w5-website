@@ -15,8 +15,8 @@ const About = () => {
                 About Us
               </h1>
               <p className="text-xl md:text-2xl font-helvetica text-black tracking-tight max-w-6xl">
-                Meet the team behind Western's largest entrepreneurial
-                community.
+                Learn the role of each portfolio and its impact across Western’s
+                entrepreneurial community.
               </p>
             </div>
           </div>
