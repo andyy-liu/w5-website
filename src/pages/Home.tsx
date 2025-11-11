@@ -55,12 +55,12 @@ const Home = () => {
           <div className="container-w5 w-full">
             <div className="flex justify-start">
               <div className="max-w-4xl">
-                <h1 className="text-7xl md:text-9xl lg:text-10xl font-apple-garamond font-normal text-on-gradient mb-8">
+                <h1 className="text-7xl md:text-9xl lg:text-10xl font-apple-garamond font-normal text-cream mb-8">
                   A Startup
                   <br />
                   for Startups.
                 </h1>
-                <p className="font-helvetica text-xl md:text-3xl font-normal text-[#FFFFFF] text-on-gradient/90 max-w-4xl">
+                <p className="font-helvetica text-xl md:text-3xl tracking-tight font-normal text-cream max-w-4xl">
                   The largest entrepreneurship community at Western University.
                 </p>
               </div>
@@ -69,7 +69,7 @@ const Home = () => {
         </section>
 
         {/* Sponsors Logo Scrolling Section */}
-        <section className="bg-white py-8">
+        <section className="bg-cream py-8">
           <div className="overflow-hidden w-full group/sponsors-scroll">
             <div className="relative w-full h-24">
               <div
@@ -104,7 +104,7 @@ const Home = () => {
         </section>
 
         {/* What is W5 Section */}
-        <section className="bg-white py-28">
+        <section className="bg-cream py-28">
           <div className="container-w5">
             <div className="max-w-5xl">
               <div className="inline-flex items-center px-2 py-2 border-round mb-4">
@@ -130,7 +130,7 @@ const Home = () => {
         </section>
 
         {/* Mission Section */}
-        <section className="bg-white py-16 md:py-28">
+        <section className="bg-cream py-16 md:py-28">
           <div className="container-w5">
             <div className="text-center mx-auto max-w-4xl">
               <div className="inline-flex items-center border-round px-2 py-2 mb-2">
@@ -150,7 +150,7 @@ const Home = () => {
         </section>
 
         {/* Portfolios Section */}
-        <section className="bg-white py-24">
+        <section className="bg-cream py-24">
           <div className="container-w5">
             <div className="mb-4">
               <div className="inline-flex items-center border-round mb-2">
@@ -168,7 +168,7 @@ const Home = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div
-                className="bg-white rounded-lg  transition duration-300 transform hover:translate-y-[-4px] cursor-pointer"
+                className="bg-cream rounded-lg  transition duration-300 transform hover:translate-y-[-4px] cursor-pointer"
                 onClick={() => navigate(`/about?section=accelerator`)}
               >
                 <div className="flex items-start space-x-4">
@@ -201,7 +201,7 @@ const Home = () => {
               </div>
 
               <div
-                className="bg-white rounded-lg transition duration-300 transform hover:translate-y-[-4px]   cursor-pointer"
+                className="bg-cream rounded-lg transition duration-300 transform hover:translate-y-[-4px]   cursor-pointer"
                 onClick={() => navigate(`/about?section=catalyst`)}
               >
                 <div className="flex items-start space-x-4">
@@ -234,7 +234,7 @@ const Home = () => {
               </div>
 
               <div
-                className="bg-white rounded-lg  transition duration-300 transform hover:translate-y-[-4px]   cursor-pointer"
+                className="bg-cream rounded-lg  transition duration-300 transform hover:translate-y-[-4px]   cursor-pointer"
                 onClick={() => navigate(`/about?section=community`)}
               >
                 <div className="flex items-start space-x-4">
@@ -267,7 +267,7 @@ const Home = () => {
               </div>
 
               <div
-                className="bg-white rounded-lg  transition duration-300 transform hover:translate-y-[-4px]   cursor-pointer"
+                className="bg-cream rounded-lg  transition duration-300 transform hover:translate-y-[-4px]   cursor-pointer"
                 onClick={() => navigate(`/about?section=development`)}
               >
                 <div className="flex items-start space-x-4">
@@ -300,7 +300,7 @@ const Home = () => {
               </div>
 
               <div
-                className="bg-white rounded-lg  transition duration-300 transform hover:translate-y-[-4px]   cursor-pointer"
+                className="bg-cream rounded-lg  transition duration-300 transform hover:translate-y-[-4px]   cursor-pointer"
                 onClick={() => navigate(`/about?section=innovation`)}
               >
                 <div className="flex items-start space-x-4">
@@ -333,7 +333,7 @@ const Home = () => {
               </div>
 
               <div
-                className="bg-white rounded-lg  transition duration-300 transform hover:translate-y-[-4px]   cursor-pointer"
+                className="bg-cream rounded-lg  transition duration-300 transform hover:translate-y-[-4px]   cursor-pointer"
                 onClick={() => navigate(`/about?section=marketing`)}
               >
                 <div className="flex items-start space-x-4">
@@ -369,7 +369,7 @@ const Home = () => {
         </section>
 
         {/* Events Carousel Section */}
-        <section className="bg-white py-24 relative rounded-b-[4rem]">
+        <section className="bg-cream py-24 relative rounded-b-[4rem]">
           <div className="container-w5">
             <div className="flex justify-center mb-2">
               <div className="inline-flex items-center border-round">

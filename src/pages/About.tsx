@@ -8,7 +8,7 @@ const About = () => {
     <Layout>
       <section className="bg-black">
         {/* Hero Section */}
-        <section className="bg-white min-h-[35vh] mt-16 flex items-center">
+        <section className="bg-cream min-h-[35vh] mt-16 flex items-center">
           <div className="container-w5 w-full">
             <div className="max-w-5xl">
               <h1 className="text-7xl md:text-9xl lg:text-10xl font-apple-garamond font-normal text-black">
@@ -23,7 +23,7 @@ const About = () => {
         </section>
 
         {/* History Section */}
-        <section className="bg-white py-12">
+        <section className="bg-cream py-12">
           <div className="container-w5">
             <div className="max-w-6xl">
               <div className="inline-flex items-center px-2 py-2 border-round mb-4">
@@ -50,7 +50,7 @@ const About = () => {
         </section>
 
         {/* Portfolios Section - Clickable Grid */}
-        <section className="bg-white pb-24 rounded-b-[4rem]">
+        <section className="bg-cream pb-24 rounded-b-[4rem]">
           <div className="container-w5">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[

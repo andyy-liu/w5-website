@@ -129,7 +129,7 @@ const Events = () => {
     <Layout>
       <section className="bg-black">
         {/* Hero Section */}
-        <section className="bg-white min-h-[35vh] mt-16 flex items-center">
+        <section className="bg-cream min-h-[35vh] mt-16 flex items-center">
           <div className="container-w5 w-full">
             <div className="max-w-5xl">
               <h1 className="text-7xl md:text-9xl lg:text-10xl font-apple-garamond font-normal text-black">
@@ -143,13 +143,14 @@ const Events = () => {
         </section>
 
         {/* Upcoming Events Section */}
-        <section className="bg-white pb-24 rounded-b-[4rem]">
+        <section className="bg-cream pb-24 rounded-b-[4rem]">
           <div className="container-w5">
             <div className="space-y-8">
               {upcomingEvents.map((event, idx) => (
                 <div
                   key={idx}
-                  className="bg-white rounded-lg cursor-pointer shadow-sm border border-gray-200 p-6 flex items-start space-x-6 transition-all duration-300 ease-out hover:scale-102 hover:-translate-y-0.5 hover:shadow-lg"
+                  className="bg-cream rounded-lg cursor-pointer p-5 flex items-start space-x-6 border-2 border-[#D9D9D9] transition-all duration-300 ease-out hover:-translate-y-0.5"
+                  style={{ boxShadow: "0 0 8px rgba(0, 4, 0, 0.1)" }}
                 >
                   {/* Image placeholder */}
                   <div className="bg-gray-100 w-32 h-32 flex items-center justify-center flex-shrink-0">

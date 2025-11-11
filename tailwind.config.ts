@@ -30,6 +30,7 @@ export default {
         "text-on-gradient": "hsl(var(--text-on-gradient))",
         "text-on-light": "hsl(var(--text-on-light))",
         "text-muted": "hsl(var(--text-muted))",
+        cream: "hsl(43, 24%, 94%)",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
