@@ -369,7 +369,7 @@ const Home = () => {
         </section>
 
         {/* Events Carousel Section */}
-        <section className="bg-cream py-24 relative rounded-b-[4rem]">
+        <section className="bg-cream py-24 relative">
           <div className="container-w5">
             <div className="flex justify-center mb-2">
               <div className="inline-flex items-center border-round">
@@ -383,6 +383,23 @@ const Home = () => {
             </div>
           </div>
           <EventCarousel events={upcomingEvents} />
+        </section>
+        <section className="bg-cream py-16 md:py-28 rounded-b-[4rem]">
+          <div className="container-w5">
+            <div className="text-center mx-auto max-w-4xl">
+              <h2 className="font-helvetica font-medium text-on-light text-xl sm:text-2xl md:text-4xl tracking-tight mx-auto mb-6">
+                A Startup for Startups.
+              </h2>
+              <a
+                href="https://buy.stripe.com/dRm8wO4ZMcYAcjrdKTaAw00"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="md:inline-flex font-helvetica btn-w5-primary text-white text-sm md:text-base"
+              >
+                Join Us!
+              </a>
+            </div>
+          </div>
         </section>
       </section>
     </Layout>

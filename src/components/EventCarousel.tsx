@@ -146,13 +146,13 @@ const EventCarousel = ({ events }: EventCarouselProps) => {
                 </div>
 
                 {/* Bottom section with date, category and button */}
-                <div className="px-3 py-3 md:px-4 md:py-4 bg-cream flex items-center justify-between rounded-b-xl">
+                <div className="px-1 py-2 bg-cream flex items-center justify-between">
                   <div>
-                    <p className="text-xs md:text-sm font-helvetica text-gray-700 font-medium mb-1">
+                    <p className="text-sm md:text-md lg:text-lg font-helvetica text-gray-700 font-medium">
                       {event.date || "Month DD-DD, 202#"}
                     </p>
                     <span
-                      className={`inline-block px-2 md:px-2.5 py-0.5 rounded-2xl text-xs font-normal tracking-tight text-black/70 ${
+                      className={`inline-block px-1.5 md:px-2.5 rounded-2xl text-[0.65rem] md:text-xs lg:text-sm font-normal tracking-tighter text-black/70 ${
                         event.badgeColor || "bg-[#5BA05B]/50"
                       }`}
                     >
@@ -161,7 +161,7 @@ const EventCarousel = ({ events }: EventCarouselProps) => {
                   </div>
                   <Link
                     to={`/events`}
-                    className="px-3 py-1.5 md:px-4 md:py-2 bg-black text-white text-xs md:text-sm font-helvetica tracking-tight rounded-lg hover:bg-gray-800 transition-colors pointer-events-auto"
+                    className="px-3 py-1.5 bg-black text-white text-xs md:text-sm lg:text-base font-helvetica tracking-tight rounded-lg hover:bg-gray-800 transition-colors pointer-events-auto"
                   >
                     Learn More
                   </Link>
