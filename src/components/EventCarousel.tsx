@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
-import { motion, useMotionValue } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useRef, useEffect } from "react";
 
 interface Event {
   id: string;
@@ -17,67 +16,82 @@ interface EventCarouselProps {
   events: Event[];
 }
 
-// Constants for animation behavior
-const ONE_SECOND = 1000;
-const AUTO_DELAY = ONE_SECOND * 30; // Auto advance every 10 seconds
-const DRAG_BUFFER = 50; // Minimum drag distance to trigger a slide change
-
-const SPRING_OPTIONS = {
-  type: "spring" as const,
-  mass: 1,
-  stiffness: 400,
-  damping: 100,
-};
-
 const EventCarousel = ({ events }: EventCarouselProps) => {
-  const [imgIndex, setImgIndex] = useState(0);
-  const dragX = useMotionValue(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
-  // Auto-advance carousel with infinite scrolling
+  // Center the middle card on initial load and resize
   useEffect(() => {
-    // Define normalized index inside the effect to avoid dependency issues
-    const advanceToNextSlide = () => {
-      setImgIndex((prev) => (prev + 1) % events.length);
+    const centerMiddleCard = () => {
+      if (scrollRef.current && events.length > 0) {
+        const container = scrollRef.current;
+        const containerWidth = container.clientWidth;
+
+        // Get responsive values based on screen size
+        const getResponsiveValues = () => {
+          const screenWidth = window.innerWidth;
+
+          if (screenWidth >= 1024) {
+            // lg breakpoint
+            return { cardWidth: 672, gap: 48, leftPadding: 80 }; // w-[42rem], gap-12, px-20
+          } else if (screenWidth >= 768) {
+            // md breakpoint
+            return { cardWidth: 384, gap: 32, leftPadding: 32 }; // w-96, gap-8, px-8
+          } else {
+            // mobile
+            return { cardWidth: 320, gap: 24, leftPadding: 16 }; // w-80, gap-6, px-4
+          }
+        };
+
+        const { cardWidth, gap, leftPadding } = getResponsiveValues();
+        const middleIndex = Math.floor(events.length / 2);
+
+        // Calculate scroll position to center the middle card
+        const scrollPosition =
+          leftPadding +
+          (cardWidth + gap) * middleIndex -
+          containerWidth / 2 +
+          cardWidth / 2;
+
+        container.scrollLeft = Math.max(0, scrollPosition);
+      }
     };
 
-    const intervalRef = setInterval(() => {
-      const x = dragX.get();
+    // Center on mount and when events change
+    centerMiddleCard();
 
-      if (x === 0) {
-        advanceToNextSlide();
-      }
-    }, AUTO_DELAY);
+    // Recenter on window resize
+    window.addEventListener("resize", centerMiddleCard);
 
-    return () => clearInterval(intervalRef);
-  }, [dragX, events.length]);
+    return () => {
+      window.removeEventListener("resize", centerMiddleCard);
+    };
+  }, [events.length]);
+  let isDown = false;
+  let startX = 0;
+  let scrollLeft = 0;
 
-  // Function removed as we're using inline calculations
-
-  // Handle drag end to change slides with infinite scrolling
-  const onDragEnd = () => {
-    const x = dragX.get();
-
-    if (x <= -DRAG_BUFFER) {
-      // Go forward (with infinite scrolling)
-      setImgIndex((prev) => (prev + 1) % events.length);
-    } else if (x >= DRAG_BUFFER) {
-      // Go backward (with infinite scrolling)
-      setImgIndex((prev) => (prev - 1 + events.length) % events.length);
+  const handleMouseDown = (e: React.MouseEvent) => {
+    isDown = true;
+    if (scrollRef.current) {
+      startX = e.pageX - scrollRef.current.offsetLeft;
+      scrollLeft = scrollRef.current.scrollLeft;
     }
-
-    // Reset drag position after animation completes
-    setTimeout(() => {
-      dragX.set(0);
-    }, 300);
   };
 
-  // Navigation functions with infinite scrolling
-  const goToNext = () => {
-    setImgIndex((prev) => (prev + 1) % events.length);
+  const handleMouseLeave = () => {
+    isDown = false;
   };
 
-  const goToPrev = () => {
-    setImgIndex((prev) => (prev - 1 + events.length) % events.length);
+  const handleMouseUp = () => {
+    isDown = false;
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDown || !scrollRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    scrollRef.current.scrollLeft = scrollLeft - walk;
   };
 
   return (
@@ -85,93 +99,76 @@ const EventCarousel = ({ events }: EventCarouselProps) => {
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center mx-auto">
           <div className="flex items-center">
-            <h2 className="text-4xl md:text-5xl font-apple-garamond font-normal text-on-light">
-              Flagship W5 Events
+            <h2 className="text-4xl lg:text-5xl font-apple-garamond font-normal text-on-light">
+              Upcoming W5 Events
             </h2>
           </div>
         </div>
       </div>
-      <div className="relative overflow-hidden">
-        <div className="flex justify-center">
-          <motion.div
-            drag="x"
-            dragConstraints={{
-              left: 0,
-              right: 0,
-            }}
-            style={{
-              x: dragX,
-              width: `${events.length * 100}%`,
-            }}
-            animate={{
-              translateX: `calc(-${imgIndex * 60}% + ${(100 - 60) / 2}%)`,
-            }}
-            transition={SPRING_OPTIONS}
-            onDragEnd={onDragEnd}
-            className="flex cursor-grab active:cursor-grabbing select-none"
-          >
-            {events.map((event, idx) => (
-              <motion.div
-                key={event.id}
-                animate={{
-                  scale: imgIndex === idx ? 1 : 0.85,
-                  opacity:
-                    Math.abs(imgIndex - idx) <= 1 ||
-                    Math.abs(imgIndex - idx) === events.length - 1
-                      ? 1
-                      : 0.5,
-                  filter: imgIndex === idx ? "grayscale(0%)" : "grayscale(40%)",
-                }}
-                transition={SPRING_OPTIONS}
-                className="w-[60%] flex-shrink-0 p-2 md:p-4 pointer-events-auto"
-              >
-                <div className="relative overflow-hidden">
-                  {/* Image - wrapped in div to prevent default drag behavior */}
-                  <div className="relative w-full h-[280px] rounded-xl overflow-hidden">
-                    <img
-                      src={event.image}
-                      alt={event.title}
-                      className="w-full h-full object-cover pointer-events-none"
-                      draggable="false"
-                    />
-                    {/* Dark overlay on image only */}
-                    <div className="absolute inset-0 bg-black/30 pointer-events-none" />
-                  </div>
 
-                  {/* Title overlay - positioned at top left */}
-                  <div className="absolute top-4 left-4">
-                    <h3 className="text-xl md:text-xl font-helvetica font-normal text-white drop-shadow-xl tracking-tight">
+      {/* Horizontal scrolling container with drag functionality */}
+      <div
+        ref={scrollRef}
+        className="overflow-x-scroll overflow-y-hidden pb-4 cursor-grab active:cursor-grabbing scrollbar-hide"
+        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        onMouseDown={handleMouseDown}
+        onMouseLeave={handleMouseLeave}
+        onMouseUp={handleMouseUp}
+        onMouseMove={handleMouseMove}
+      >
+        <div
+          className="flex gap-6 md:gap-8 lg:gap-12 px-4 md:px-8 lg:px-20"
+          style={{ width: "max-content" }}
+        >
+          {events.map((event) => (
+            <div
+              key={event.id}
+              className="flex-shrink-0 w-80 md:w-96 lg:w-[42rem] select-none"
+            >
+              <div className="relative overflow-hidden bg-cream rounded-xl">
+                {/* Event Image */}
+                <div className="relative w-full h-48 md:h-64 lg:h-80 bg-gray-200 rounded-xl overflow-hidden">
+                  <img
+                    src={event.image}
+                    alt={event.title}
+                    className="w-full h-full object-cover pointer-events-none"
+                    draggable="false"
+                  />
+                  {/* Dark overlay */}
+                  <div className="absolute inset-0 bg-black/40" />
+
+                  {/* Event title overlay */}
+                  <div className="absolute top-3 left-3 md:top-4 md:left-4">
+                    <h3 className="text-white text-lg md:text-xl font-helvetica font-normal tracking-tight drop-shadow-lg">
                       {event.title}
                     </h3>
                   </div>
-
-                  {/* Bottom section with date, category and button */}
-                  <div className="px-2 py-3 flex items-center justify-between">
-                    <div>
-                      <p className="text-sm font-helvetica text-gray-700 font-medium">
-                        {event.date || "Month DD-DD, 202#"}
-                      </p>
-                      <div>
-                        <span
-                          className={`inline-block px-2.5 py-0.5 rounded-2xl text-xs font-normal tracking-tight text-[#00000A]/60 ${
-                            event.badgeColor || "bg-[#5BA05B]"
-                          }`}
-                        >
-                          {event.category}
-                        </span>
-                      </div>
-                    </div>
-                    <Link
-                      to={`/events/${event.id}`}
-                      className="px-3 py-1 bg-black text-white text-md font-light tracking-tight rounded-lg inline-block text-center"
-                    >
-                      Learn More
-                    </Link>
-                  </div>
                 </div>
-              </motion.div>
-            ))}
-          </motion.div>
+
+                {/* Bottom section with date, category and button */}
+                <div className="px-3 py-3 md:px-4 md:py-4 bg-cream flex items-center justify-between rounded-b-xl">
+                  <div>
+                    <p className="text-xs md:text-sm font-helvetica text-gray-700 font-medium mb-1">
+                      {event.date || "Month DD-DD, 202#"}
+                    </p>
+                    <span
+                      className={`inline-block px-2 md:px-2.5 py-0.5 rounded-2xl text-xs font-normal tracking-tight text-black/70 ${
+                        event.badgeColor || "bg-[#5BA05B]/50"
+                      }`}
+                    >
+                      {event.category}
+                    </span>
+                  </div>
+                  <Link
+                    to={`/events`}
+                    className="px-3 py-1.5 md:px-4 md:py-2 bg-black text-white text-xs md:text-sm font-helvetica tracking-tight rounded-lg hover:bg-gray-800 transition-colors pointer-events-auto"
+                  >
+                    Learn More
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

@@ -7,14 +7,6 @@ import EventCarousel from "../components/EventCarousel";
 const Home = () => {
   const upcomingEvents = [
     {
-      id: "summit",
-      title: "Summit Case Competition",
-      date: "October 2025",
-      category: "DEVELOPMENT",
-      image: "/photos/summit.jpg",
-      badgeColor: "bg-[#5BA05B]/50",
-    },
-    {
       id: "accelerator",
       title: "Accelerator Program",
       date: "Februrary 2025",
@@ -22,6 +14,14 @@ const Home = () => {
       image:
         "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1770&auto=format&fit=crop",
       badgeColor: "bg-[#D15B4B]/50",
+    },
+    {
+      id: "summit",
+      title: "Summit Case Competition",
+      date: "October 2025",
+      category: "DEVELOPMENT",
+      image: "/photos/summit.jpg",
+      badgeColor: "bg-[#5BA05B]/50",
     },
     {
       id: "innovation-sprint",
@@ -55,7 +55,7 @@ const Home = () => {
           <div className="container-w5 w-full">
             <div className="flex justify-start">
               <div className="max-w-4xl">
-                <h1 className="text-8xl md:text-9xl lg:text-10xl font-apple-garamond font-normal text-cream mb-8">
+                <h1 className="text-7xl md:text-9xl lg:text-10xl font-apple-garamond font-normal text-cream mb-8">
                   A Startup
                   <br />
                   for Startups.
@@ -381,8 +381,8 @@ const Home = () => {
                 </span>
               </div>
             </div>
-            <EventCarousel events={upcomingEvents} />
           </div>
+          <EventCarousel events={upcomingEvents} />
         </section>
       </section>
     </Layout>

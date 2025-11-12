@@ -4,15 +4,31 @@ import EventCard from "../components/EventCard";
 const Events = () => {
   const upcomingEvents = [
     {
-      title: "Annual General Meeting",
-      date: "September 13, 2025",
+      title: "On The Road",
+      date: "August 15, 2025",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-agm",
-      portfolio: "FULL TEAM",
-      portfolioColor: "#E6A6C7", // Black for full team events
-      isRegistrationOpen: false, // Event has passed
-      image: "/events/agm-2025.jpg", // Add your event image here
+      isRegistrationOpen: false,
+      image: "/events/agm-2025.jpg",
+    },
+    {
+      title: "Summer Dinner",
+      date: "August 16, 2025",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      register: "https://example.com/register-agm",
+      isRegistrationOpen: false,
+      image: "/events/agm-2025.jpg",
+    },
+    {
+      title: "Annual General Meeting",
+      date: "September 13, 2025",
+      description:
+        "Kick off the year with W5’s Annual General Meeting—an opportunity to learn about our mission, meet the executive team, and explore ways to get involved.",
+      register: "https://example.com/register-agm",
+      isRegistrationOpen: false,
+      image: "/events/agm-2025.jpg",
     },
     {
       title: "Summit Case Competition",
@@ -20,10 +36,8 @@ const Events = () => {
       description:
         "Gain valuable case competition experience, network with sponsor representatives, and work on creating solutions to real world business problems",
       register: "https://example.com/register-summit",
-      portfolio: "DEVELOPMENT",
-      portfolioColor: "#5BA05B", // Development color
-      isRegistrationOpen: false, // Event has passed
-      image: "/events/summit-2025.jpg", // Add your event image here
+      isRegistrationOpen: false,
+      image: "/events/summit-2025.jpg",
     },
     {
       title: "Steve Jobs Night",
@@ -31,10 +45,8 @@ const Events = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-steve-jobs",
-      portfolio: "INNOVATION",
-      portfolioColor: "#5B9ED1", // Marketing color
-      isRegistrationOpen: false, // Today's event, registration still open
-      image: "/events/steve-jobs-night.jpg", // Add your event image here
+      isRegistrationOpen: false,
+      image: "/events/steve-jobs-night.jpg",
     },
     {
       title: "Careers Panel",
@@ -42,9 +54,7 @@ const Events = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-careers",
-      portfolio: "DEVELOPMENT",
-      portfolioColor: "#5BA05B", // Development color
-      isRegistrationOpen: false, // Upcoming event
+      isRegistrationOpen: false,
     },
     {
       title: "Toronto Firms Trip",
@@ -52,9 +62,7 @@ const Events = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-designathon",
-      portfolio: "DEVELOPMENT",
-      portfolioColor: "#5BA05B", // Community color
-      isRegistrationOpen: false, // Not open yet
+      isRegistrationOpen: false,
     },
     {
       title: "Innovation Sprint",
@@ -62,9 +70,7 @@ const Events = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-sprint",
-      portfolio: "ACCELERATOR",
-      portfolioColor: "#D15B4B", // Innovation color
-      isRegistrationOpen: true, // Upcoming event
+      isRegistrationOpen: true,
     },
     {
       title: "Internship Program",
@@ -72,8 +78,6 @@ const Events = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-internship",
-      portfolio: "INNOVATION",
-      portfolioColor: "#5B9ED1",
       isRegistrationOpen: false,
     },
     {
@@ -82,9 +86,7 @@ const Events = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-accelerator",
-      portfolio: "Accelerator",
-      portfolioColor: "#D15B4B", // Accelerator color
-      isRegistrationOpen: false, // Not open yet
+      isRegistrationOpen: false,
     },
     {
       title: "Iterate Designathon",
@@ -92,19 +94,15 @@ const Events = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-designathon",
-      portfolio: "MARKETING",
-      portfolioColor: "#6B5BD1", // Innovation color
-      isRegistrationOpen: false, // Not open yet
+      isRegistrationOpen: false,
     },
     {
-      title: "VC Case Competition",
+      title: "PitchQuest",
       date: "January 18, 2025",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-designathon",
-      portfolio: "CATALYST",
-      portfolioColor: "#D7C16B", // Catalyst color
-      isRegistrationOpen: false, // Not open yet
+      isRegistrationOpen: false,
     },
     {
       title: "Pitch5",
@@ -112,9 +110,7 @@ const Events = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-designathon",
-      portfolio: "Accelerator",
-      portfolioColor: "#D15B4B", // Accelerator color
-      isRegistrationOpen: false, // Not open yet
+      isRegistrationOpen: false,
     },
     {
       title: "Suit Down & Get Social",
@@ -122,8 +118,6 @@ const Events = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       register: "https://example.com/register-designathon",
-      portfolio: "FULL TEAM",
-      portfolioColor: "#E6A6C7",
       isRegistrationOpen: false,
     },
   ];
@@ -156,8 +150,8 @@ const Events = () => {
                   style={{ boxShadow: "0 0 8px rgba(0, 4, 0, 0.1)" }}
                 >
                   {/* Event Image */}
-                  <div className="w-32 flex-shrink-0 flex items-center justify-center">
-                    <div className="w-32 h-32 rounded-lg overflow-hidden bg-gray-100">
+                  <div className="w-36 flex-shrink-0 flex items-center justify-center">
+                    <div className="w-36 h-36 rounded-lg overflow-hidden bg-gray-100">
                       {event.image ? (
                         <img
                           src={event.image}
@@ -179,7 +173,7 @@ const Events = () => {
                       <div className="text-sm md:text-md font-helvetica text-black tracking-tight font-medium -mb-2 ml-0.5">
                         {event.date}
                       </div>
-                      {event.portfolio && (
+                      {/* {event.portfolio && (
                         <div
                           className="justify-center px-2 py-0.5 rounded-2xl text-xs font-normal tracking-tight text-black -mb-2"
                           style={{
@@ -190,12 +184,12 @@ const Events = () => {
                         >
                           {event.portfolio}
                         </div>
-                      )}
+                      )} */}
                     </div>
                     <div className="text-xl md:text-2xl lg:text-3xl font-helvetica font-medium tracking-tight text-black mb-1">
                       {event.title}
                     </div>
-                    <div className="text-base/5 md:text-lg/5 font-helvetica text-black/60 tracking-tight -mt-1 mb-1">
+                    <div className="text-base/5 md:text-lg/5 font-helvetica text-black/60 tracking-tight -mt-0.5 mb-3">
                       {event.description}
                     </div>
                     {event.isRegistrationOpen ? (
@@ -204,7 +198,7 @@ const Events = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <button className="px-3 py-1 rounded-lg bg-gray-100 border border-black text-sm tracking-tight font-helvetica text-gray-800 hover:bg-gray-200 transition">
+                        <button className="px-3 py-2 rounded-lg bg-[#E3E3E3] border border-[#767676] text-sm tracking-tight font-helvetica text-gray-800 hover:bg-gray-200 transition">
                           Register
                         </button>
                       </a>
@@ -212,7 +206,7 @@ const Events = () => {
                       <div className="relative group">
                         <button
                           disabled
-                          className="px-3 py-1 rounded-lg bg-gray-100 border border-gray-300 text-sm tracking-tight font-helvetica text-gray-400"
+                          className="px-3 py-2 rounded-lg bg-[#E3E3E3] border border-[#767676]/40 text-sm tracking-tight font-helvetica text-gray-400"
                         >
                           Register
                         </button>
