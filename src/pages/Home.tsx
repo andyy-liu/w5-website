@@ -3,47 +3,13 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserRound, Rocket, Folder, Calendar } from "lucide-react";
 import EventCarousel from "../components/EventCarousel";
+import { getFeaturedEvents, PORTFOLIOS } from "../data";
 
 const Home = () => {
-  const upcomingEvents = [
-    {
-      id: "accelerator-program",
-      title: "Accelerator Program",
-      date: "Februrary 2025",
-      category: "ACCELERATOR",
-      image:
-        "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1770&auto=format&fit=crop",
-      badgeColor: "bg-[#D15B4B]/50",
-    },
-    {
-      id: "summit-case-competition",
-      title: "Summit Case Competition",
-      date: "October 2025",
-      category: "DEVELOPMENT",
-      image: "/photos/summit.jpg",
-      badgeColor: "bg-[#5BA05B]/50",
-    },
-    {
-      id: "innovation-sprint",
-      title: "Innovation Sprint",
-      date: "November 2025",
-      category: "ACCELERATOR",
-      image: "/photos/inno-sprint.jpg",
-      badgeColor: "bg-[#D15B4B]/50",
-    },
-  ];
+  const upcomingEvents = getFeaturedEvents();
 
   // Track which portfolio is currently active (shows primary variant)
   const [activePortfolio, setActivePortfolio] = useState<string>("Accelerator");
-
-  const portfolios = [
-    "Accelerator",
-    "Catalyst",
-    "Community",
-    "Development",
-    "Innovation",
-    "Marketing",
-  ];
 
   const navigate = useNavigate();
 
@@ -150,6 +116,7 @@ const Home = () => {
         </section>
 
         {/* Portfolios Section */}
+        {/* Portfolios Section */}
         <section className="bg-cream py-24">
           <div className="container-w5">
             <div className="mb-4">
@@ -167,203 +134,39 @@ const Home = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div
-                className="bg-cream rounded-lg  transition duration-300 transform hover:translate-y-[-4px] cursor-pointer"
-                onClick={() => navigate(`/about?section=accelerator`)}
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="bg-gray-200 rounded-lg aspect-square w-28 flex items-center justify-center flex-shrink-0">
-                    <span className="text-4xl flex items-center justify-center">
-                      <img
-                        src="/accelerator.svg"
-                        alt="Accelerator"
-                        className="transition-transform duration-300 group-hover:scale-110"
-                        style={{
-                          filter: "brightness(2)",
-                          width: "1.25em",
-                          height: "1.25em",
-                          display: "block",
-                        }}
-                      />
-                    </span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl font-helvetica font-normal tracking-tighter text-on-light">
-                      Accelerator
-                    </h3>
-                    <p className="text-sm/4 md:text-sm font-helvetica text-gray-600 leading-snug">
-                      Accelerator is built for students who are passionate about
-                      entrepreneurship and want to be at the forefront of
-                      helping new ideas grow into real startups.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="bg-cream rounded-lg transition duration-300 transform hover:translate-y-[-4px]   cursor-pointer"
-                onClick={() => navigate(`/about?section=catalyst`)}
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="bg-gray-200 rounded-lg aspect-square w-28 flex items-center justify-center flex-shrink-0">
-                    <span className="text-4xl flex items-center justify-center">
-                      <img
-                        src="/catalyst.svg"
-                        alt="Catalyst"
-                        className="transition-transform duration-300 group-hover:scale-110"
-                        style={{
-                          filter: "brightness(2)",
-                          width: "1.25em",
-                          height: "1.25em",
-                          display: "block",
-                        }}
-                      />
-                    </span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl font-helvetica font-normal tracking-tighter text-on-light ">
-                      Catalyst
-                    </h3>
-                    <p className="text-sm/4 md:text-sm font-helvetica text-gray-600">
-                      Catalyst is the operations engine of W5, managing
-                      everything behind the scenes—from financial planning and
-                      grant writing to venue booking and logistics.
-                    </p>
+              {PORTFOLIOS.map((portfolio) => (
+                <div
+                  key={portfolio.id}
+                  className="bg-cream rounded-lg transition duration-300 transform hover:translate-y-[-4px] cursor-pointer"
+                  onClick={() => navigate(`/about?section=${portfolio.path}`)}
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-gray-200 rounded-lg aspect-square w-28 flex items-center justify-center flex-shrink-0">
+                      <span className="text-4xl flex items-center justify-center">
+                        <img
+                          src={portfolio.icon}
+                          alt={portfolio.name}
+                          className="transition-transform duration-300 group-hover:scale-110"
+                          style={{
+                            filter: "brightness(2)",
+                            width: "1.25em",
+                            height: "1.25em",
+                            display: "block",
+                          }}
+                        />
+                      </span>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl md:text-2xl font-helvetica font-normal tracking-tighter text-on-light">
+                        {portfolio.name}
+                      </h3>
+                      <p className="text-sm/4 md:text-sm font-helvetica text-gray-600 leading-snug">
+                        {portfolio.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <div
-                className="bg-cream rounded-lg  transition duration-300 transform hover:translate-y-[-4px]   cursor-pointer"
-                onClick={() => navigate(`/about?section=community`)}
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="bg-gray-200 rounded-lg aspect-square w-28 flex items-center justify-center flex-shrink-0">
-                    <span className="text-4xl flex items-center justify-center">
-                      <img
-                        src="/community.svg"
-                        alt="Community"
-                        className="transition-transform duration-300 group-hover:scale-110"
-                        style={{
-                          filter: "brightness(2)",
-                          width: "1.25em",
-                          height: "1.25em",
-                          display: "block",
-                        }}
-                      />
-                    </span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl font-helvetica font-normal tracking-tighter text-on-light ">
-                      Community
-                    </h3>
-                    <p className="text-sm/4 md:text-sm font-helvetica text-gray-600">
-                      Community is the portfolio that unites W5. It focuses on
-                      creating an inclusive environment for both internal
-                      members and the broader student body.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="bg-cream rounded-lg  transition duration-300 transform hover:translate-y-[-4px]   cursor-pointer"
-                onClick={() => navigate(`/about?section=development`)}
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="bg-gray-200 rounded-lg aspect-square w-28 flex items-center justify-center flex-shrink-0">
-                    <span className="text-4xl flex items-center justify-center">
-                      <img
-                        src="/development.svg"
-                        alt="Development"
-                        className="transition-transform duration-300 group-hover:scale-110"
-                        style={{
-                          filter: "brightness(2)",
-                          width: "1.1em",
-                          height: "1.1em",
-                          display: "block",
-                        }}
-                      />
-                    </span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl font-helvetica font-normal tracking-tighter text-on-light ">
-                      Development
-                    </h3>
-                    <p className="text-sm/4 md:text-sm font-helvetica text-gray-600 leading-snug">
-                      The Development portfolio is the powerhouse behind W5’s
-                      most high-profile events, leading major projects and
-                      initiatives that make a real impact.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="bg-cream rounded-lg  transition duration-300 transform hover:translate-y-[-4px]   cursor-pointer"
-                onClick={() => navigate(`/about?section=innovation`)}
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="bg-gray-200 rounded-lg aspect-square w-28 flex items-center justify-center flex-shrink-0">
-                    <span className="text-4xl flex items-center justify-center">
-                      <img
-                        src="/innovation.svg"
-                        alt="Innovation"
-                        className="transition-transform duration-300 group-hover:scale-110"
-                        style={{
-                          filter: "brightness(2)",
-                          width: "1.25em",
-                          height: "1.25em",
-                          display: "block",
-                        }}
-                      />
-                    </span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl font-helvetica font-normal tracking-tighter text-on-light ">
-                      Innovation
-                    </h3>
-                    <p className="text-sm/4 md:text-sm font-helvetica text-gray-600 leading-snug">
-                      Innovation is where curiosity meets opportunity;
-                      organizing events to cultivate the entrepreneurial spirit
-                      within students who want to take the next step.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="bg-cream rounded-lg  transition duration-300 transform hover:translate-y-[-4px]   cursor-pointer"
-                onClick={() => navigate(`/about?section=marketing`)}
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="bg-gray-200 rounded-lg aspect-square w-28 flex items-center justify-center flex-shrink-0">
-                    <span className="text-4xl flex items-center justify-center">
-                      <img
-                        src="/marketing.svg"
-                        alt="Marketing"
-                        className="transition-transform duration-300 group-hover:scale-110"
-                        style={{
-                          filter: "brightness(2)",
-                          width: "1.25em",
-                          height: "1.25em",
-                          display: "block",
-                        }}
-                      />
-                    </span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl  font-helvetica font-normal tracking-tighter text-on-light ">
-                      Marketing
-                    </h3>
-                    <p className="text-sm/4 md:text-sm font-helvetica text-gray-600 leading-snug">
-                      Marketing is the creative voice of W5. It’s how people
-                      hear about us; through eye-catching visuals, clever
-                      branding, and engaging campaigns.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>

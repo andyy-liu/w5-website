@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
 import EventCard from "../components/EventCard";
 import { useNavigate } from "react-router-dom";
+import { EVENTS } from "../data";
 
 const Events = () => {
   const navigate = useNavigate();
@@ -160,7 +161,7 @@ const Events = () => {
         <section className="bg-cream pb-24 rounded-b-[4rem]">
           <div className="container-w5">
             <div className="space-y-8">
-              {upcomingEvents.map((event, idx) => (
+              {EVENTS.map((event, idx) => (
                 <div
                   key={idx}
                   className="bg-cream rounded-lg cursor-pointer p-5 flex items-stretch space-x-6 border-2 border-[#D9D9D9] transition-all duration-300 ease-out hover:-translate-y-0.5"

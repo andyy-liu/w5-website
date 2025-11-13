@@ -2,6 +2,7 @@ import Layout from "../components/Layout";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Clock4 } from "lucide-react";
+import { PORTFOLIOS } from "../data";
 
 const About = () => {
   return (
@@ -53,50 +54,19 @@ const About = () => {
         <section className="bg-cream pb-24 rounded-b-[4rem]">
           <div className="container-w5">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Accelerator",
-                  color: "#D15B4B",
-                  svg: "/accelerator.svg",
-                },
-                {
-                  title: "Catalyst",
-                  color: "#D7C16B",
-                  svg: "/catalyst.svg",
-                },
-                {
-                  title: "Community",
-                  color: "#E6A6C7",
-                  svg: "/community.svg",
-                },
-                {
-                  title: "Development",
-                  color: "#5BA05B",
-                  svg: "/development.svg",
-                },
-                {
-                  title: "Innovation",
-                  color: "#5B9ED1",
-                  svg: "/innovation.svg",
-                },
-                {
-                  title: "Marketing",
-                  color: "#6B5BD1",
-                  svg: "/marketing.svg",
-                },
-              ].map((portfolio, idx) => (
+              {PORTFOLIOS.map((portfolio, idx) => (
                 <div
-                  key={portfolio.title}
+                  key={portfolio.id}
                   className="rounded-lg cursor-pointer flex flex-col justify-between p-6 h-72 transition-all duration-300 ease-out hover:scale-102 hover:-translate-y-1 hover:shadow-2xl"
                   style={{ background: portfolio.color }}
                   onClick={() =>
-                    (window.location.href = `/portfolio/${portfolio.title.toLowerCase()}`)
+                    (window.location.href = `/portfolio/${portfolio.name.toLowerCase()}`)
                   }
                 >
                   <div className="flex justify-start">
                     <img
-                      src={portfolio.svg}
-                      alt={portfolio.title}
+                      src={portfolio.icon}
+                      alt={portfolio.name}
                       style={{
                         filter: "invert(1) brightness(2)",
                         width: "2.5em",
@@ -107,7 +77,7 @@ const About = () => {
                   </div>
                   <div className="mt-auto">
                     <span className="text-3xl font-helvetica font-medium tracking-tight text-white">
-                      {portfolio.title}
+                      {portfolio.name}
                     </span>
                   </div>
                 </div>

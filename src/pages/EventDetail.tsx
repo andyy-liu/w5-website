@@ -1,48 +1,13 @@
 import { useParams } from "react-router-dom";
 import { Network, Calendar } from "lucide-react";
 import Layout from "../components/Layout";
+import { getEventById, getPortfolioByName } from "../data";
 
 const EventDetail = () => {
   const { eventId } = useParams<{ eventId: string }>();
 
-  // Event data - in a real app this would come from an API or database
-  const eventData: { [key: string]: any } = {
-    "summit-case-competition": {
-      title: "Summit Case Competition",
-      portfolio: "DEVELOPMENT",
-      portfolioColor: "#5BA05B",
-      whatIs:
-        "Summit Case Competition is W5’s annual flagship event, drawing over 100 competitors. Whether you’re a first-time participant or a regular case competitor, Summit offers a platform to showcase your analytical and presentation skills. Over 24 hours, students take on a case and present their solutions to representatives from leading firms such as Boston Consulting Group (BCG), Deloitte, and Bank of Montreal (BMO).",
-      why: "Summit is the first case competition of the school year, designed to help students build confidence, develop problem-solving skills, and connect with industry leaders. Through guided workshops, mentorship, and resource drives, competitors gain the tools to craft impactful presentations and tackle business challenges with confidence.",
-      additionalDetails:
-        "Date: October 4th \n Time: 8AM - 6PM \n Location: Morrissette Institute for Entrepreneurship & Somerville House \n Cost: $20 for members and $25 for non-members \n Attendance: Open to students of all academic years and programs that register.",
-      images: [],
-    },
-    "innovation-sprint": {
-      title: "Innovation Sprint",
-      portfolio: "ACCELERATOR",
-      portfolioColor: "#D15B4B",
-      whatIs:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      why: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      additionalDetails:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      images: [],
-    },
-    "accelerator-program": {
-      title: "Accelerator Program",
-      portfolio: "ACCELERATOR",
-      portfolioColor: "#D15B4B",
-      whatIs:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      why: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      additionalDetails:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      images: [],
-    },
-  };
-
-  const event = eventData[eventId || ""];
+  const event = getEventById(eventId || "");
+  const portfolio = event ? getPortfolioByName(event.portfolio) : null;
 
   // Define consistent sections structure
   const sections = event
@@ -89,93 +54,125 @@ const EventDetail = () => {
 
   return (
     <Layout>
-      <section className="bg-cream min-h-screen pt-48">
-        <div className="container-w5">
-          {/* Header */}
-          <div className="mb-12">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-apple-garamond font-normal text-black mb-4">
-              {event.title}
-            </h1>
-            {event.portfolio && (
-              <div
-                className="inline-block px-3 py-1 rounded-2xl text-sm font-normal tracking-tight text-black mb-6"
-                style={{
-                  backgroundColor: event.portfolioColor
-                    ? `${event.portfolioColor}50`
-                    : "#000020",
-                }}
-              >
-                {event.portfolio}
-              </div>
-            )}
-            {/* <p className="text-lg md:text-xl font-helvetica text-black/80 tracking-tight max-w-full leading-relaxed">
-              {event.description}
-            </p> */}
-          </div>
+      <div className="bg-black">
+        <section className="bg-cream min-h-screen pt-48 pb-24 rounded-b-[4rem]">
+          <div className="container-w5">
+            {/* Header */}
+            <div className="mb-12">
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-apple-garamond font-normal text-black mb-4">
+                {event.title}
+              </h1>
+              {portfolio && (
+                <div
+                  className="inline-flex items-center gap-2 px-3 py-1 rounded-2xl text-sm font-normal tracking-tight text-black mb-6"
+                  style={{
+                    backgroundColor: `${portfolio.color}50`,
+                  }}
+                >
+                  <img
+                    src={portfolio.icon}
+                    alt={`${portfolio.name} icon`}
+                    className="w-4 h-4"
+                  />
+                  {portfolio.name.toUpperCase()}
+                </div>
+              )}
+            </div>
 
-          {/* Content Sections */}
-          <div className="space-y-16">
-            {sections.map((section, index: number) => (
-              <div
-                key={index}
-                className="max-w-full"
-              >
-                {section.tag && (
-                  <div
-                    className="inline-flex items-center px-2 py-2 mb-4"
-                    style={{
-                      border: `1px solid ${event.portfolioColor}`,
-                      borderRadius: "9999px",
-                    }}
-                  >
-                    <span
-                      className="text-sm md:text-md font-helvetica mr-2"
+            {/* Content Sections */}
+            <div className="space-y-16">
+              {sections.map((section, index: number) => (
+                <div
+                  key={index}
+                  className="max-w-full"
+                >
+                  {section.tag && portfolio && (
+                    <div
+                      className="inline-flex items-center px-2 py-2 mb-4"
                       style={{
-                        color: event.portfolioColor,
+                        border: `1px solid ${portfolio.color}`,
+                        borderRadius: "9999px",
                       }}
                     >
-                      {section.tag === "Core Functions" ? (
-                        <Network size={16} />
-                      ) : section.tag === "Event Info" ? (
-                        <Calendar size={16} />
-                      ) : null}
-                    </span>
-                    <span
-                      className="text-sm md:text-md font-helvetica tracking-tight"
-                      style={{
-                        color: event.portfolioColor,
-                      }}
-                    >
-                      {section.tag}
-                    </span>
-                  </div>
-                )}
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-apple-garamond font-normal text-black mb-4">
-                  {section.title}
-                </h2>
-                {section.title === "Additional Details" ? (
-                  <div className="text-base md:text-lg font-helvetica text-black/70 tracking-tight leading-relaxed">
-                    {section.content
-                      .split("\n")
-                      .map((line: string, lineIndex: number) => (
-                        <div
-                          key={lineIndex}
-                          className="mb-2"
-                        >
-                          {line.trim()}
+                      <span
+                        className="text-sm md:text-md font-helvetica mr-2"
+                        style={{
+                          color: portfolio.color,
+                        }}
+                      >
+                        {section.tag === "Core Functions" ? (
+                          <Network size={16} />
+                        ) : section.tag === "Event Info" ? (
+                          <Calendar size={16} />
+                        ) : null}
+                      </span>
+                      <span
+                        className="text-sm md:text-md font-helvetica tracking-tight"
+                        style={{
+                          color: portfolio.color,
+                        }}
+                      >
+                        {section.tag}
+                      </span>
+                    </div>
+                  )}
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-apple-garamond font-normal text-black mb-4">
+                    {section.title}
+                  </h2>
+                  {section.title === "Additional Details" ? (
+                    <div className="text-base md:text-lg font-helvetica text-black/70 tracking-tight leading-relaxed">
+                      {(typeof section.content === "string"
+                        ? section.content
+                        : section.content.join("\n")
+                      )
+                        .split("\n")
+                        .map((line: string, lineIndex: number) => (
+                          <div
+                            key={lineIndex}
+                            className="mb-2"
+                          >
+                            {line.trim()}
+                          </div>
+                        ))}
+                    </div>
+                  ) : section.title === "Images" ? (
+                    <div>
+                      {event.images && event.images.length > 0 ? (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                          {event.images.map(
+                            (image: string, imageIndex: number) => (
+                              <div
+                                key={imageIndex}
+                                className="aspect-[4/3] rounded-xl overflow-hidden bg-gray-100"
+                              >
+                                <img
+                                  src={image}
+                                  alt={`${event.title} - Image ${
+                                    imageIndex + 1
+                                  }`}
+                                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                />
+                              </div>
+                            )
+                          )}
                         </div>
-                      ))}
-                  </div>
-                ) : (
-                  <p className="text-base md:text-lg font-helvetica text-black/70 tracking-tight leading-relaxed">
-                    {section.content}
-                  </p>
-                )}
-              </div>
-            ))}
+                      ) : (
+                        <p className="text-base md:text-lg font-helvetica text-black/40 tracking-tight leading-relaxed italic">
+                          No images available for this event.
+                        </p>
+                      )}
+                    </div>
+                  ) : (
+                    <p className="text-base md:text-lg font-helvetica text-black/70 tracking-tight leading-relaxed">
+                      {section.content}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </Layout>
   );
 };

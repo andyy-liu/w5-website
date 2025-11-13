@@ -1,16 +1,6 @@
 import { Link } from "react-router-dom";
 import { useRef, useEffect } from "react";
-
-interface Event {
-  id: string;
-  title: string;
-  date: string;
-  category: string;
-  image: string;
-  badgeColor?: string;
-  portfolio?: string;
-  portfolioColor?: string;
-}
+import { Event, getPortfolioByName } from "../data";
 
 interface EventCarouselProps {
   events: Event[];
@@ -100,7 +90,7 @@ const EventCarousel = ({ events }: EventCarouselProps) => {
         <div className="flex items-center mx-auto">
           <div className="flex items-center">
             <h2 className="text-4xl lg:text-5xl font-apple-garamond font-normal text-on-light">
-              Upcoming W5 Events
+              Flagship W5 Events
             </h2>
           </div>
         </div>
@@ -129,7 +119,7 @@ const EventCarousel = ({ events }: EventCarouselProps) => {
                 {/* Event Image */}
                 <div className="relative w-full h-48 md:h-64 lg:h-80 bg-gray-200 rounded-xl overflow-hidden">
                   <img
-                    src={event.image}
+                    src={event.image || "/placeholder.svg"}
                     alt={event.title}
                     className="w-full h-full object-cover pointer-events-none"
                     draggable="false"
@@ -148,16 +138,26 @@ const EventCarousel = ({ events }: EventCarouselProps) => {
                 {/* Bottom section with date, category and button */}
                 <div className="px-1 py-2 bg-cream flex items-center justify-between">
                   <div>
-                    <p className="text-sm md:text-md lg:text-lg font-helvetica text-gray-700 font-medium -mb-1 md:mb-0">
+                    <p className="text-sm md:text-md lg:text-lg font-helvetica text-gray-700 font-medium tracking-tight -mb-1 md:mb-0">
                       {event.date || "Month DD-DD, 202#"}
                     </p>
-                    <span
-                      className={`inline-block px-1.5 md:px-2.5 rounded-2xl text-[0.65rem] md:text-xs lg:text-sm font-normal tracking-tighter text-black/70 ${
-                        event.badgeColor || "bg-[#5BA05B]/50"
-                      }`}
-                    >
-                      {event.category}
-                    </span>
+                    {getPortfolioByName(event.portfolio) && (
+                      <span
+                        className="inline-flex items-center gap-1 py-0.5 px-1.5 md:px-2.5 rounded-2xl text-[0.65rem] md:text-xs lg:text-sm font-normal tracking-tighter text-black/70"
+                        style={{
+                          backgroundColor: `${
+                            getPortfolioByName(event.portfolio)?.color
+                          }50`,
+                        }}
+                      >
+                        <img
+                          src={getPortfolioByName(event.portfolio)?.icon}
+                          alt={`${event.portfolio} icon`}
+                          className="w-3 h-3 lg:w-3.5 lg:h-3.5"
+                        />
+                        {event.portfolio}
+                      </span>
+                    )}
                   </div>
                   <Link
                     to={`/events/${event.id}`}
