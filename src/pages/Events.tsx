@@ -1,9 +1,13 @@
 import Layout from "../components/Layout";
 import EventCard from "../components/EventCard";
+import { useNavigate } from "react-router-dom";
 
 const Events = () => {
+  const navigate = useNavigate();
+
   const upcomingEvents = [
     {
+      id: "on-the-road",
       title: "On The Road",
       date: "August 15, 2025",
       description:
@@ -13,6 +17,7 @@ const Events = () => {
       image: "/events/agm-2025.jpg",
     },
     {
+      id: "summer-dinner",
       title: "Summer Dinner",
       date: "August 16, 2025",
       description:
@@ -22,24 +27,27 @@ const Events = () => {
       image: "/events/agm-2025.jpg",
     },
     {
+      id: "annual-general-meeting",
       title: "Annual General Meeting",
       date: "September 13, 2025",
       description:
-        "Kick off the year with W5’s Annual General Meeting—an opportunity to learn about our mission, meet the executive team, and explore ways to get involved.",
+        "Kick off the year with W5’s Annual General Meeting; an opportunity to learn about our mission, meet the executive team, and explore ways to get involved.",
       register: "https://example.com/register-agm",
       isRegistrationOpen: false,
       image: "/events/agm-2025.jpg",
     },
     {
+      id: "summit-case-competition",
       title: "Summit Case Competition",
       date: "October 3-4, 2025",
       description:
-        "Gain valuable case competition experience, network with sponsor representatives, and work on creating solutions to real world business problems",
+        "Compete in W5’s flagship event—Summit Case Competition, Western’s largest beginner friendly case competition bringing together top students and industry leaders.",
       register: "https://example.com/register-summit",
       isRegistrationOpen: false,
       image: "/events/summit-2025.jpg",
     },
     {
+      id: "steve-jobs-night",
       title: "Steve Jobs Night",
       date: "October 10, 2025",
       description:
@@ -49,22 +57,25 @@ const Events = () => {
       image: "/events/steve-jobs-night.jpg",
     },
     {
+      id: "careers-panel",
       title: "Careers Panel",
       date: "October 28-29, 2025",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Discover diverse career paths at Careers Panel—a two-day event connecting students with HBA1 and HBA2 mentors in finance, consulting, tech, and entrepreneurship.",
       register: "https://example.com/register-careers",
       isRegistrationOpen: false,
     },
     {
+      id: "toronto-firms-trip",
       title: "Toronto Firms Trip",
       date: "November 14, 2025",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Get an inside look at the world of finance and consulting through W5’s Toronto Firms Trip—a one-day experience connecting students directly with industry professionals.",
       register: "https://example.com/register-designathon",
       isRegistrationOpen: false,
     },
     {
+      id: "innovation-sprint",
       title: "Innovation Sprint",
       date: "November 15-16, 2025",
       description:
@@ -73,6 +84,7 @@ const Events = () => {
       isRegistrationOpen: true,
     },
     {
+      id: "internship-program",
       title: "Internship Program",
       date: "November 23, 2025",
       description:
@@ -81,6 +93,7 @@ const Events = () => {
       isRegistrationOpen: false,
     },
     {
+      id: "accelerator-program",
       title: "Accelerator Program",
       date: "December-January, 2025",
       description:
@@ -89,6 +102,7 @@ const Events = () => {
       isRegistrationOpen: false,
     },
     {
+      id: "iterate-designathon",
       title: "Iterate Designathon",
       date: "January 9-10, 2025",
       description:
@@ -97,6 +111,7 @@ const Events = () => {
       isRegistrationOpen: false,
     },
     {
+      id: "pitchquest",
       title: "PitchQuest",
       date: "January 18, 2025",
       description:
@@ -105,6 +120,7 @@ const Events = () => {
       isRegistrationOpen: false,
     },
     {
+      id: "pitch5",
       title: "Pitch5",
       date: "February 28 - March 1, 2025",
       description:
@@ -113,6 +129,7 @@ const Events = () => {
       isRegistrationOpen: false,
     },
     {
+      id: "suit-down-get-social",
       title: "Suit Down & Get Social",
       date: "March 20-21, 2025",
       description:
@@ -148,6 +165,7 @@ const Events = () => {
                   key={idx}
                   className="bg-cream rounded-lg cursor-pointer p-5 flex items-stretch space-x-6 border-2 border-[#D9D9D9] transition-all duration-300 ease-out hover:-translate-y-0.5"
                   style={{ boxShadow: "0 0 8px rgba(0, 4, 0, 0.1)" }}
+                  onClick={() => navigate(`/events/${event.id}`)}
                 >
                   {/* Event Image */}
                   <div className="w-36 flex-shrink-0 flex items-center justify-center">
@@ -203,16 +221,16 @@ const Events = () => {
                         </button>
                       </a>
                     ) : (
-                      <div className="relative group">
+                      <div className="relative">
                         <button
                           disabled
-                          className="px-3 py-2 rounded-lg bg-[#E3E3E3] border border-[#767676]/40 text-sm tracking-tight font-helvetica text-gray-400"
+                          className="group px-3 py-2 rounded-lg bg-[#E3E3E3] border border-[#767676]/40 text-sm tracking-tight font-helvetica text-gray-400"
                         >
                           Register
+                          <span className="pointer-events-none absolute -top-8 -left-6 w-max opacity-0 transition-opacity group-hover:opacity-100 bg-gray-800 text-white text-xs rounded py-1 px-2">
+                            Registration is closed
+                          </span>
                         </button>
-                        <span className="pointer-events-none absolute -top-8 -left-6 w-max opacity-0 transition-opacity group-hover:opacity-100 bg-gray-800 text-white text-xs rounded py-1 px-2">
-                          Registration is closed
-                        </span>
                       </div>
                     )}
                   </div>

@@ -7,7 +7,7 @@ import EventCarousel from "../components/EventCarousel";
 const Home = () => {
   const upcomingEvents = [
     {
-      id: "accelerator",
+      id: "accelerator-program",
       title: "Accelerator Program",
       date: "Februrary 2025",
       category: "ACCELERATOR",
@@ -16,7 +16,7 @@ const Home = () => {
       badgeColor: "bg-[#D15B4B]/50",
     },
     {
-      id: "summit",
+      id: "summit-case-competition",
       title: "Summit Case Competition",
       date: "October 2025",
       category: "DEVELOPMENT",

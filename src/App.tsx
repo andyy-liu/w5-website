@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Events from "./pages/Events";
+import EventDetail from "./pages/EventDetail";
 import Team from "./pages/Team";
 import NotFound from "./pages/NotFound";
 
@@ -29,6 +30,10 @@ const App = () => (
           <Route
             path="/events"
             element={<Events />}
+          />
+          <Route
+            path="/events/:eventId"
+            element={<EventDetail />}
           />
           <Route
             path="/team"

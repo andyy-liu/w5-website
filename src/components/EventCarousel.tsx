@@ -148,7 +148,7 @@ const EventCarousel = ({ events }: EventCarouselProps) => {
                 {/* Bottom section with date, category and button */}
                 <div className="px-1 py-2 bg-cream flex items-center justify-between">
                   <div>
-                    <p className="text-sm md:text-md lg:text-lg font-helvetica text-gray-700 font-medium">
+                    <p className="text-sm md:text-md lg:text-lg font-helvetica text-gray-700 font-medium -mb-1 md:mb-0">
                       {event.date || "Month DD-DD, 202#"}
                     </p>
                     <span
@@ -160,7 +160,7 @@ const EventCarousel = ({ events }: EventCarouselProps) => {
                     </span>
                   </div>
                   <Link
-                    to={`/events`}
+                    to={`/events/${event.id}`}
                     className="px-3 py-1.5 bg-black text-white text-xs md:text-sm lg:text-base font-helvetica tracking-tight rounded-lg hover:bg-gray-800 transition-colors pointer-events-auto"
                   >
                     Learn More
