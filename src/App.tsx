@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Events from "./pages/Events";
 import EventDetail from "./pages/EventDetail";
+import PortfolioDetail from "./pages/PortfolioDetail";
 import Team from "./pages/Team";
 import NotFound from "./pages/NotFound";
 
@@ -34,6 +35,10 @@ const App = () => (
           <Route
             path="/events/:eventId"
             element={<EventDetail />}
+          />
+          <Route
+            path="/portfolio/:portfolioId"
+            element={<PortfolioDetail />}
           />
           <Route
             path="/team"

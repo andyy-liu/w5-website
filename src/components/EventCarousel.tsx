@@ -80,7 +80,7 @@ const EventCarousel = ({ events }: EventCarouselProps) => {
     if (!isDown || !scrollRef.current) return;
     e.preventDefault();
     const x = e.pageX - scrollRef.current.offsetLeft;
-    const walk = (x - startX) * 2;
+    const walk = (x - startX) * 1;
     scrollRef.current.scrollLeft = scrollLeft - walk;
   };
 
@@ -129,7 +129,7 @@ const EventCarousel = ({ events }: EventCarouselProps) => {
 
                   {/* Event title overlay */}
                   <div className="absolute top-3 left-3 md:top-4 md:left-4">
-                    <h3 className="text-white text-lg md:text-xl font-helvetica font-normal tracking-tight drop-shadow-lg">
+                    <h3 className="text-white text-lg md:text-xl lg:text-2xl font-helvetica font-normal tracking-tight drop-shadow-lg">
                       {event.title}
                     </h3>
                   </div>
@@ -138,7 +138,7 @@ const EventCarousel = ({ events }: EventCarouselProps) => {
                 {/* Bottom section with date, category and button */}
                 <div className="px-1 py-2 bg-cream flex items-center justify-between">
                   <div>
-                    <p className="text-sm md:text-md lg:text-lg font-helvetica text-gray-700 font-medium tracking-tight -mb-1 md:mb-0">
+                    <p className="text-sm md:text-md lg:text-lg font-helvetica text-gray-700 font-medium tracking-tight mb-0 md:mb-1">
                       {event.date || "Month DD-DD, 202#"}
                     </p>
                     {getPortfolioByName(event.portfolio) && (

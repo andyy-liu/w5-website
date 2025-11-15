@@ -138,7 +138,7 @@ const Home = () => {
                 <div
                   key={portfolio.id}
                   className="bg-cream rounded-lg transition duration-300 transform hover:translate-y-[-4px] cursor-pointer"
-                  onClick={() => navigate(`/about?section=${portfolio.path}`)}
+                  onClick={() => navigate(`/portfolio/${portfolio.id}`)}
                 >
                   <div className="flex items-start space-x-4">
                     <div className="bg-gray-200 rounded-lg aspect-square w-28 flex items-center justify-center flex-shrink-0">

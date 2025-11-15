@@ -143,14 +143,14 @@ const EventDetail = () => {
                             (image: string, imageIndex: number) => (
                               <div
                                 key={imageIndex}
-                                className="aspect-[4/3] rounded-xl overflow-hidden bg-gray-100"
+                                className="aspect-[4/3] rounded-xl overflow-hidden bg-gray-100 hover:scale-[1.01] transition-transform duration-300"
                               >
                                 <img
                                   src={image}
                                   alt={`${event.title} - Image ${
                                     imageIndex + 1
                                   }`}
-                                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                  className="w-full h-full object-cover "
                                 />
                               </div>
                             )

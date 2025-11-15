@@ -6,6 +6,11 @@ export interface Portfolio {
   description: string;
   icon: string;
   path: string;
+  // Portfolio detail specific fields
+  whatDo?: string;
+  events?: string[];
+  joinIf?: string;
+  teamImages?: string[];
 }
 
 // Event Types
@@ -42,7 +47,10 @@ export const PORTFOLIOS: Portfolio[] = [
     color: "#D15B4B",
     description: "Accelerator is built for students who are passionate about entrepreneurship and want to be at the forefront of helping new ideas grow into real startups.",
     icon: "/accelerator.svg",
-    path: "/about?section=accelerator"
+    path: "/about?section=accelerator",
+    whatDo: "The Accelerator portfolio is built for students who are passionate about entrepreneurship and want to be at the forefront of helping new ideas grow into real startups. Accelerator runs high-impact, hands-on events and programs that lower the barrier to building or working in startups.",
+    joinIf: "you want to see real businesses take shape, and give firsthand experience in startup development, mentorship planning, and program execution.",
+    teamImages: ["/team/accelerator-1.webp", "/team/accelerator-2.webp"]
   },
   {
     id: "catalyst",
@@ -50,7 +58,10 @@ export const PORTFOLIOS: Portfolio[] = [
     color: "#D7C16B",
     description: "Catalyst is the operations engine of W5, managing everything behind the scenes—from financial planning and grant writing to venue booking and logistics.",
     icon: "/catalyst.svg",
-    path: "/about?section=catalyst"
+    path: "/about?section=catalyst",
+    whatDo: "Catalyst is the operations engine of W5, managing everything behind the scenes—from financial planning and grant writing to venue booking and logistics. We ensure smooth operations across all portfolios and maintain the infrastructure that keeps W5 running effectively.",
+    joinIf: "you’re interested in developing hands-on skills in finance, logistics, and operational planning—all while being at the core of everything W5 does.",
+    teamImages: ["/team/catalyst-1.webp", "/team/catalyst-2.webp"]
   },
   {
     id: "community",
@@ -58,7 +69,10 @@ export const PORTFOLIOS: Portfolio[] = [
     color: "#E6A6C7",
     description: "Community is the portfolio that unites W5. It focuses on creating an inclusive environment for both internal members and the broader student body.",
     icon: "/community.svg",
-    path: "/about?section=community"
+    path: "/about?section=community",
+    whatDo: "Community is the portfolio that unites W5. It focuses on creating a welcoming, inclusive, and engaging environment for both internal members and the broader student body. By organizing social events, mentorship mixers, and community-building initiatives, Community ensures that every member feels connected and part of something bigger.",
+    joinIf: "you love planning meaningful events and helping foster a strong sense of belonging and culture in W5.",
+    teamImages: ["/team/community-1.webp", "/team/community-2.webp"]
   },
   {
     id: "development",
@@ -66,7 +80,10 @@ export const PORTFOLIOS: Portfolio[] = [
     color: "#5BA05B",
     description: "The Development portfolio is the powerhouse behind W5's most high-profile events, leading major projects and initiatives that make a real impact.",
     icon: "/development.svg",
-    path: "/about?section=development"
+    path: "/about?section=development",
+    whatDo: "The Development portfolio is the powerhouse behind W5’s biggest and most high-profile events. If you're someone who loves detailed planning, working with external partners, and seeing large-scale ideas come to life, this is where you’ll thrive. Development members gain experience in event execution, sponsorship outreach, and corporate relations.",
+    joinIf: "you want to lead major projects, build relationships with corporate partners, and run events that make a real impact at Western.",
+    teamImages: ["/team/development-1.webp", "/team/development-2.webp"]
   },
   {
     id: "innovation",
@@ -74,7 +91,10 @@ export const PORTFOLIOS: Portfolio[] = [
     color: "#5B9ED1",
     description: "Innovation is where curiosity meets opportunity; organizing events to cultivate the entrepreneurial spirit within students who want to take the next step.",
     icon: "/innovation.svg",
-    path: "/about?section=innovation"
+    path: "/about?section=innovation",
+    whatDo: "Innovation is where curiosity meets opportunity. Our portfolio is focused on making entrepreneurship accessible and fun by providing hands-on exposure to the startup world. Innovation creates and organizes events that aim to spark the entrepreneurial spirit within students who are curious and want to take the next step.",
+    joinIf: "you love brainstorming innovative and original event ideas that cater to those lesser-explored niches.",
+    teamImages: ["/team/innovation-1.webp", "/team/innovation-2.webp"]
   },
   {
     id: "marketing",
@@ -82,7 +102,10 @@ export const PORTFOLIOS: Portfolio[] = [
     color: "#6B5BD1",
     description: "Marketing is the creative voice of W5. It's how people hear about us; through eye-catching visuals, clever branding, and engaging campaigns.",
     icon: "/marketing.svg",
-    path: "/about?section=marketing"
+    path: "/about?section=marketing",
+    whatDo: "Marketing is the creative voice of W5. It’s how people hear about our initiatives; through eye-catching visuals, clever branding, and engaging campaigns. From Instagram posts to design events, we work with every portfolio to share what’s happening and grow W5’s presence across campus.",
+    joinIf: "you want to push creative boundaries in innovative ways and bring more design opportunities to Western.",
+    teamImages: ["/team/marketing-1.webp", "/team/marketing-2.webp"]
   }
 ];
 
@@ -92,11 +115,15 @@ export const EVENTS: Event[] = [
     id: "on-the-road",
     title: "On The Road",
     date: "August 15, 2025",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    portfolio: "COMMUNITY",
+    description: "Come to On The Road, W5’s first in-person event of the summer—a chance to gain a deeper insight into what working at a startup is actually like.",
+    portfolio: "INNOVATION",
     image: "/events/agm-2025.jpg",
     register: "https://example.com/register-agm",
-    isRegistrationOpen: false
+    isRegistrationOpen: false,
+    whatIs: "On The Road (OTR) is a trip to some of Toronto’s most exciting high-growth startups. Participants will visit multiple companies, meet the teams building them, and hear candid stories about product development, scaling, fundraising, and company culture. Whether you’re curious about entrepreneurship or just want a fresh perspective, this event immerses you directly into the space.",
+    why: "On The Road gives you personal access to Toronto’s startup culture. You’ll experience company culture up close, ask real questions, and see how different teams within the firm think, build, and execute. Past tours have featured networking sessions, exclusive hiring insights, and behind-the-scenes looks at operations that you won’t find at typical networking events. ",
+    additionalDetails: "Date: August 15th \n Time: 1:00 - 4:00PM \n Location: Downtown Toronto \n Cost: Free for all students \n Attendance: Open to all Western University students interested in entrepreneurship.",
+    images: []
   },
   {
     id: "summer-dinner",
@@ -114,9 +141,13 @@ export const EVENTS: Event[] = [
     date: "September 13, 2025",
     description: "Kick off the year with W5's Annual General Meeting; an opportunity to learn about our mission, meet the executive team, and explore ways to get involved.",
     portfolio: "COMMUNITY",
-    image: "/events/agm-2025.jpg",
+    image: "/events/agm-2.webp",
     register: "https://example.com/register-agm",
-    isRegistrationOpen: false
+    isRegistrationOpen: false,
+    whatIs: "The Annual General Meeting (AGM) marks the start of W5’s academic year. It brings together over 150 students to hear from the executive team about W5’s mission, structure, and the initiatives led by each portfolio. Attendees gain an inside look at how the club operates and what it means to be part of Western’s entrepreneurial community.",
+    why: "The AGM is the best place to connect directly with the executive team before director applications open. Unlike other large-scale events or coffee chats, the AGM offers access to the entire executive team - giving you the chance to ask questions, build connections, and find your fit within the club early on.",
+    additionalDetails: "Date: September 13th \n Time: 2:00PM - 4:00PM \n Location: Morrissette Institute for Entrepreneurship \n Cost: Free for all students \n Attendance: Open to all Western University students interested in entrepreneurship.",
+    images: ["/events/agm-1.webp", "/events/agm-2.webp", "/events/agm-3.webp", "/events/agm-4.webp", "/events/agm-5.webp", "/events/agm-6.webp"]
   },
   {
     id: "summit-case-competition",
@@ -124,12 +155,12 @@ export const EVENTS: Event[] = [
     date: "October 3–4, 2025",
     description: "Compete in W5's flagship event—Summit Case Competition, Western's largest beginner friendly case competition bringing together top students and industry leaders.",
     portfolio: "DEVELOPMENT",
-    image: "/photos/summit.jpg",
+    image: "/events/summit.jpg",
     register: "https://example.com/register-summit",
     isRegistrationOpen: false,
     whatIs: "Summit Case Competition is W5's annual flagship event, drawing over 100 competitors. Whether you're a first-time participant or a regular case competitor, Summit offers a platform to showcase your analytical and presentation skills. Over 24 hours, students take on a case and present their solutions to representatives from leading firms such as Boston Consulting Group (BCG), Deloitte, and Bank of Montreal (BMO).",
     why: "Summit is the first case competition of the school year, designed to help students build confidence, develop problem-solving skills, and connect with industry leaders. Through guided workshops, mentorship, and resource drives, competitors gain the tools to craft impactful presentations and tackle business challenges with confidence.",
-    additionalDetails: "Date: October 4th \n Time: 8AM - 6PM \n Location: Morrissette Institute for Entrepreneurship & Somerville House \n Cost: $20 for members and $25 for non-members \n Attendance: Open to students of all academic years and programs that register.",
+    additionalDetails: "Date: October 4th \n Time: 8:00AM - 6:00PM \n Location: Morrissette Institute for Entrepreneurship & Somerville House \n Cost: $20 for members and $25 for non-members \n Attendance: Open to students of all academic years and programs that register.",
     images: []
   },
   {
@@ -149,7 +180,11 @@ export const EVENTS: Event[] = [
     description: "Discover diverse career paths at Careers Panel—a two-day event connecting students with HBA1 and HBA2 mentors in finance, consulting, tech, and entrepreneurship.",
     portfolio: "DEVELOPMENT",
     register: "https://example.com/register-careers",
-    isRegistrationOpen: false
+    isRegistrationOpen: false,
+    whatIs: "Careers Panel is a collaborative event between W5, PBSN, and WFN designed to help students explore a wide range of career opportunities. Over two days, 12 HBA1 and HBA2 students share their experiences—discussing what motivated their career choices, how they navigated recruitment, and what it’s like working in their respective fields.",
+    why: "Many incoming business students at Western begin their journey with a limited view of available career paths. Careers Panel broadens those horizons by showcasing diverse industries and experiences, helping students understand what different roles involve, identify areas that align with their interests, and gain clarity on how to prepare for their own professional journey.",
+    additionalDetails: "Date: October 28th and 30th \n Time: 5:30 - 6:30PM \n Location: Ivey Business School \n Cost: Free for all students \n Attendance: Open to all Western University students",
+    images: []
   },
   {
     id: "toronto-firms-trip",
@@ -158,7 +193,11 @@ export const EVENTS: Event[] = [
     description: "Get an inside look at the world of finance and consulting through W5's Toronto Firms Trip—a one-day experience connecting students directly with industry professionals.",
     portfolio: "DEVELOPMENT",
     register: "https://example.com/register-designathon",
-    isRegistrationOpen: false
+    isRegistrationOpen: false,
+    whatIs: "Toronto Firms Trip is a one-day excursion organized by W5, offering first- and second-year students the opportunity to visit leading finance and consulting firms in Toronto, such as Deloitte, National Bank, and McKinsey. Throughout the day, participants take part in office tours, company presentations, and networking sessions with professionals who share insights into their work, company culture, and recruitment processes.",
+    why: "The Firms Trip provides students with a firsthand look at how top firms operate. Taking place during peak recruitment season, the trip offers valuable exposure, practical advice, and direct networking opportunities with recruiters and professionals. By engaging with firms early on, students gain a clearer understanding of potential career paths and a competitive edge when pursuing future internship opportunities.",
+    additionalDetails: "Date: November 14th \n Time: 6:00AM - 8:00PM \n Location: Downtown Toronto \n Cost: $35 for members, $40 for non-members \n Attendance: Select partcipants from registered applicants.",
+    images: []
   },
   {
     id: "innovation-sprint",
@@ -166,7 +205,7 @@ export const EVENTS: Event[] = [
     date: "November 15–16, 2025",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     portfolio: "ACCELERATOR", 
-    image: "/photos/inno-sprint.jpg",
+    image: "/events/inno-sprint.jpg",
     register: "https://example.com/register-sprint",
     isRegistrationOpen: true,
     whatIs: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -185,10 +224,14 @@ export const EVENTS: Event[] = [
     id: "internship-program",
     title: "Internship Program",
     date: "November 23, 2025",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    portfolio: "ACCELERATOR",
+    description: "Kickstart your career this winter term through a remote internship with one of our partner startups—featuring hands-on work experience, mentorship, and a guided application process run by W5’s Launch program.",
+    portfolio: "INNOVATION",
     register: "https://example.com/register-internship",
-    isRegistrationOpen: false
+    isRegistrationOpen: false,
+    whatIs: "The Launch Internship Program is a Winter 2026 internship program run by W5 in collaboration with various startups. Students will attend an information session hosted by W5, apply through a structured screening process managed by W5, and selected candidates will complete a four-month remote internship from January to April 2026. ",
+    why: "Unlike typical job postings or open applications, Launch offers students a guided pathway into startup roles. W5 handles resume screening and first-round interviews to ensure applicants receive support and feedback during the hiring process. Partner companies provide hands-on work, tight-knit team environments, and opportunities to contribute directly to product, marketing, operations, and strategy—not just observe, all while studying.",
+    additionalDetails: "Info Session Date: November 23rd \n Time: 1:00 - 2:30PM \n Location: Somerville House6 \n Application period: 7 days following the info session \n Internship Duration: January - April 2026 (4 months) \n Cost: Free for all students \n Attendance: Open to all Western University students.",
+    images: []
   },
   {
     id: "accelerator-program",
@@ -208,17 +251,21 @@ export const EVENTS: Event[] = [
     id: "iterate-designathon",
     title: "Iterate Designathon",
     date: "January 9-10, 2025",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    portfolio: "INNOVATION",
+    description: "Jumpstart your design journey with Iterate Designathon—W5 Marketing’s flagship event featuring our annual Figma and Notion workshops.",
+    portfolio: "MARKETING",
     register: "https://example.com/register-designathon",
-    isRegistrationOpen: false
+    isRegistrationOpen: false,
+    whatIs: "Iterate Designathon is W5 Marketing’s signature design-focused initiative. The event brings together students interested in UI/UX, product design, and digital creation for a full day of hands-on workshops and guided project building. Through beginner-friendly Figma and Notion sessions, attendees gain practical experience and leave with completed designs they can showcase in their portfolios. The Designathon creates a collaborative environment where participants can experiment, learn, and bring their ideas to life.",
+    why: "Addresses the lack of product design opportunities at Western by providing a hands-on competition that builds practical skills and results in portfolio-quality projects.",
+    additionalDetails: "Date: January 9 - 11 \n Time: 5:00 - 9:00PM (Jan 9); 9:00AM - 3:00PM (Jan 10) \n Location: Virtual \n Cost: $10 entry fee \n Attendance: Open to all university students across Canada.",
+    images: []
   },
   {
     id: "pitchquest",
     title: "PitchQuest",
     date: "January 18, 2025",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    portfolio: "ACCELERATOR",
+    portfolio: "CATALYST",
     register: "https://example.com/register-designathon",
     isRegistrationOpen: false
   },
@@ -228,6 +275,15 @@ export const EVENTS: Event[] = [
     date: "February 28 - March 1, 2025",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     portfolio: "ACCELERATOR",
+    register: "https://example.com/register-designathon",
+    isRegistrationOpen: false
+  },
+  {
+    id: "alchemy",
+    title: "Alchemy",
+    date: "Late February, Early March",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    portfolio: "CATALYST",
     register: "https://example.com/register-designathon",
     isRegistrationOpen: false
   },

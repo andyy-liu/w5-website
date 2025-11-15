@@ -60,7 +60,7 @@ const About = () => {
                   className="rounded-lg cursor-pointer flex flex-col justify-between p-6 h-72 transition-all duration-300 ease-out hover:scale-102 hover:-translate-y-1 hover:shadow-2xl"
                   style={{ background: portfolio.color }}
                   onClick={() =>
-                    (window.location.href = `/portfolio/${portfolio.name.toLowerCase()}`)
+                    (window.location.href = `/portfolio/${portfolio.id}`)
                   }
                 >
                   <div className="flex justify-start">

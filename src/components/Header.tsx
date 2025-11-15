@@ -48,7 +48,9 @@ const Header = ({
             className={clsx("flex items-center", textColor)}
           >
             <img
-              src={variant === "landing" ? "/w5logo.png" : "/w5logo_dark.png"}
+              src={
+                variant === "landing" ? "/w5logo-light.svg" : "/w5logo-dark.svg"
+              }
               alt="W5 Logo"
               className="h-6 w-auto"
             />
