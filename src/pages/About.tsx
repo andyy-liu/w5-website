@@ -1,10 +1,12 @@
 import Layout from "../components/Layout";
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Clock4 } from "lucide-react";
 import { PORTFOLIOS } from "../data";
 
 const About = () => {
+  const navigate = useNavigate();
+
   return (
     <Layout>
       <section className="bg-black">
@@ -59,9 +61,7 @@ const About = () => {
                   key={portfolio.id}
                   className="rounded-lg cursor-pointer flex flex-col justify-between p-6 h-72 transition-all duration-300 ease-out hover:scale-102 hover:-translate-y-1 hover:shadow-2xl"
                   style={{ background: portfolio.color }}
-                  onClick={() =>
-                    (window.location.href = `/portfolio/${portfolio.id}`)
-                  }
+                  onClick={() => navigate(`/portfolio/${portfolio.id}`)}
                 >
                   <div className="flex justify-start">
                     <img
