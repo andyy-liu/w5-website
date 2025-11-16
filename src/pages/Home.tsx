@@ -160,7 +160,7 @@ const Home = () => {
                       <h3 className="text-xl md:text-2xl font-helvetica font-normal tracking-tighter text-on-light">
                         {portfolio.name}
                       </h3>
-                      <p className="text-sm/4 md:text-sm font-helvetica text-gray-600 leading-snug">
+                      <p className="text-sm/4 md:text-sm font-helvetica text-gray-600 tracking-tight leading-snug">
                         {portfolio.description}
                       </p>
                     </div>
