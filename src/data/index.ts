@@ -129,11 +129,15 @@ export const EVENTS: Event[] = [
     id: "summer-dinner",
     title: "Summer Dinner",
     date: "August 16, 2025",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description: "A summer meetup for incoming Western students to learn about W5, connect with our team, and hear insights from one of our founders.",
     portfolio: "COMMUNITY",
     image: "/events/agm-2025.jpg",
     register: "https://example.com/register-agm",
-    isRegistrationOpen: false
+    isRegistrationOpen: false,
+    whatIs: "Summer Dinner is an early touchpoint for new Western students entering first year. The event brings together the internal executive team, eager incoming students, and a W5 founder for an evening of conversation and community. Guests enjoy dinner, network with peers, and take part in a fireside chat with Braden Ream, gaining an inside look at W5 and the people behind it.",
+    why: "Summer Dinner gives first-year students a chance to plug into Western’s entrepreneurial ecosystem before classes even begin. It creates space to meet the executive team, build early mentorship connections, and learn the story behind W5 from one of its founders. It’s the first large-scale introduction to the club and a meaningful starting point for anyone curious about entrepreneurship at Western.",
+    additionalDetails: "Date: August 16th \n Time: 6:00PM - 8:00PM \n Location: Voiceflow Office (30 Duncan Street) \n Cost: Free for all students \n Attendance: Open to all incoming first-year Western University students.",
+    images: []
   },
   {
     id: "annual-general-meeting",
@@ -167,11 +171,15 @@ export const EVENTS: Event[] = [
     id: "steve-jobs-night",
     title: "Steve Jobs Night",
     date: "October 10, 2025",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description: "Steve Jobs Night is a casual pitch competition where students come to sharpen their pitch competition skills, meet other students, and potentially win prizes.",
     portfolio: "INNOVATION",
     image: "/events/steve-jobs-night.jpg",
     register: "https://example.com/register-steve-jobs",
-    isRegistrationOpen: false
+    isRegistrationOpen: false,
+    whatIs: "During Steve Jobs Night, students pitch a product based on various different factors such as industry, product, and target demographic. While preparing, students will be met with the challenge of building a physical prototype with random items. Whether you are curious about entrepreneurship or want to improve your case competition skills, Steve Jobs Night is here to spark that passion.",
+    why: "Steve Jobs Night aims to provide a casual environment for students to practice their presentation and case competition skills, students walk away with a unique experience and get to be hands on with their product building in a fun environment.",
+    additionalDetails: "Date: October 9th \n Time: 6:00 - 8:00PM \n Location: Social Science Centre \n Cost: Free for all students \n Attendance: Open to all Western University students.",
+    images: []
   },
   {
     id: "careers-panel",
@@ -203,14 +211,14 @@ export const EVENTS: Event[] = [
     id: "innovation-sprint",
     title: "Innovation Sprint",
     date: "November 15–16, 2025",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description: "Experience W5’s Innovation Sprint—an immersive 24-hour entrepreneurship challenge to turn bold ideas into impactful solutions and connect with leaders from TD Invent.",
     portfolio: "ACCELERATOR", 
     image: "/events/inno-sprint.jpg",
     register: "https://example.com/register-sprint",
     isRegistrationOpen: true,
-    whatIs: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    why: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    additionalDetails: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    whatIs: "Innovation Sprint is a unique take on a case competition—designed to lower barrier to entry and cultivate entrepreneurship among the Western student body. Over the course of 24 hours, participants immerse themselves in the founder’s journey by developing their own business idea in response to a challenge posed by TD Invent.",
+    why: "Innovation Sprint is designed to foster innovative thinking and empower emerging business leaders to turn their ideas into action. Through mentorship, hands-on workshops, and opportunities to engage with industry professionals, participants gain the confidence and skills to develop impactful ventures. A key highlight of the competition is the chance to connect with TD Invent—offering exclusive rewards, valuable industry insights, and potential career opportunities that support students on their entrepreneurial journey.",
+    additionalDetails: "Date: November 15-16th \n Location: Morrissette Institute for Entrepreneurship and Somerville House \n Cost: $20 for members and $25 for non-members \n Attendance: Open to all Western University students.",
     images: [
       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=1000&auto=format&fit=crop",
@@ -237,20 +245,20 @@ export const EVENTS: Event[] = [
     id: "accelerator-program",
     title: "Accelerator Program",
     date: "January 2025",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description: "Begin your startup journey through W5’s Accelerator Program— a 4 week long incubator where you work with successful founders to build a product.",
     portfolio: "ACCELERATOR",
     image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1770&auto=format&fit=crop",
     register: "https://example.com/register-accelerator",
     isRegistrationOpen: false,
-    whatIs: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    why: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    additionalDetails: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    whatIs: "W5’s Accelerator Program is a four-week incubator designed to help aspiring entrepreneurs develop their startup ideas. Participants receive mentorship from experienced founders, engage in hands-on workshops, and collaborate with peers to build viable products and business models.",
+    why: "Entrepreneurship often feels both out of reach and risky for university students. The Accelerator Program offers a more intimate setting to overcome those early challenges and build alongside a supportive community. ",
+    additionalDetails: "Date: January 2026 \n Time: Weekly sessions (TBD) \n Location: Morrissette Institute for Entrepreneurship \n Cost: $10 for members, $15 for non-members \n Attendance: Open to all Western University students.",
     images: []
   },
   {
     id: "iterate-designathon",
     title: "Iterate Designathon",
-    date: "January 9-10, 2025",
+    date: "January 9-10, 2026",
     description: "Jumpstart your design journey with Iterate Designathon—W5 Marketing’s flagship event featuring our annual Figma and Notion workshops.",
     portfolio: "MARKETING",
     register: "https://example.com/register-designathon",
@@ -263,20 +271,28 @@ export const EVENTS: Event[] = [
   {
     id: "pitchquest",
     title: "PitchQuest",
-    date: "January 18, 2025",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    date: "January 18, 2026",
+    description: "Step into the shoes of a venture capital associate and analyze companies from a quantitative, investment-driven lens while also thinking creatively and innovatively, embracing your entrepreneurial side.",
     portfolio: "CATALYST",
     register: "https://example.com/register-designathon",
-    isRegistrationOpen: false
+    isRegistrationOpen: false,
+    whatIs: "Think stock pitch, but for startups. Less formal than a stock pitch but more formal than Steve Jobs Night. Focused on education and exposure rather than full competition.",
+    why: "This event also appeals to creative thinkers who value entrepreneurship and innovation but want to pursue a career in a more practical industry (finance).",
+    additionalDetails: "Date: January 18th \n Time: TBD \n Location: TBD \n Cost: TBD \n Attendance: Open to all Western University students.",
+    images: []
   },
   {
     id: "pitch5",
     title: "Pitch5",
-    date: "February 28 - March 1, 2025",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    date: "February 28 - March 1, 2026",
+    description: "An alternative pitch competition focused on student creativity and business feasibility, the thesis of the Accelerator Program",
     portfolio: "ACCELERATOR",
     register: "https://example.com/register-designathon",
-    isRegistrationOpen: false
+    isRegistrationOpen: false,
+    whatIs: "Pitch5 builds directly off of the Accelerator program, allowing students to pitch any business idea that they have with limited parameters. Pitch5 is a two-day event, where students will learn more about the various aspects of entrepreneurship through workshops on the first day and get to pitch their own business ideas to industry professionals on the second day. ",
+    why: "Pitch5 gives students a different angle on case competitions by removing the rigid structure and letting them test their own ideas. By pushing students to think independently, validate assumptions, and communicate a business concept under real constraints, Pitch5 encourages creativity and practical problem-solving—skills that translate directly into stronger performance in traditional case settings and in the 2257 feasibility project.",
+    additionalDetails: "Date: February 28 - March 1, 2025 \n Time: TBD \n Location: TBD \n Cost: TBD \n Attendance: Open to all Western University students.",
+    images: []
   },
   {
     id: "alchemy",
@@ -290,11 +306,15 @@ export const EVENTS: Event[] = [
   {
     id: "suit-down-get-social",
     title: "Suit Down & Get Social",
-    date: "March 20-21, 2025",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    date: "March 20-21, 2026",
+    description: "A casual year-end mixer bringing together Western’s leading business clubs for an evening of connection, conversation, and community.",
     portfolio: "COMMUNITY",
     register: "https://example.com/register-designathon",
-    isRegistrationOpen: false
+    isRegistrationOpen: false,
+    whatIs: "Suit Down & Get Social is a collaborative mixer hosted by W5, PBSN, WFN, and WMA—four of Western’s largest undergraduate business clubs. The event offers a relaxed space to meet executive teams, learn about each club, and connect with students from across campus. It’s designed as an informal, no-suits gathering to wind down the year and build community across Western’s business ecosystem.",
+    why: "The mixer gives students the chance to meet leaders from multiple business clubs in one place, without the pressure of a professional setting. It encourages cross-club connection, helps students explore different communities on campus, and provides a fun, low-stakes environment to socialize before the year wraps up.",
+    additionalDetails: "Date: March 20-21, 2026 \n Time: TBA \n Location: TBA \n Cost: Free for all students \n Attendance: Open to all undergraduate students at Western University.",
+    images: []
   }
 ];
 
