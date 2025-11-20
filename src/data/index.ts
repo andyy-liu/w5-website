@@ -272,12 +272,12 @@ export const EVENTS: Event[] = [
     images: ["/events/optimize-1.webp", "/events/optimize-2.webp", "/events/optimize-3.webp"]
   },
   {
-    id: "pitchquest",
-    title: "PitchQuest",
+    id: "vision",
+    title: "Vision",
     date: "January 18, 2026",
     description: "Step into the shoes of a venture capital associate and analyze companies from a quantitative, investment-driven lens while also thinking creatively and innovatively, embracing your entrepreneurial side.",
     portfolio: "CATALYST",
-    register: "https://example.com/register-designathon",
+    register: "https://example.com/register-vision",
     isRegistrationOpen: false,
     whatIs: "Think stock pitch, but for startups. Less formal than a stock pitch but more formal than Steve Jobs Night. Focused on education and exposure rather than full competition.",
     why: "This event also appeals to creative thinkers who value entrepreneurship and innovation but want to pursue a career in a more practical industry (finance).",
