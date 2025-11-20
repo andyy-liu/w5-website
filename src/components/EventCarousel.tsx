@@ -117,12 +117,14 @@ const EventCarousel = ({ events }: EventCarouselProps) => {
             >
               <div className="relative overflow-hidden bg-cream rounded-xl">
                 {/* Event Image */}
-                <div className="relative w-full h-48 md:h-64 lg:h-80 bg-gray-200 rounded-xl overflow-hidden">
+                <div className="relative w-full h-48 md:h-64 lg:h-[22rem] bg-gray-200 rounded-xl overflow-hidden">
                   <img
                     src={event.image || "/placeholder.svg"}
                     alt={event.title}
                     className="w-full h-full object-cover pointer-events-none"
                     draggable="false"
+                    loading="eager"
+                    fetchPriority="high"
                   />
                   {/* Dark overlay */}
                   <div className="absolute inset-0 bg-black/40" />
@@ -154,6 +156,7 @@ const EventCarousel = ({ events }: EventCarouselProps) => {
                           src={getPortfolioByName(event.portfolio)?.icon}
                           alt={`${event.portfolio} icon`}
                           className="w-3 h-3 lg:w-3.5 lg:h-3.5"
+                          loading="eager"
                         />
                         {event.portfolio}
                       </span>
