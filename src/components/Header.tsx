@@ -101,7 +101,7 @@ const Header = ({
               </SheetTrigger>
               <SheetContent
                 side="bottom"
-                className="backdrop-blur supports-[backdrop-filter]:bg-primary-light/90 max-h-[85vh] overflow-y-auto rounded-t-[var(--radius)]"
+                className="backdrop-blur supports-[backdrop-filter]:bg-cream max-h-[85vh] overflow-y-auto rounded-t-[var(--radius)]"
               >
                 <div className="mt-10 space-y-6">
                   {navItems.map((item) => (

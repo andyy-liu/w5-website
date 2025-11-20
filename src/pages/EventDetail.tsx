@@ -55,7 +55,7 @@ const EventDetail = () => {
   return (
     <Layout>
       <div className="bg-black">
-        <section className="bg-cream min-h-screen pt-48 pb-24 rounded-b-[4rem]">
+        <section className="bg-cream min-h-screen pt-36 pb-24 rounded-b-[4rem]">
           <div className="container-w5">
             {/* Header */}
             <div className="mb-12">

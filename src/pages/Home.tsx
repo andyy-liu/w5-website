@@ -8,9 +8,6 @@ import { getFeaturedEvents, PORTFOLIOS } from "../data";
 const Home = () => {
   const upcomingEvents = getFeaturedEvents();
 
-  // Track which portfolio is currently active (shows primary variant)
-  const [activePortfolio, setActivePortfolio] = useState<string>("Accelerator");
-
   const navigate = useNavigate();
 
   return (

@@ -45,7 +45,7 @@ export const PORTFOLIOS: Portfolio[] = [
     id: "accelerator",
     name: "Accelerator",
     color: "#D15B4B",
-    description: "Accelerator is built for students who are passionate about entrepreneurship and want to be at the forefront of helping new ideas grow into real startups.",
+    description: "Accelerator is for students who are passionate about entrepreneurship and want to be at the forefront of helping new ideas grow into real startups.",
     icon: "/accelerator.svg",
     path: "/about?section=accelerator",
     whatDo: "The Accelerator portfolio is built for students who are passionate about entrepreneurship and want to be at the forefront of helping new ideas grow into real startups. Accelerator runs high-impact, hands-on events and programs that lower the barrier to building or working in startups.",
@@ -56,7 +56,7 @@ export const PORTFOLIOS: Portfolio[] = [
     id: "catalyst",
     name: "Catalyst",
     color: "#D7C16B",
-    description: "Catalyst is the operations engine of W5, managing everything behind the scenes—from financial planning and grant writing to venue booking and logistics.",
+    description: "Catalyst is the operations engine of W5, managing everything behind the scenes—from financials and grant writing to venue booking and logistics.",
     icon: "/catalyst.svg",
     path: "/about?section=catalyst",
     whatDo: "Catalyst is the operations engine of W5, managing everything behind the scenes—from financial planning and grant writing to venue booking and logistics. We ensure smooth operations across all portfolios and maintain the infrastructure that keeps W5 running effectively.",
@@ -89,7 +89,7 @@ export const PORTFOLIOS: Portfolio[] = [
     id: "innovation",
     name: "Innovation",
     color: "#5B9ED1",
-    description: "Innovation is where curiosity meets opportunity; organizing events to cultivate the entrepreneurial spirit within students who want to take the next step.",
+    description: "Innovation is where curiosity meets opportunity; hosting events to cultivate the entrepreneurial spirit in students who want to take the next step.",
     icon: "/innovation.svg",
     path: "/about?section=innovation",
     whatDo: "Innovation is where curiosity meets opportunity. Our portfolio is focused on making entrepreneurship accessible and fun by providing hands-on exposure to the startup world. Innovation creates and organizes events that aim to spark the entrepreneurial spirit within students who are curious and want to take the next step.",
@@ -117,13 +117,13 @@ export const EVENTS: Event[] = [
     date: "August 15, 2025",
     description: "Come to On The Road, W5’s first in-person event of the summer—a chance to gain a deeper insight into what working at a startup is actually like.",
     portfolio: "INNOVATION",
-    image: "/events/agm-2025.jpg",
+    image: "/events/otr-1.webp",
     register: "https://example.com/register-agm",
     isRegistrationOpen: false,
     whatIs: "On The Road (OTR) is a trip to some of Toronto’s most exciting high-growth startups. Participants will visit multiple companies, meet the teams building them, and hear candid stories about product development, scaling, fundraising, and company culture. Whether you’re curious about entrepreneurship or just want a fresh perspective, this event immerses you directly into the space.",
     why: "On The Road gives you personal access to Toronto’s startup culture. You’ll experience company culture up close, ask real questions, and see how different teams within the firm think, build, and execute. Past tours have featured networking sessions, exclusive hiring insights, and behind-the-scenes looks at operations that you won’t find at typical networking events. ",
     additionalDetails: "Date: August 15th \n Time: 1:00 - 4:00PM \n Location: Downtown Toronto \n Cost: Free for all students \n Attendance: Open to all Western University students interested in entrepreneurship.",
-    images: []
+    images: ["/events/otr-1.webp", "/events/otr-2.webp", "/events/otr-3.webp", "/events/otr-4.webp", "/events/otr-5.webp", "/events/otr-6.webp"]
   },
   {
     id: "summer-dinner",
@@ -131,13 +131,13 @@ export const EVENTS: Event[] = [
     date: "August 16, 2025",
     description: "A summer meetup for incoming Western students to learn about W5, connect with our team, and hear insights from one of our founders.",
     portfolio: "COMMUNITY",
-    image: "/events/agm-2025.jpg",
+    image: "/events/summer-dinner-1.webp",
     register: "https://example.com/register-agm",
     isRegistrationOpen: false,
     whatIs: "Summer Dinner is an early touchpoint for new Western students entering first year. The event brings together the internal executive team, eager incoming students, and a W5 founder for an evening of conversation and community. Guests enjoy dinner, network with peers, and take part in a fireside chat with Braden Ream, gaining an inside look at W5 and the people behind it.",
     why: "Summer Dinner gives first-year students a chance to plug into Western’s entrepreneurial ecosystem before classes even begin. It creates space to meet the executive team, build early mentorship connections, and learn the story behind W5 from one of its founders. It’s the first large-scale introduction to the club and a meaningful starting point for anyone curious about entrepreneurship at Western.",
     additionalDetails: "Date: August 16th \n Time: 6:00PM - 8:00PM \n Location: Voiceflow Office (30 Duncan Street) \n Cost: Free for all students \n Attendance: Open to all incoming first-year Western University students.",
-    images: []
+    images: ["/events/summer-dinner-1.webp", "/events/summer-dinner-2.webp", "/events/summer-dinner-3.webp", "/events/summer-dinner-4.webp", "/events/summer-dinner-5.webp", "/events/summer-dinner-6.webp", "/events/summer-dinner-7.webp", "/events/summer-dinner-8.webp", "/events/summer-dinner-9.webp"]
   },
   {
     id: "annual-general-meeting",
@@ -151,7 +151,7 @@ export const EVENTS: Event[] = [
     whatIs: "The Annual General Meeting (AGM) marks the start of W5’s academic year. It brings together over 150 students to hear from the executive team about W5’s mission, structure, and the initiatives led by each portfolio. Attendees gain an inside look at how the club operates and what it means to be part of Western’s entrepreneurial community.",
     why: "The AGM is the best place to connect directly with the executive team before director applications open. Unlike other large-scale events or coffee chats, the AGM offers access to the entire executive team - giving you the chance to ask questions, build connections, and find your fit within the club early on.",
     additionalDetails: "Date: September 13th \n Time: 2:00PM - 4:00PM \n Location: Morrissette Institute for Entrepreneurship \n Cost: Free for all students \n Attendance: Open to all Western University students interested in entrepreneurship.",
-    images: ["/events/agm-1.webp", "/events/agm-2.webp", "/events/agm-3.webp", "/events/agm-4.webp", "/events/agm-5.webp", "/events/agm-6.webp"]
+    images: ["/events/agm-1.webp", "/events/agm-2.webp", "/events/agm-3.webp", "/events/agm-4.webp", "/events/agm-5.webp", "/events/agm-6.webp", "/events/agm-7.webp", "/events/agm-8.webp", "/events/agm-9.webp"]
   },
   {
     id: "summit-case-competition",
@@ -165,7 +165,7 @@ export const EVENTS: Event[] = [
     whatIs: "Summit Case Competition is W5's annual flagship event, drawing over 100 competitors. Whether you're a first-time participant or a regular case competitor, Summit offers a platform to showcase your analytical and presentation skills. Over 24 hours, students take on a case and present their solutions to representatives from leading firms such as Boston Consulting Group (BCG), Deloitte, and Bank of Montreal (BMO).",
     why: "Summit is the first case competition of the school year, designed to help students build confidence, develop problem-solving skills, and connect with industry leaders. Through guided workshops, mentorship, and resource drives, competitors gain the tools to craft impactful presentations and tackle business challenges with confidence.",
     additionalDetails: "Date: October 4th \n Time: 8:00AM - 6:00PM \n Location: Morrissette Institute for Entrepreneurship & Somerville House \n Cost: $20 for members and $25 for non-members \n Attendance: Open to students of all academic years and programs that register.",
-    images: []
+    images: ["/events/summit.jpg", "/events/summit-2.webp", "/events/summit-3.webp"]
   },
   {
     id: "steve-jobs-night",
@@ -173,13 +173,13 @@ export const EVENTS: Event[] = [
     date: "October 10, 2025",
     description: "Steve Jobs Night is a casual pitch competition where students come to sharpen their pitch competition skills, meet other students, and potentially win prizes.",
     portfolio: "INNOVATION",
-    image: "/events/steve-jobs-night.jpg",
+    image: "/events/steve-jobs-3.webp",
     register: "https://example.com/register-steve-jobs",
     isRegistrationOpen: false,
     whatIs: "During Steve Jobs Night, students pitch a product based on various different factors such as industry, product, and target demographic. While preparing, students will be met with the challenge of building a physical prototype with random items. Whether you are curious about entrepreneurship or want to improve your case competition skills, Steve Jobs Night is here to spark that passion.",
     why: "Steve Jobs Night aims to provide a casual environment for students to practice their presentation and case competition skills, students walk away with a unique experience and get to be hands on with their product building in a fun environment.",
     additionalDetails: "Date: October 9th \n Time: 6:00 - 8:00PM \n Location: Social Science Centre \n Cost: Free for all students \n Attendance: Open to all Western University students.",
-    images: []
+    images: ["/events/steve-jobs-1.webp", "/events/steve-jobs-2.webp", "/events/steve-jobs-3.webp", "/events/steve-jobs-4.webp", "/events/steve-jobs-5.webp", "/events/steve-jobs-6.webp", "/events/steve-jobs-7.webp", "/events/steve-jobs-8.webp", "/events/steve-jobs-9.webp"]
   },
   {
     id: "careers-panel",
@@ -187,6 +187,7 @@ export const EVENTS: Event[] = [
     date: "October 28-29, 2025",
     description: "Discover diverse career paths at Careers Panel—a two-day event connecting students with HBA1 and HBA2 mentors in finance, consulting, tech, and entrepreneurship.",
     portfolio: "DEVELOPMENT",
+    image: "/events/careers-panel.webp",
     register: "https://example.com/register-careers",
     isRegistrationOpen: false,
     whatIs: "Careers Panel is a collaborative event between W5, PBSN, and WFN designed to help students explore a wide range of career opportunities. Over two days, 12 HBA1 and HBA2 students share their experiences—discussing what motivated their career choices, how they navigated recruitment, and what it’s like working in their respective fields.",
@@ -200,12 +201,13 @@ export const EVENTS: Event[] = [
     date: "November 14, 2025",
     description: "Get an inside look at the world of finance and consulting through W5's Toronto Firms Trip—a one-day experience connecting students directly with industry professionals.",
     portfolio: "DEVELOPMENT",
+    image: "/events/firms-5.webp",
     register: "https://example.com/register-designathon",
     isRegistrationOpen: false,
     whatIs: "Toronto Firms Trip is a one-day excursion organized by W5, offering first- and second-year students the opportunity to visit leading finance and consulting firms in Toronto, such as Deloitte, National Bank, and McKinsey. Throughout the day, participants take part in office tours, company presentations, and networking sessions with professionals who share insights into their work, company culture, and recruitment processes.",
     why: "The Firms Trip provides students with a firsthand look at how top firms operate. Taking place during peak recruitment season, the trip offers valuable exposure, practical advice, and direct networking opportunities with recruiters and professionals. By engaging with firms early on, students gain a clearer understanding of potential career paths and a competitive edge when pursuing future internship opportunities.",
     additionalDetails: "Date: November 14th \n Time: 6:00AM - 8:00PM \n Location: Downtown Toronto \n Cost: $35 for members, $40 for non-members \n Attendance: Select partcipants from registered applicants.",
-    images: []
+    images: ["/events/firms-1.webp", "/events/firms-2.webp", "/events/firms-3.webp", "/events/firms-4.webp", "/events/firms-5.webp", "/events/firms-6.webp"]
   },
   {
     id: "innovation-sprint",
@@ -220,12 +222,12 @@ export const EVENTS: Event[] = [
     why: "Innovation Sprint is designed to foster innovative thinking and empower emerging business leaders to turn their ideas into action. Through mentorship, hands-on workshops, and opportunities to engage with industry professionals, participants gain the confidence and skills to develop impactful ventures. A key highlight of the competition is the chance to connect with TD Invent—offering exclusive rewards, valuable industry insights, and potential career opportunities that support students on their entrepreneurial journey.",
     additionalDetails: "Date: November 15-16th \n Location: Morrissette Institute for Entrepreneurship and Somerville House \n Cost: $20 for members and $25 for non-members \n Attendance: Open to all Western University students.",
     images: [
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1000&auto=format&fit=crop"
+      "/events/inno-sprint-1.webp",
+      "/events/inno-sprint-2.webp",
+      "/events/inno-sprint-3.webp",
+      "/events/inno-sprint-4.webp",
+      "/events/inno-sprint-5.webp",
+      "/events/inno-sprint-6.webp"
     ]
   },
   {
@@ -247,13 +249,13 @@ export const EVENTS: Event[] = [
     date: "January 2025",
     description: "Begin your startup journey through W5’s Accelerator Program— a 4 week long incubator where you work with successful founders to build a product.",
     portfolio: "ACCELERATOR",
-    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1770&auto=format&fit=crop",
+    image: "/events/accelerator-program-2.webp",
     register: "https://example.com/register-accelerator",
     isRegistrationOpen: false,
     whatIs: "W5’s Accelerator Program is a four-week incubator designed to help aspiring entrepreneurs develop their startup ideas. Participants receive mentorship from experienced founders, engage in hands-on workshops, and collaborate with peers to build viable products and business models.",
     why: "Entrepreneurship often feels both out of reach and risky for university students. The Accelerator Program offers a more intimate setting to overcome those early challenges and build alongside a supportive community. ",
     additionalDetails: "Date: January 2026 \n Time: Weekly sessions (TBD) \n Location: Morrissette Institute for Entrepreneurship \n Cost: $10 for members, $15 for non-members \n Attendance: Open to all Western University students.",
-    images: []
+    images: ["/events/accelerator-program-1.webp", "/events/accelerator-program-2.webp", "/events/accelerator-program-3.webp"]
   },
   {
     id: "iterate-designathon",
@@ -261,12 +263,13 @@ export const EVENTS: Event[] = [
     date: "January 9-10, 2026",
     description: "Jumpstart your design journey with Iterate Designathon—W5 Marketing’s flagship event featuring our annual Figma and Notion workshops.",
     portfolio: "MARKETING",
+    image: "/events/optimize-2.webp",
     register: "https://example.com/register-designathon",
     isRegistrationOpen: false,
     whatIs: "Iterate Designathon is W5 Marketing’s signature design-focused initiative. The event brings together students interested in UI/UX, product design, and digital creation for a full day of hands-on workshops and guided project building. Through beginner-friendly Figma and Notion sessions, attendees gain practical experience and leave with completed designs they can showcase in their portfolios. The Designathon creates a collaborative environment where participants can experiment, learn, and bring their ideas to life.",
     why: "Addresses the lack of product design opportunities at Western by providing a hands-on competition that builds practical skills and results in portfolio-quality projects.",
     additionalDetails: "Date: January 9 - 11 \n Time: 5:00 - 9:00PM (Jan 9); 9:00AM - 3:00PM (Jan 10) \n Location: Virtual \n Cost: $10 entry fee \n Attendance: Open to all university students across Canada.",
-    images: []
+    images: ["/events/optimize-1.webp", "/events/optimize-2.webp", "/events/optimize-3.webp"]
   },
   {
     id: "pitchquest",
@@ -342,7 +345,7 @@ export const getEventsByPortfolio = (portfolioName: string): Event[] => {
 export const getFeaturedEvents = (): Event[] => {
   // Return specific events for carousel/featured display
   return EVENTS.filter(event => 
-    ["accelerator-program", "summit-case-competition", "innovation-sprint"].includes(event.id)
+    ["accelerator-program", "summit-case-competition", "innovation-sprint", "steve-jobs-night", "summer-dinner"].includes(event.id)
   );
 };
 
