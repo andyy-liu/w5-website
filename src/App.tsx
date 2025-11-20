@@ -22,6 +22,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <Analytics />
+      <SpeedInsights />
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
