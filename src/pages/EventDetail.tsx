@@ -90,7 +90,7 @@ const EventDetail = () => {
                     <div
                       className="inline-flex items-center px-2 py-2 mb-4"
                       style={{
-                        border: `1px solid ${portfolio.color}`,
+                        border: `2px solid ${portfolio.color}`,
                         borderRadius: "9999px",
                       }}
                     >
