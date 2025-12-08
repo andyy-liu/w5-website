@@ -217,7 +217,7 @@ export const EVENTS: Event[] = [
     portfolio: "ACCELERATOR", 
     image: "/events/inno-sprint.jpg",
     register: "https://example.com/register-sprint",
-    isRegistrationOpen: true,
+    isRegistrationOpen: false,
     whatIs: "Innovation Sprint is a unique take on a case competition—designed to lower barrier to entry and cultivate entrepreneurship among the Western student body. Over the course of 24 hours, participants immerse themselves in the founder’s journey by developing their own business idea in response to a challenge posed by TD Invent.",
     why: "Innovation Sprint is designed to foster innovative thinking and empower emerging business leaders to turn their ideas into action. Through mentorship, hands-on workshops, and opportunities to engage with industry professionals, participants gain the confidence and skills to develop impactful ventures. A key highlight of the competition is the chance to connect with TD Invent—offering exclusive rewards, valuable industry insights, and potential career opportunities that support students on their entrepreneurial journey.",
     additionalDetails: "Date: November 15-16th \n Location: Morrissette Institute for Entrepreneurship and Somerville House \n Cost: $20 for members and $25 for non-members \n Attendance: Open to all Western University students.",
