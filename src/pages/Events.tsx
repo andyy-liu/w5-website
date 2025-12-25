@@ -30,13 +30,13 @@ const Events = () => {
               {EVENTS.map((event, idx) => (
                 <div
                   key={idx}
-                  className="bg-cream rounded-lg cursor-pointer p-5 flex items-stretch space-x-6 border-2 border-[#D9D9D9] transition-all duration-300 ease-out hover:-translate-y-0.5"
+                  className="bg-cream rounded-lg cursor-pointer p-5 flex flex-col md:flex-row md:items-stretch md:space-x-6 border-2 border-[#D9D9D9] transition-all duration-300 ease-out hover:-translate-y-0.5"
                   style={{ boxShadow: "0 0 8px rgba(0, 4, 0, 0.1)" }}
                   onClick={() => navigate(`/events/${event.id}`)}
                 >
                   {/* Event Image */}
-                  <div className="w-36 flex-shrink-0 flex items-center justify-center">
-                    <div className="w-36 h-36 rounded-lg overflow-hidden bg-gray-100">
+                  <div className="w-full md:w-36 flex-shrink-0 flex items-center justify-center mb-4 md:mb-0">
+                    <div className="w-full aspect-[4/3] md:w-36 md:h-36 md:aspect-auto rounded-lg overflow-hidden bg-gray-200">
                       {event.image ? (
                         <img
                           src={event.image}
@@ -45,9 +45,19 @@ const Events = () => {
                         />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center">
-                          <span className="text-sm text-gray-500">
-                            No Image
-                          </span>
+                          <svg
+                            className="w-12 h-12 text-gray-400"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={1.5}
+                              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                            />
+                          </svg>
                         </div>
                       )}
                     </div>
@@ -55,23 +65,11 @@ const Events = () => {
                   {/* Event details */}
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
-                      <div className="text-sm md:text-md font-helvetica text-black tracking-tight font-medium -mb-2 ml-0.5">
+                      <div className="text-sm md:text-md font-helvetica text-black tracking-tight font-medium -mb-2 md:ml-0.5">
                         {event.date}
                       </div>
-                      {/* {event.portfolio && (
-                        <div
-                          className="justify-center px-2 py-0.5 rounded-2xl text-xs font-normal tracking-tight text-black -mb-2"
-                          style={{
-                            backgroundColor: event.portfolioColor
-                              ? `${event.portfolioColor}50`
-                              : "#000020",
-                          }}
-                        >
-                          {event.portfolio}
-                        </div>
-                      )} */}
                     </div>
-                    <div className="text-xl md:text-2xl lg:text-3xl font-helvetica font-medium tracking-tight text-black mb-1">
+                    <div className="text-2xl md:text-2xl lg:text-3xl font-helvetica font-medium tracking-tight text-black mb-1">
                       {event.title}
                     </div>
                     <div className="text-base/5 md:text-lg/5 font-helvetica text-black/60 tracking-tight -mt-0.5 mb-3">
@@ -82,6 +80,7 @@ const Events = () => {
                         href={event.register}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
                       >
                         <button className="px-3 py-2 rounded-lg bg-[#E3E3E3] border border-[#767676] text-sm tracking-tight font-helvetica text-gray-800 hover:bg-gray-200 transition">
                           Register

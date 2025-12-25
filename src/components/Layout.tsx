@@ -9,7 +9,7 @@ interface LayoutProps {
 
 const Layout = ({ children, variant = "default" }: LayoutProps) => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-dvh flex flex-col">
       <Header variant={variant} />
       <main className="flex-1">{children}</main>
       <Footer />

@@ -59,6 +59,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fix for Safari iOS viewport height */
+@supports (-webkit-touch-callout: none) {
+  .min-h-dvh {
+    min-height: -webkit-fill-available;
+  }
+}
+
 /* W5 Design System - Purple gradient theme with entrepreneurship focus */
 
 @layer base {
