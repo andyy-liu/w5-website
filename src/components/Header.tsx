@@ -39,7 +39,12 @@ const Header = ({
   const textColor = variant === "landing" ? "text-white" : "text-black";
 
   return (
-    <header className={clsx("fixed top-0 left-0 right-0 z-50", headerBg)}>
+    <header
+      className={clsx(
+        "fixed top-0 left-0 right-0 z-50 transform-gpu",
+        headerBg
+      )}
+    >
       <div className="container-w5">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
